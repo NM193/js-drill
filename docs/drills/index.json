@@ -1,9 +1,9 @@
 [
   {
     "id": "2026-08-29-vece",
-    "createdAt": "2026-08-29T15:07:07.957Z",
-    "topic": "Async iteratori",
-    "lessonTitle": "for await i async generatori",
-    "taskTitle": "Sekvencijalno kupljenje async vrednosti"
+    "createdAt": "2026-08-29T18:01:45.334Z",
+    "topic": "let i const",
+    "lessonTitle": "let i const",
+    "taskTitle": "Izaberi tacnu verziju"
   }
 ]
