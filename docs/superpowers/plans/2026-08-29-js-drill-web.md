@@ -1160,7 +1160,7 @@ Dodaj `SITE_URL` u `EnvironmentVariables`:
 ```bash
 cd ~/js-drill && env -i HOME=$HOME PATH=/opt/homebrew/bin:/usr/bin:/bin \
   CLAUDE_BIN=$HOME/.local/bin/claude \
-  NTFY_TOPIC=js_teacher_alert_9ery263n \
+  NTFY_TOPIC=<TVOJ-TOPIC> \
   SITE_URL=https://nm193.github.io/js-drill/ \
   /opt/homebrew/bin/node drill.mjs
 ```

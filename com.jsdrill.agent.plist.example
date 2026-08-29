@@ -5,7 +5,6 @@
   <key>Label</key>
   <string>com.jsdrill.agent</string>
 
-  <!-- ZAMENI: pun put do node-a (which node) i do drill.mjs -->
   <key>ProgramArguments</key>
   <array>
     <string>/opt/homebrew/bin/node</string>
@@ -14,10 +13,10 @@
 
   <key>EnvironmentVariables</key>
   <dict>
-    <!-- ZAMENI: tvoj nasumicni ntfy topic -->
     <key>NTFY_TOPIC</key>
-    <string>js_teacher_alert_9ery263n</string>
-    <!-- ZAMENI: pun put do claude binarija (which claude) -->
+    <string>ZAMENI-SVOJIM-NTFY-TOPICOM</string>
+    <key>SITE_URL</key>
+    <string>https://nm193.github.io/js-drill/</string>
     <key>CLAUDE_BIN</key>
     <string>/Users/nemanjamarjanovic/.local/bin/claude</string>
     <key>HOME</key>
