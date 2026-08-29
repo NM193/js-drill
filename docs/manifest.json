@@ -1,0 +1,15 @@
+{
+  "name": "js-drill",
+  "short_name": "js-drill",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1B1E27",
+  "theme_color": "#1B1E27",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
