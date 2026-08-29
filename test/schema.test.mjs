@@ -1,20 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert';
 import { validateDrill } from '../lib/schema.mjs';
+import { VALID_DRILL } from './fixtures.mjs';
 
-export const VALID_DRILL = {
-  topic: 'Closure',
-  lesson: { title: 'Closure', body: 'Objasnjenje.' },
-  task: {
-    title: 'Brojac',
-    brief: 'Napravi brojac.',
-    signature: 'function counter()',
-    starter: 'function counter() {}',
-    tests: [{ name: 'broji', code: 'assert.ok(true);' }],
-  },
-  answer: 'function counter() { let n = 0; return () => ++n; }',
-  explanation: 'Closure cuva n.',
-};
 
 test('validna vezba prolazi', () => {
   assert.deepEqual(validateDrill(VALID_DRILL), []);
