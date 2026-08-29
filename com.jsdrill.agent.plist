@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.jsdrill.agent</string>
+
+  <!-- ZAMENI: pun put do node-a (which node) i do drill.mjs -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/node</string>
+    <string>/Users/nemanjamarjanovic/js-drill/drill.mjs</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <!-- ZAMENI: tvoj nasumicni ntfy topic -->
+    <key>NTFY_TOPIC</key>
+    <string>js_teacher_alert_9ery263n</string>
+    <!-- ZAMENI: pun put do claude binarija (which claude) -->
+    <key>CLAUDE_BIN</key>
+    <string>/Users/nemanjamarjanovic/.local/bin/claude</string>
+    <key>HOME</key>
+    <string>/Users/nemanjamarjanovic</string>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <!-- 08:00 i 20:00 lokalnog vremena -->
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict>
+      <key>Hour</key><integer>8</integer>
+      <key>Minute</key><integer>0</integer>
+    </dict>
+    <dict>
+      <key>Hour</key><integer>20</integer><key>Minute</key><integer>0</integer>
+    </dict>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/Users/nemanjamarjanovic/js-drill/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/nemanjamarjanovic/js-drill/launchd.err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
