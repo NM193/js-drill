@@ -60,3 +60,17 @@ export const assert = {
     throw new AssertionError(message ?? 'ocekivana greska, nista nije baceno');
   },
 };
+
+// Svaki test dobija svez new Function scope, pa mutacija iz jednog ne curi u
+// sledeci. Sintaksna greska u korisnickom kodu pada pri konstrukciji i hvata
+// se istim catch-om.
+export function runTests(userCode, tests) {
+  return tests.map(({ name, code }) => {
+    try {
+      new Function('assert', `"use strict";\n${userCode}\n;${code}`)(assert);
+      return { name, ok: true };
+    } catch (err) {
+      return { name, ok: false, message: err?.message ?? String(err) };
+    }
+  });
+}
