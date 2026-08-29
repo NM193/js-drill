@@ -1,0 +1,37 @@
+{
+  "topic": "Async iteratori",
+  "lesson": {
+    "title": "for await i async generatori",
+    "body": "`for await...of` iterira preko izvora koji vraca `Promise` po elementu — bilo koji objekat sa `Symbol.asyncIterator`, ali i obican niz Promise-a (svaka vrednost se implicitno `await`-uje). Najlaksi nacin da napravis takav izvor je `async function*`: svaki `yield` postaje jedan `{ value, done }` upakovan u Promise, a `await` unutar tela se ponasa normalno. Kljucna razlika u odnosu na `Promise.all` je sekvencijalnost: `for await` ceka da se element `n` razresi pre nego sto uopste zatrazi element `n+1`, pa nema paralelizma, ali ima kontrolisan protok i ranu obradu. Ako neki element odbaci (reject), petlja baca na tom mestu i preskace ostatak — isto kao `throw` u sinhronoj petlji; `try/catch` oko petlje to hvata. Async generator moze da se konzumira samo jednom, jer je iterator sam sebi izvor i pomera se u mestu. Zamka: `array.map(async x => ...)` unutar `for await` ti ne pomaze — dobijes niz vec pokrenutih Promise-a, sto znaci da su svi startovali odjednom, a `for await` samo cita rezultate redom. Druga zamka: `for await` u obicnoj funkciji je sintaksna greska, mora `async` kontekst."
+  },
+  "task": {
+    "title": "Sekvencijalno kupljenje async vrednosti",
+    "brief": "Napisi async funkciju `collect(source)` koja prolazi kroz async iterabilni (ili obican niz Promise-a) izvor i vraca niz svih razresenih vrednosti, redom. Ako neki element odbaci, greska treba da se propagira dalje (ne hvatas je).",
+    "signature": "async function collect(source)",
+    "starter": "async function collect(source) {\n  // TODO\n}",
+    "tests": [
+      {
+        "name": "kupi vrednosti iz async generatora",
+        "code": "async function* gen() { yield 1; yield 2; yield 3; }\nreturn collect(gen()).then(r => { assert.deepEqual(r, [1, 2, 3]); });"
+      },
+      {
+        "name": "radi i sa nizom Promise-a, vrednosti su razresene",
+        "code": "return collect([Promise.resolve('a'), 'b', Promise.resolve('c')]).then(r => { assert.deepEqual(r, ['a', 'b', 'c']); });"
+      },
+      {
+        "name": "odbijanje se propagira i zaustavlja kupljenje",
+        "code": "let reached = false;\nasync function* gen() { yield 1; throw new Error('boom'); }\nreturn collect(gen()).then(() => { reached = true; }, (e) => { assert.equal(e.message, 'boom'); }).then(() => { assert.equal(reached, false); });"
+      },
+      {
+        "name": "prazan izvor daje prazan niz",
+        "code": "async function* gen() {}\nreturn collect(gen()).then(r => { assert.deepEqual(r, []); });"
+      }
+    ]
+  },
+  "answer": "async function collect(source) {\n  const out = [];\n  for await (const value of source) out.push(value);\n  return out;\n}",
+  "explanation": "`for await...of` sam raspakuje Promise po element, pa radi i nad async generatorom i nad nizom Promise-a. Vrednosti se guraju u niz redom, sto garantuje sekvencijalnost. Kada element odbaci, petlja baca, `collect` vraca odbijeni Promise i akumulirani deo se odbacuje.",
+  "format": "challenge",
+  "id": "2026-08-29-vece",
+  "createdAt": "2026-08-29T15:07:07.957Z",
+  "slot": "vece"
+}
