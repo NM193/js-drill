@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-08-30-vece",
+    "createdAt": "2026-08-30T18:00:23.246Z",
+    "topic": "tipovi vrednosti",
+    "lessonTitle": "Tipovi vrednosti i typeof",
+    "taskTitle": "Saznaj tip vrednosti"
+  },
+  {
     "id": "2026-08-29-vece",
     "createdAt": "2026-08-29T18:01:45.334Z",
     "topic": "let i const",

@@ -1,0 +1,33 @@
+{
+  "topic": "tipovi vrednosti",
+  "lesson": {
+    "title": "Tipovi vrednosti i typeof",
+    "body": "Svaka vrednost u JavaScriptu ima svoj tip. Tekst je `string` i pise se pod navodnicima, broj je `number` i pise se bez njih, a `true` ili `false` je `boolean`. Operator `typeof` ti vrati ime tipa kao tekst, sto je korisno kad ne znas sta ti je stiglo iz nekog podatka.\n\n```js\nconst name = \"Ana\";\nconst age = 30;\nconsole.log(typeof name); // \"string\"\nconsole.log(typeof age);  // \"number\"\n```\n\nRezultat `typeof` je uvek string, pa je `typeof 5` bas tekst `\"number\"`, a ne nesto drugo."
+  },
+  "task": {
+    "title": "Saznaj tip vrednosti",
+    "brief": "Napravljena je promenljiva `value`. Napravi promenljivu `valueType` cija je vrednost tip te vrednosti, dobijen pomocu `typeof`. Primeri: ako je `value` jednako `\"zdravo\"`, `valueType` je `\"string\"`; ako je `value` jednako `42`, `valueType` je `\"number\"`.",
+    "signature": "const valueType",
+    "starter": "const value = \"zdravo\";\nconst valueType = // ovde",
+    "tests": [
+      {
+        "name": "valueType je string \"string\"",
+        "code": "assert.equal(valueType, \"string\");"
+      },
+      {
+        "name": "valueType je i sam tipa string",
+        "code": "assert.equal(typeof valueType, \"string\");"
+      },
+      {
+        "name": "value nije menjan",
+        "code": "assert.equal(value, \"zdravo\");"
+      }
+    ]
+  },
+  "answer": "const value = \"zdravo\";\nconst valueType = typeof value;",
+  "explanation": "`typeof value` gleda vrednost `\"zdravo\"` i vraca ime njenog tipa. Posto je to tekst pod navodnicima, tip je `\"string\"`. Sam rezultat `typeof` je uvek string, zato i `typeof valueType` daje `\"string\"`.",
+  "format": "challenge",
+  "id": "2026-08-30-vece",
+  "createdAt": "2026-08-30T18:00:23.246Z",
+  "slot": "vece"
+}
