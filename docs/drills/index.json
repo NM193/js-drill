@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-08-31-jutro",
+    "createdAt": "2026-08-31T06:00:27.742Z",
+    "topic": "funkcije",
+    "lessonTitle": "Funkcije i return",
+    "taskTitle": "Napravi funkciju addTax"
+  },
+  {
     "id": "2026-08-30-vece",
     "createdAt": "2026-08-30T18:00:23.246Z",
     "topic": "tipovi vrednosti",

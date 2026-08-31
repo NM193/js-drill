@@ -1,0 +1,34 @@
+{
+  "topic": "funkcije",
+  "lesson": {
+    "title": "Funkcije i return",
+    "body": "Funkcija je imenovan komad koda koji mozes da pozoves vise puta. Pravis je recju `function`, pa ime, pa zagrade u kojima stoje parametri - to su imena za vrednosti koje funkcija dobija spolja. Rec `return` govori koju vrednost funkcija vraca nazad onome ko ju je pozvao. Ako nema `return`, funkcija vraca `undefined`, tj. nista korisno.\n\n```js\nfunction double(n) {\n  return n * 2;\n}\ndouble(5); // 10\n```\n\nU praksi funkcije koristis da isto racunanje ne pises po deset puta, nego ga nazoves imenom.",
+    "body_note": ""
+  },
+  "task": {
+    "title": "Napravi funkciju addTax",
+    "brief": "Funkcija `addTax` dobija cenu kao broj i treba da vrati tu cenu uvecanu za 20 posto, tj. cenu pomnozenu sa 1.2. Potpis i `return` su vec napisani - popuni samo izraz na mestu gde stoji `// ovde`.\n\nPrimeri: `addTax(100)` vraca `120`. `addTax(50)` vraca `60`.",
+    "signature": "function addTax(price)",
+    "starter": "function addTax(price) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "addTax(100) je 120",
+        "code": "assert.equal(addTax(100), 120);"
+      },
+      {
+        "name": "addTax(50) je 60",
+        "code": "assert.equal(addTax(50), 60);"
+      },
+      {
+        "name": "addTax(0) je 0",
+        "code": "assert.equal(addTax(0), 0);"
+      }
+    ]
+  },
+  "answer": "function addTax(price) {\n  return price * 1.2;\n}",
+  "explanation": "Parametar `price` je ime za broj koji stigne pri pozivu. Mnozenjem sa 1.2 dobijas cenu uvecanu za 20 posto. `return` tu vrednost salje nazad, pa `addTax(100)` daje 120.",
+  "format": "debug",
+  "id": "2026-08-31-jutro",
+  "createdAt": "2026-08-31T06:00:27.742Z",
+  "slot": "jutro"
+}
