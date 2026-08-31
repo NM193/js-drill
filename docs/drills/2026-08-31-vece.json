@@ -1,0 +1,33 @@
+{
+  "topic": "arrow funkcije",
+  "lesson": {
+    "title": "Arrow funkcije: kraci zapis",
+    "body": "Arrow funkcija je kraci nacin da se napise funkcija. Umesto reci `function` napises parametre, strelicu `=>` i izraz koji se vraca.\n\n```js\nconst add = (a, b) => a + b;\nconsole.log(add(2, 3)); // 5\n```\n\nAko posle strelice NEMA viticastih zagrada, rezultat izraza se vraca automatski - `return` se ne pise. Ako stavis viticaste zagrade `{ }`, onda moras sam da napises `return`, inace funkcija vraca `undefined`. Ovaj zapis ces stalno vidjati u kodu koji AI alati generisu, pa je vazno da ga prepoznajes."
+  },
+  "task": {
+    "title": "Koja varijanta udvostrucuje broj?",
+    "brief": "Tri varijante arrow funkcije `double` su date kao komentari. Samo jedna stvarno vraca broj pomnozen sa 2. Prepisi tacnu varijantu na mesto oznaceno sa `// ovde`. Primeri: double(2) daje 4, double(5) daje 10.",
+    "signature": "double(n)",
+    "starter": "// Koja varijanta vraca n * 2?\n// A: const double = (n) => n * 2;\n// B: const double = (n) => { n * 2; };\n// C: const double = (n) => n + 2;\n\n// ovde\n",
+    "tests": [
+      {
+        "name": "double(2) vraca 4",
+        "code": "assert.equal(double(2), 4);"
+      },
+      {
+        "name": "double(5) vraca 10",
+        "code": "assert.equal(double(5), 10);"
+      },
+      {
+        "name": "double(0) vraca 0",
+        "code": "assert.equal(double(0), 0);"
+      }
+    ]
+  },
+  "answer": "const double = (n) => n * 2;",
+  "explanation": "Varijanta A nema viticaste zagrade, pa se rezultat izraza n * 2 vraca automatski. Varijanta B ima zagrade bez return, pa vraca undefined. Varijanta C sabira umesto da mnozi.",
+  "format": "mcq",
+  "id": "2026-08-31-vece",
+  "createdAt": "2026-08-31T18:00:45.711Z",
+  "slot": "vece"
+}

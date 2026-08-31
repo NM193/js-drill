@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-08-31-vece",
+    "createdAt": "2026-08-31T18:00:45.711Z",
+    "topic": "arrow funkcije",
+    "lessonTitle": "Arrow funkcije: kraci zapis",
+    "taskTitle": "Koja varijanta udvostrucuje broj?"
+  },
+  {
     "id": "2026-08-31-jutro",
     "createdAt": "2026-08-31T06:00:27.742Z",
     "topic": "funkcije",
