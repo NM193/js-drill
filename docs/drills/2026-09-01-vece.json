@@ -1,0 +1,34 @@
+{
+  "topic": "truthy i falsy",
+  "lesson": {
+    "title": "Truthy i falsy vrednosti",
+    "body": "U JavaScriptu svaka vrednost moze da se ponasa kao tacna ili netacna kad se nadje u `if`-u. Vrednosti koje se ponasaju kao netacne zovu se **falsy** i ima ih samo sest: `false`, `0`, `\"\"` (prazan string), `null`, `undefined` i `NaN`. Sve ostalo je **truthy**, ukljucujuci string `\"0\"` i tekst `\"ne\"`. Da proveris kako se neka vrednost ponasa, stavi je u `Boolean()` i dobices `true` ili `false`.\n\n```js\nBoolean(0);        // false\nBoolean(\"zdravo\"); // true\nBoolean(\"\");       // false\n```\n\nOvo u praksi sluzi da kratko proveris da li je nesto uneto: `if (ime)` znaci \"ako ime nije prazno\"."
+  },
+  "task": {
+    "title": "Da li je polje popunjeno",
+    "brief": "Napravi funkciju `isFilled` koja vraca `true` ako je prosledjena vrednost truthy, a `false` ako je falsy. Koristi `Boolean()`. Primeri: `isFilled(\"Ana\")` daje `true`, `isFilled(\"\")` daje `false`.",
+    "signature": "function isFilled(value)",
+    "starter": "function isFilled(value) {\n  return  // ovde\n}",
+    "tests": [
+      {
+        "name": "neprazan string je truthy",
+        "code": "assert.equal(isFilled(\"Ana\"), true);"
+      },
+      {
+        "name": "prazan string je falsy",
+        "code": "assert.equal(isFilled(\"\"), false);"
+      },
+      {
+        "name": "nula je falsy, a broj 5 je truthy",
+        "code": "assert.equal(isFilled(0), false);\nassert.equal(isFilled(5), true);"
+      }
+    ],
+    "answer": "function isFilled(value) {\n  return Boolean(value)\n}"
+  },
+  "answer": "function isFilled(value) {\n  return Boolean(value)\n}",
+  "explanation": "`Boolean(value)` pretvara bilo koju vrednost u `true` ili `false` po pravilima truthy i falsy. Prazan string i nula su falsy, pa vracaju `false`. Sve ostalo, kao `\"Ana\"` i `5`, je truthy.",
+  "format": "debug",
+  "id": "2026-09-01-vece",
+  "createdAt": "2026-09-01T18:00:26.311Z",
+  "slot": "vece"
+}
