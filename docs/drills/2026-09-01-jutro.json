@@ -1,0 +1,33 @@
+{
+  "topic": "uslovi i poredjenje",
+  "lesson": {
+    "title": "if, else i poredjenje sa ===",
+    "body": "`if` proverava uslov i izvrsava kod samo ako je uslov tacan. Ako nije tacan, izvrsava se `else` deo. Za poredjenje koristi `===` (tri znaka jednakosti), koje proverava i vrednost i tip. Postoji i `==`, ali ono tiho pretvara tipove pa je `\"5\" == 5` tacno - zato ga izbegavaj. Postoje i `>`, `<`, `>=`, `<=` za brojeve.\n\n```js\nconst age = 20;\nif (age >= 18) {\n  console.log(\"punoletan\");\n}\n```\n\nU praksi ovo je nacin da program donese odluku: prikazi dugme ili ne, pusti korisnika dalje ili ne."
+  },
+  "task": {
+    "title": "Da li je broj pozitivan",
+    "brief": "Dopuni funkciju `checkNumber` tako da vrati string `\"pozitivan\"` ako je broj veci od nule, a u suprotnom `\"nije pozitivan\"`. Napisi samo uslov na mestu gde stoji `// ovde`.\n\nPrimeri: `checkNumber(5)` daje `\"pozitivan\"`. `checkNumber(-3)` daje `\"nije pozitivan\"`.",
+    "signature": "function checkNumber(n)",
+    "starter": "function checkNumber(n) {\n  if (/* ovde */) {\n    return \"pozitivan\";\n  } else {\n    return \"nije pozitivan\";\n  }\n}",
+    "tests": [
+      {
+        "name": "pozitivan broj",
+        "code": "assert.equal(checkNumber(5), \"pozitivan\");"
+      },
+      {
+        "name": "negativan broj",
+        "code": "assert.equal(checkNumber(-3), \"nije pozitivan\");"
+      },
+      {
+        "name": "nula nije pozitivna",
+        "code": "assert.equal(checkNumber(0), \"nije pozitivan\");"
+      }
+    ]
+  },
+  "answer": "function checkNumber(n) {\n  if (n > 0) {\n    return \"pozitivan\";\n  } else {\n    return \"nije pozitivan\";\n  }\n}",
+  "explanation": "Uslov `n > 0` je tacan samo za brojeve vece od nule. Za `-3` i za `0` uslov nije tacan, pa se izvrsava `else` grana. Nula nije veca od nule, zato pada u `else`.",
+  "format": "challenge",
+  "id": "2026-09-01-jutro",
+  "createdAt": "2026-09-01T06:00:28.360Z",
+  "slot": "jutro"
+}
