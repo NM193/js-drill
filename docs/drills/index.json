@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-02-vece",
+    "createdAt": "2026-09-02T18:00:32.285Z",
+    "topic": "nizovi",
+    "lessonTitle": "Nizovi: lista vrednosti",
+    "taskTitle": "Uzmi drugi element niza"
+  },
+  {
     "id": "2026-09-02-jutro",
     "createdAt": "2026-09-02T06:07:58.149Z",
     "topic": "stringovi",

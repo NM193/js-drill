@@ -1,0 +1,33 @@
+{
+  "topic": "nizovi",
+  "lesson": {
+    "title": "Nizovi: lista vrednosti",
+    "body": "Niz je jedna promenljiva koja cuva vise vrednosti po redu. Pravi se uglastim zagradama, a vrednosti se odvajaju zarezom. Do svake vrednosti se dolazi preko indeksa - to je redni broj mesta u nizu, i on krece od nule, ne od jedan. Zato je prvi element na mestu `[0]`, drugi na `[1]`, i tako dalje.\n\n```js\nconst fruits = [\"apple\", \"banana\", \"kiwi\"];\nconsole.log(fruits[0]); // \"apple\"\nconsole.log(fruits[2]); // \"kiwi\"\n```\n\nU praksi nizovi drze stvari kojih ima vise: spisak korisnika, poruke u chatu, proizvode u korpi."
+  },
+  "task": {
+    "title": "Uzmi drugi element niza",
+    "brief": "Napravi promenljivu `second` koja sadrzi drugi element niza `colors`. Pazi da indeksi krecu od nule. Primer: za `[\"red\", \"blue\", \"green\"]` drugi element je `\"blue\"`; za `[\"a\", \"b\"]` drugi bi bio `\"b\"`.",
+    "signature": "const second",
+    "starter": "const colors = [\"red\", \"blue\", \"green\"];\n\nconst second = // ovde",
+    "tests": [
+      {
+        "name": "second je drugi element niza",
+        "code": "assert.equal(second, \"blue\");"
+      },
+      {
+        "name": "second nije prvi element",
+        "code": "assert.ok(second !== colors[0]);"
+      },
+      {
+        "name": "second je string",
+        "code": "assert.equal(typeof second, \"string\");"
+      }
+    ]
+  },
+  "answer": "const colors = [\"red\", \"blue\", \"green\"];\n\nconst second = colors[1];",
+  "explanation": "Indeksi u nizu krecu od nule, pa je drugi element na mestu `[1]`. Zato `colors[1]` daje `\"blue\"`, dok bi `colors[2]` dalo treci element.",
+  "format": "challenge",
+  "id": "2026-09-02-vece",
+  "createdAt": "2026-09-02T18:00:32.285Z",
+  "slot": "vece"
+}
