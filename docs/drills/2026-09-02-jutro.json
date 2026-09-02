@@ -1,0 +1,33 @@
+{
+  "topic": "stringovi",
+  "lesson": {
+    "title": "Sabloni sa backtick-ovima",
+    "body": "String je tekst. Do sada si ga pisao pod navodnicima, ali postoji i treci nacin: backtick-ovi (` `), znak koji se na tastaturi nalazi levo od jedinice. Unutar backtick-ova mozes da ubacis vrednost promenljive tako sto je stavis u `${...}`. To se zove sablon (template literal) i sluzi da spojis tekst i vrednosti bez sabiranja plusevima.\n\n```js\nconst name = \"Ana\";\nconst greeting = `Zdravo, ${name}!`;\n// greeting je \"Zdravo, Ana!\"\n```\n\nU praksi ovo koristis stalno: poruke korisniku, naslovi, ispis cene ili broja poruka."
+  },
+  "task": {
+    "title": "Napravi poruku sa imenom",
+    "brief": "Napisi funkciju `greet` koja prima ime i vraca pozdrav u obliku `Zdravo, IME!`. Iskoristi sablon sa backtick-ovima. Ponudjene su tri varijante kao komentari A, B i C - prepisi tacnu u telo funkcije na mesto gde stoji `// ovde`.\n\nPrimeri:\n- `greet(\"Ana\")` vraca `\"Zdravo, Ana!\"`\n- `greet(\"Marko\")` vraca `\"Zdravo, Marko!\"`",
+    "signature": "function greet(name)",
+    "starter": "// A) return `Zdravo, name!`;\n// B) return `Zdravo, ${name}!`;\n// C) return \"Zdravo, ${name}!\";\n\nfunction greet(name) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "radi za Ana",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana!\");"
+      },
+      {
+        "name": "radi za Marko",
+        "code": "assert.equal(greet(\"Marko\"), \"Zdravo, Marko!\");"
+      },
+      {
+        "name": "ime se stvarno ubacuje, nije doslovan tekst",
+        "code": "assert.equal(greet(\"Ivana\"), \"Zdravo, Ivana!\");"
+      }
+    ]
+  },
+  "answer": "function greet(name) {\n  return `Zdravo, ${name}!`;\n}",
+  "explanation": "Tacna je varijanta B jer se vrednost promenljive ubacuje samo unutar `${...}` i samo u backtick-ovima. Varijanta A ispisuje doslovnu rec `name`, a varijanta C koristi obicne navodnike gde `${name}` nema nikakvo posebno znacenje.",
+  "format": "mcq",
+  "id": "2026-09-02-jutro",
+  "createdAt": "2026-09-02T06:07:58.149Z",
+  "slot": "jutro"
+}
