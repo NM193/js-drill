@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-03-vece",
+    "createdAt": "2026-09-03T18:00:38.072Z",
+    "topic": "forEach",
+    "lessonTitle": "forEach: prolazak kroz niz",
+    "taskTitle": "Saberi sve brojeve"
+  },
+  {
     "id": "2026-09-03-jutro",
     "createdAt": "2026-09-03T06:00:41.318Z",
     "topic": "for...of petlja",
