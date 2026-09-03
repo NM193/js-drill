@@ -1,0 +1,33 @@
+{
+  "topic": "for...of petlja",
+  "lesson": {
+    "title": "Petlja for...of: prolazak kroz niz",
+    "body": "Petlja je nacin da se isti kod ponovi vise puta. Kad imas niz i zelis da nesto uradis sa svakim elementom, najlakse je da koristis `for...of`. Pise se `for (const x of niz)` i JavaScript sam uzima element po element i stavlja ga u `x`. Blok u viticastim zagradama se izvrsi jednom za svaki element, po redu.\n\n```js\nconst fruits = [\"jabuka\", \"kruska\"];\nfor (const fruit of fruits) {\n  console.log(fruit);\n}\n```\n\nOvo ispise `jabuka` pa `kruska`. U praksi se ovako sabiraju cene, prolazi kroz listu korisnika ili proverava svaki unos redom."
+  },
+  "task": {
+    "title": "Ispravi petlju koja sabira brojeve",
+    "brief": "Funkcija `sum` treba da vrati zbir svih brojeva u nizu. Petlja je napisana pogresno pa se rezultat ne racuna kako treba. Ispravi liniju oznacenu sa `// ovde`.\n\nPrimeri:\n- `sum([1, 2, 3])` vraca `6`\n- `sum([10, 20])` vraca `30`",
+    "signature": "function sum(numbers)",
+    "starter": "function sum(numbers) {\n  let total = 0;\n  for (const n in numbers) { // ovde\n    total = total + n;\n  }\n  return total;\n}",
+    "tests": [
+      {
+        "name": "sabira tri broja",
+        "code": "assert.equal(sum([1, 2, 3]), 6);"
+      },
+      {
+        "name": "sabira dva broja",
+        "code": "assert.equal(sum([10, 20]), 30);"
+      },
+      {
+        "name": "prazan niz daje 0",
+        "code": "assert.equal(sum([]), 0);"
+      }
+    ]
+  },
+  "answer": "function sum(numbers) {\n  let total = 0;\n  for (const n of numbers) {\n    total = total + n;\n  }\n  return total;\n}",
+  "explanation": "Bag je bio u reci `in` umesto `of`. Sa `for...of` promenljiva `n` dobija sam element niza, pa se brojevi stvarno sabiraju. Sa `in` dobija se nesto drugo, pa zbir ispadne pogresan.",
+  "format": "debug",
+  "id": "2026-09-03-jutro",
+  "createdAt": "2026-09-03T06:00:41.318Z",
+  "slot": "jutro"
+}
