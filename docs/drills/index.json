@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-04-vece",
+    "createdAt": "2026-09-04T18:01:04.748Z",
+    "topic": "filter",
+    "lessonTitle": "filter: izdvajanje po uslovu",
+    "taskTitle": "Popravi uslov u filteru"
+  },
+  {
     "id": "2026-09-04-jutro",
     "createdAt": "2026-09-04T06:46:39.844Z",
     "topic": "map",

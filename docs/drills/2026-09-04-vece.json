@@ -1,0 +1,33 @@
+{
+  "topic": "filter",
+  "lesson": {
+    "title": "filter: izdvajanje po uslovu",
+    "body": "`filter` pravi nov niz od postojeceg, ali u njega upada samo ono sto ispunjava uslov. Ide kroz svaki element i pita: da li je uslov tacan? Ako jeste, element ulazi u novi niz; ako nije, preskace se. Uslov pises kao malu strelicastu funkciju koja vraca `true` ili `false`. Stari niz se ne menja, dobijas potpuno nov.\n\n```js\nconst ages = [12, 20, 15];\nconst adults = ages.filter((a) => a >= 18);\nconsole.log(adults); // [20]\n```\n\nU praksi tako iz liste izvlacis samo ono sto ti treba, na primer samo neplacene racune."
+  },
+  "task": {
+    "title": "Popravi uslov u filteru",
+    "brief": "Promenljiva `big` treba da sadrzi samo brojeve vece od 5. Uslov u filteru je pogresan - ispravi ga. Primeri: iz `[3, 10, 7, 12]` izlazi `[10, 7, 12]`; iz `[1, 9]` izaslo bi `[9]`.",
+    "signature": "const big",
+    "starter": "const numbers = [3, 10, 7, 12];\n\nconst big = numbers.filter((n) => n < 5); // ovde",
+    "tests": [
+      {
+        "name": "big sadrzi samo brojeve vece od 5",
+        "code": "assert.deepEqual(big, [10, 7, 12]);"
+      },
+      {
+        "name": "big ima tri elementa",
+        "code": "assert.equal(big.length, 3);"
+      },
+      {
+        "name": "polazni niz nije promenjen",
+        "code": "assert.deepEqual(numbers, [3, 10, 7, 12]);"
+      }
+    ]
+  },
+  "answer": "const numbers = [3, 10, 7, 12];\n\nconst big = numbers.filter((n) => n > 5);",
+  "explanation": "Uslov je bio okrenut naopako, pa je propustao male brojeve umesto velikih. Zamenom `<` sa `>` u niz ulaze samo brojevi veci od 5. `filter` pravi nov niz, zato `numbers` ostaje isti.",
+  "format": "debug",
+  "id": "2026-09-04-vece",
+  "createdAt": "2026-09-04T18:01:04.748Z",
+  "slot": "vece"
+}
