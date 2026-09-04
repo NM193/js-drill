@@ -1,0 +1,34 @@
+{
+  "topic": "map",
+  "lesson": {
+    "title": "map: novi niz od starog",
+    "body": "`map` prolazi kroz svaki element niza i pravi NOVI niz od rezultata. Njemu daješ funkciju, a ono što ta funkcija vrati postaje element novog niza. Stari niz ostaje nepromenjen. To se u praksi stalno koristi: imaš niz cena i hoćeš niz cena sa popustom, ili niz imena i hoćeš niz pozdrava.\n\n```js\nconst numbers = [1, 2, 3];\nconst doubled = numbers.map((n) => n * 2);\n// doubled je [2, 4, 6], numbers je i dalje [1, 2, 3]\n```",
+    "body_note": ""
+  },
+  "task": {
+    "title": "Duplo veći brojevi",
+    "brief": "Dopuni funkciju `triple` tako da vrati novi niz u kome je svaki broj pomnožen sa 3. Koristi `map`. Primer: `triple([1, 2])` vraća `[3, 6]`. Primer: `triple([10, 0])` vraća `[30, 0]`.",
+    "signature": "function triple(numbers)",
+    "starter": "function triple(numbers) {\n  return numbers.map((n) => /* ovde */);\n}",
+    "tests": [
+      {
+        "name": "mnozi svaki broj sa 3",
+        "code": "assert.deepEqual(triple([1, 2]), [3, 6]);"
+      },
+      {
+        "name": "radi sa nulom i vecim brojem",
+        "code": "assert.deepEqual(triple([10, 0]), [30, 0]);"
+      },
+      {
+        "name": "ne menja polazni niz",
+        "code": "const start = [4, 5];\ntriple(start);\nassert.deepEqual(start, [4, 5]);"
+      }
+    ]
+  },
+  "answer": "function triple(numbers) {\n  return numbers.map((n) => n * 3);\n}",
+  "explanation": "`map` poziva datu funkciju za svaki element i skuplja povratne vrednosti u novi niz. Funkcija `(n) => n * 3` vraća trostruku vrednost svakog broja. Polazni niz se ne dira, `map` uvek pravi novi.",
+  "format": "challenge",
+  "id": "2026-09-04-jutro",
+  "createdAt": "2026-09-04T06:46:39.844Z",
+  "slot": "jutro"
+}
