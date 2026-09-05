@@ -1,0 +1,33 @@
+{
+  "topic": "find",
+  "lesson": {
+    "title": "find: prvi element po uslovu",
+    "body": "Metoda `find` prolazi kroz niz i vraca **prvi** element koji zadovoljava uslov. Uslov pises kao malu funkciju koja vraca `true` ili `false`. Cim naidje na prvi za koji je `true`, staje i vraca sam taj element - ne niz, nego jednu vrednost. Ako nijedan element ne odgovara, `find` vraca `undefined`. Razlika u odnosu na `filter`: `filter` vraca niz svih pogodaka, `find` samo prvi.\n\n```js\nconst numbers = [4, 9, 15, 20];\nconst first = numbers.find(n => n > 10);\nconsole.log(first); // 15\n```\n\nU praksi ovo koristis kad trazis jednu odredjenu stvar u listi, na primer korisnika po imenu."
+  },
+  "task": {
+    "title": "Prvi broj veci od 10",
+    "brief": "Ponudjene su tri implementacije: A, B i C. Samo jedna vraca prvi broj iz niza koji je veci od 10. Prepisi tu varijantu u telo funkcije `firstOver10`.\n\nPrimeri:\n- `firstOver10([3, 12, 20])` vraca `12`\n- `firstOver10([1, 2, 3])` vraca `undefined`",
+    "signature": "function firstOver10(numbers)",
+    "starter": "// A: return numbers.filter(n => n > 10);\n// B: return numbers.find(n => n > 10);\n// C: return numbers.forEach(n => n > 10);\n\nfunction firstOver10(numbers) {\n  // ovde - prepisi varijantu A, B ili C\n}",
+    "tests": [
+      {
+        "name": "vraca prvi broj veci od 10",
+        "code": "assert.equal(firstOver10([3, 12, 20]), 12);"
+      },
+      {
+        "name": "vraca undefined kad nema takvog broja",
+        "code": "assert.equal(firstOver10([1, 2, 3]), undefined);"
+      },
+      {
+        "name": "staje na prvom pogotku, ne na poslednjem",
+        "code": "assert.equal(firstOver10([50, 60]), 50);"
+      }
+    ]
+  },
+  "answer": "function firstOver10(numbers) {\n  return numbers.find(n => n > 10);\n}",
+  "explanation": "Varijanta B je tacna jer `find` vraca sam element, a ne niz. Varijanta A koristi `filter` pa bi vratila niz `[12, 20]` umesto broja `12`. Varijanta C koristi `forEach`, koji uvek vraca `undefined`.",
+  "format": "mcq",
+  "id": "2026-09-05-jutro",
+  "createdAt": "2026-09-05T06:00:37.281Z",
+  "slot": "jutro"
+}

@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-05-jutro",
+    "createdAt": "2026-09-05T06:00:37.281Z",
+    "topic": "find",
+    "lessonTitle": "find: prvi element po uslovu",
+    "taskTitle": "Prvi broj veci od 10"
+  },
+  {
     "id": "2026-09-04-vece",
     "createdAt": "2026-09-04T18:01:04.748Z",
     "topic": "filter",
