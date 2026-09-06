@@ -1,0 +1,33 @@
+{
+  "topic": "objekti",
+  "lesson": {
+    "title": "Objekti: vise podataka pod jednim imenom",
+    "body": "Objekat je vrednost koja drzi vise podataka pod jednim imenom. Svaki podatak u objektu se zove svojstvo i ima svoje ime i svoju vrednost. Objekat se pravi viticastim zagradama, a svojstvu se pristupa tackom: prvo ime objekta, pa tacka, pa ime svojstva.\n\n```js\nconst user = { name: \"Ana\", age: 30 };\nconsole.log(user.name); // \"Ana\"\nconsole.log(user.age); // 30\n```\n\nOvo sluzi da jednu stvar iz stvarnog sveta, na primer korisnika ili knjigu, opises na jednom mestu umesto u pet odvojenih promenljivih. Redosled svojstava nije bitan, jer se svojstvo uvek trazi po imenu."
+  },
+  "task": {
+    "title": "Procitaj naslov knjige",
+    "brief": "Funkcija getTitle dobija objekat koji opisuje knjigu i treba da vrati vrednost njegovog svojstva title. Popuni mesto oznaceno sa // ovde.\n\nPrimer 1: getTitle({ title: \"Dina\", pages: 412 }) vraca \"Dina\".\nPrimer 2: getTitle({ title: \"Hobit\", pages: 310 }) vraca \"Hobit\".",
+    "signature": "function getTitle(book)",
+    "starter": "function getTitle(book) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca naslov knjige Dina",
+        "code": "assert.equal(getTitle({ title: \"Dina\", pages: 412 }), \"Dina\");"
+      },
+      {
+        "name": "vraca naslov knjige Hobit",
+        "code": "assert.equal(getTitle({ title: \"Hobit\", pages: 310 }), \"Hobit\");"
+      },
+      {
+        "name": "radi i kad title nije prvo svojstvo",
+        "code": "assert.equal(getTitle({ pages: 100, title: \"Solaris\" }), \"Solaris\");"
+      }
+    ]
+  },
+  "answer": "function getTitle(book) {\n  return book.title;\n}",
+  "explanation": "Izraz book.title cita svojstvo po imenu title iz objekta book. Nije bitno na kom mestu u objektu to svojstvo stoji, jer se trazi po imenu, ne po redosledu.",
+  "format": "challenge",
+  "id": "2026-09-06-jutro",
+  "createdAt": "2026-09-06T06:00:43.645Z",
+  "slot": "jutro"
+}

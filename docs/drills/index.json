@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-06-jutro",
+    "createdAt": "2026-09-06T06:00:43.645Z",
+    "topic": "objekti",
+    "lessonTitle": "Objekti: vise podataka pod jednim imenom",
+    "taskTitle": "Procitaj naslov knjige"
+  },
+  {
     "id": "2026-09-05-jutro",
     "createdAt": "2026-09-05T06:00:37.281Z",
     "topic": "find",
