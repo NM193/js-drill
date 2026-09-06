@@ -1,0 +1,33 @@
+{
+  "topic": "ugnjezdeni objekti",
+  "lesson": {
+    "title": "Objekat unutar objekta",
+    "body": "Vrednost svojstva u objektu moze da bude i drugi objekat. To se zove ugnjezdeni objekat: objekat unutar objekta. Do unutrasnje vrednosti stizes tako sto nadovezujes tacke, po jednu za svaki nivo.\n\n```js\nconst user = { name: \"Ana\", address: { city: \"Novi Sad\", zip: 21000 } };\nconsole.log(user.address.city); // \"Novi Sad\"\nconsole.log(user.address.zip);  // 21000\n```\n\nOvo ces sretati stalno, jer podaci sa servera skoro uvek stizu kao objekti u objektima. Ako preskocis nivo, na primer `user.city`, dobijes `undefined`, jer `user` nema svojstvo `city` direktno u sebi."
+  },
+  "task": {
+    "title": "Grad kupca",
+    "brief": "Kod pokusava da iz objekta `order` izvuce grad kupca u promenljivu `city`, ali cita pogresan nivo. Ispravi liniju oznacenu sa `// ovde` tako da `city` sadrzi grad iz ugnjezdenog objekta `customer`. Primeri: za customer `{ name: \"Marko\", city: \"Nis\" }` city je \"Nis\"; za customer `{ name: \"Jelena\", city: \"Subotica\" }` city bi bio \"Subotica\".",
+    "signature": "const city",
+    "starter": "const order = {\n  id: 7,\n  customer: { name: \"Marko\", city: \"Nis\" }\n};\nconst city = order.city; // ovde",
+    "tests": [
+      {
+        "name": "city je grad kupca",
+        "code": "assert.equal(city, \"Nis\");"
+      },
+      {
+        "name": "order i dalje ima ugnjezdeni objekat customer",
+        "code": "assert.equal(order.customer.name, \"Marko\");"
+      },
+      {
+        "name": "order nema svojstvo city direktno",
+        "code": "assert.equal(order.city, undefined);"
+      }
+    ]
+  },
+  "answer": "const order = {\n  id: 7,\n  customer: { name: \"Marko\", city: \"Nis\" }\n};\nconst city = order.customer.city;",
+  "explanation": "Grad nije direktno u `order`, nego u unutrasnjem objektu `customer`. Zato treba proci kroz oba nivoa: `order.customer.city`. Izraz `order.city` daje `undefined`, jer `order` nema takvo svojstvo.",
+  "format": "debug",
+  "id": "2026-09-06-vece",
+  "createdAt": "2026-09-06T18:00:59.456Z",
+  "slot": "vece"
+}
