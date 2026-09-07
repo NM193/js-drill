@@ -1,0 +1,33 @@
+{
+  "topic": "destrukturiranje objekta",
+  "lesson": {
+    "title": "Destrukturiranje objekta",
+    "body": "Destrukturiranje je kraci nacin da vrednost iz objekta prebacis u promenljivu. Umesto da pises `const ime = osoba.ime`, stavis viticaste zagrade sa leve strane i unutar njih ime svojstva. JavaScript tada sam pronadje to svojstvo i napravi promenljivu istog imena.\n\n```js\nconst osoba = { ime: \"Ana\", godine: 30 };\nconst { ime } = osoba;\nconsole.log(ime); // \"Ana\"\n```\n\nAko svojstvo ne postoji, promenljiva dobija `undefined`. Ovo se stalno koristi kad iz nekog podatka treba samo jedno ili dva polja."
+  },
+  "task": {
+    "title": "Izaberi tacno destrukturiranje",
+    "brief": "Napisana su tri pokusaja da se iz objekta `user` izvuce svojstvo `city`. Samo jedan koristi ispravno destrukturiranje. Prepisi taj jedan red u telo funkcije, na mesto komentara `// ovde`, i vrati vrednost. Primer 1: `getCity({ name: \"Ana\", city: \"Nis\" })` vraca `\"Nis\"`. Primer 2: `getCity({ city: \"Novi Sad\" })` vraca `\"Novi Sad\"`.",
+    "signature": "function getCity(user)",
+    "starter": "// A) const { city } = user;\n// B) const city = user{ city };\n// C) const [city] = user;\n\nfunction getCity(user) {\n  // ovde\n  return city;\n}",
+    "tests": [
+      {
+        "name": "vraca grad iz objekta sa dva svojstva",
+        "code": "assert.equal(getCity({ name: \"Ana\", city: \"Nis\" }), \"Nis\");"
+      },
+      {
+        "name": "radi i kad je redosled svojstava drugaciji",
+        "code": "assert.equal(getCity({ city: \"Novi Sad\", age: 30 }), \"Novi Sad\");"
+      },
+      {
+        "name": "vraca undefined kad svojstvo ne postoji",
+        "code": "assert.equal(getCity({ name: \"Mila\" }), undefined);"
+      }
+    ]
+  },
+  "answer": "function getCity(user) {\n  const { city } = user;\n  return city;\n}",
+  "explanation": "Tacna je varijanta A: viticaste zagrade sa leve strane znace destrukturiranje objekta i prave promenljivu `city` od svojstva `city`. Varijanta B nije validan JavaScript, a C koristi uglaste zagrade koje sluze za nizove, ne za objekte. Kad svojstva nema, kao u trecem testu, promenljiva dobija `undefined`.",
+  "format": "mcq",
+  "id": "2026-09-07-jutro",
+  "createdAt": "2026-09-07T06:00:34.163Z",
+  "slot": "jutro"
+}

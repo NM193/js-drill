@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-07-jutro",
+    "createdAt": "2026-09-07T06:00:34.163Z",
+    "topic": "destrukturiranje objekta",
+    "lessonTitle": "Destrukturiranje objekta",
+    "taskTitle": "Izaberi tacno destrukturiranje"
+  },
+  {
     "id": "2026-09-06-vece",
     "createdAt": "2026-09-06T18:00:59.456Z",
     "topic": "ugnjezdeni objekti",
