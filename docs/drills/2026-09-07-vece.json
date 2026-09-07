@@ -1,0 +1,33 @@
+{
+  "topic": "podrazumevane vrednosti parametara",
+  "lesson": {
+    "title": "Podrazumevana vrednost parametra",
+    "body": "Kada pozoves funkciju bez nekog argumenta, taj parametar bude `undefined`. Da se to ne desi, mozes mu dati podrazumevanu vrednost - vrednost koja se koristi ako argument nije prosledjen. Pise se znakom `=` odmah u potpisu funkcije.\n\n```js\nfunction pozdrav(ime, rec = \"Zdravo\") {\n  return `${rec}, ${ime}!`;\n}\npozdrav(\"Ana\"); // \"Zdravo, Ana!\"\npozdrav(\"Ana\", \"Cao\"); // \"Cao, Ana!\"\n```\n\nPodrazumevana vrednost se koristi samo kada je argument `undefined` - ako posaljes `0` ili prazan string, oni se koriste kao pravi argument. U praksi ovo sluzi da funkcija radi i kad pozivalac ne zna ili ne mora da navede svaki detalj."
+  },
+  "task": {
+    "title": "Kolicina podrazumevano 1",
+    "brief": "Funkcija `ukupno` racuna ukupnu cenu kao cena puta kolicina. Dopuni potpis tako da `kolicina` ima podrazumevanu vrednost 1, pa poziv sa samo jednim argumentom vrati cenu jednog komada. Primer: `ukupno(200, 3)` daje `600`. Primer: `ukupno(200)` daje `200`.",
+    "signature": "function ukupno(cena, kolicina)",
+    "starter": "function ukupno(cena, kolicina) { // ovde\n  return cena * kolicina;\n}",
+    "tests": [
+      {
+        "name": "racuna sa prosledjenom kolicinom",
+        "code": "assert.equal(ukupno(200, 3), 600);"
+      },
+      {
+        "name": "bez kolicine koristi 1",
+        "code": "assert.equal(ukupno(200), 200);"
+      },
+      {
+        "name": "nula je prava vrednost, ne podrazumevana",
+        "code": "assert.equal(ukupno(50, 0), 0);"
+      }
+    ]
+  },
+  "answer": "function ukupno(cena, kolicina = 1) {\n  return cena * kolicina;\n}",
+  "explanation": "Znak `=` u potpisu daje parametru `kolicina` vrednost 1 kada argument nije prosledjen. Zato `ukupno(200)` racuna 200 * 1. Kada prosledis 0, to je stvarna vrednost pa se podrazumevana ne koristi.",
+  "format": "challenge",
+  "id": "2026-09-07-vece",
+  "createdAt": "2026-09-07T18:00:36.719Z",
+  "slot": "vece"
+}
