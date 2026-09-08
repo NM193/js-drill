@@ -1,0 +1,33 @@
+{
+  "topic": "try i catch",
+  "lesson": {
+    "title": "try i catch: hvatanje greske",
+    "body": "Kada kod pukne, program staje i dalje se nista ne izvrsava. `try` i `catch` sluze da to sprecis: u `try` blok stavis kod koji moze da pukne, a u `catch` blok ono sto treba uraditi ako pukne. Promenljiva u zagradi posle `catch` je objekat greske, pa preko `greska.message` mozes da vidis sta se desilo. Ako u `try` bloku nista ne pukne, `catch` se uopste ne izvrsava. U praksi ovo koristis kad radis sa necim nesigurnim, na primer sa podacima koji stizu spolja i mozda nisu tu.\n\n```js\ntry { null.length; }\ncatch (greska) { console.log(greska.message); }\n```"
+  },
+  "task": {
+    "title": "Duzina ili nula",
+    "brief": "Funkcija `duzinaIliNula` treba da vrati duzinu prosledjene vrednosti. Ako citanje duzine pukne (na primer za `null`), treba da vrati `0`. Ponudjene su tri varijante kao komentari A, B i C - upisi u telo funkcije onu koja je tacna.\n\nPrimeri:\n- `duzinaIliNula(\"zdravo\")` daje `6`\n- `duzinaIliNula(null)` daje `0`",
+    "signature": "function duzinaIliNula(vrednost)",
+    "starter": "// A\n// try { return vrednost.length; } catch (greska) { return 0; }\n\n// B\n// try { return vrednost.length; } catch (greska) { return greska.message; }\n\n// C\n// if (vrednost.length) { return vrednost.length; } else { return 0; }\n\nfunction duzinaIliNula(vrednost) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "za string vraca njegovu duzinu",
+        "code": "assert.equal(duzinaIliNula(\"zdravo\"), 6);"
+      },
+      {
+        "name": "za null vraca nulu umesto da pukne",
+        "code": "assert.equal(duzinaIliNula(null), 0);"
+      },
+      {
+        "name": "za niz vraca broj elemenata",
+        "code": "assert.equal(duzinaIliNula([1, 2, 3]), 3);"
+      }
+    ]
+  },
+  "answer": "function duzinaIliNula(vrednost) {\n  try { return vrednost.length; } catch (greska) { return 0; }\n}",
+  "explanation": "Tacna je varijanta A: `vrednost.length` ide u `try`, a `catch` vraca `0` kad citanje duzine pukne. Varijanta B hvata gresku ali vraca tekst poruke umesto broja. Varijanta C nema `try`, pa za `null` puca vec u samom `if` uslovu.",
+  "format": "mcq",
+  "id": "2026-09-08-vece",
+  "createdAt": "2026-09-08T18:00:55.349Z",
+  "slot": "vece"
+}

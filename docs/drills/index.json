@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-08-vece",
+    "createdAt": "2026-09-08T18:00:55.349Z",
+    "topic": "try i catch",
+    "lessonTitle": "try i catch: hvatanje greske",
+    "taskTitle": "Duzina ili nula"
+  },
+  {
     "id": "2026-09-08-jutro",
     "createdAt": "2026-09-08T06:00:31.022Z",
     "topic": "greske i poruke",
