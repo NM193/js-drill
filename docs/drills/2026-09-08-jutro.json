@@ -1,0 +1,34 @@
+{
+  "topic": "greske i poruke",
+  "lesson": {
+    "title": "Greske: kako se cita poruka",
+    "body": "Kada JavaScript naidje na nesto sto ne moze da uradi, on baca gresku i program staje. Poruka o gresci ima dva dela: tip greske i objasnjenje. Najcesci tipovi su `TypeError` (vrednost nije onog tipa koji ocekujes) i `ReferenceError` (koristis ime koje ne postoji). Gresku mozes i sam da napravis pomocu `new Error(\"tekst\")`, i da je bacis sa `throw`. To je korisno kad zelis da jasno kazes sta je poslo naopako umesto da vratis pogresan rezultat.\n\n```js\nconst greska = new Error(\"Nema imena\");\nconsole.log(greska.message); // \"Nema imena\"\nthrow new Error(\"Broj mora biti pozitivan\");\n```",
+    "emoji": "⚠️"
+  },
+  "task": {
+    "title": "Baci gresku za prazan tekst",
+    "brief": "Funkcija `pozdrav` prima ime. Ako je ime prazan string, treba da baci gresku sa porukom \"Ime je obavezno\". U suprotnom vraca pozdrav. Primeri: `pozdrav(\"Ana\")` vraca \"Zdravo, Ana\"; `pozdrav(\"\")` baca gresku sa porukom \"Ime je obavezno\".",
+    "signature": "function pozdrav(ime)",
+    "starter": "function pozdrav(ime) {\n  if (ime === \"\") {\n    // ovde\n  }\n  return `Zdravo, ${ime}`;\n}",
+    "tests": [
+      {
+        "name": "vraca pozdrav za obicno ime",
+        "code": "assert.equal(pozdrav(\"Ana\"), \"Zdravo, Ana\");"
+      },
+      {
+        "name": "baca gresku za prazan string",
+        "code": "assert.throws(() => pozdrav(\"\"));"
+      },
+      {
+        "name": "poruka greske je tacna",
+        "code": "let poruka = \"\";\ntry { pozdrav(\"\"); } catch (e) { poruka = e.message; }\nassert.equal(poruka, \"Ime je obavezno\");"
+      }
+    ]
+  },
+  "answer": "function pozdrav(ime) {\n  if (ime === \"\") {\n    throw new Error(\"Ime je obavezno\");\n  }\n  return `Zdravo, ${ime}`;\n}",
+  "explanation": "`throw new Error(\"Ime je obavezno\")` pravi gresku sa tvojom porukom i odmah zaustavlja funkciju. Tekst koji das u zagradi cuva se u `greska.message`. Tako pozivalac funkcije jasno vidi sta je bio problem.",
+  "format": "debug",
+  "id": "2026-09-08-jutro",
+  "createdAt": "2026-09-08T06:00:31.022Z",
+  "slot": "jutro"
+}
