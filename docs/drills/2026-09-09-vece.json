@@ -1,0 +1,33 @@
+{
+  "topic": "Object.keys",
+  "lesson": {
+    "title": "Object.keys: spisak kljuceva",
+    "body": "Objekat cuva vrednosti pod imenima, a ta imena se zovu kljucevi. `Object.keys(objekat)` vraca niz svih kljuceva tog objekta, i to kao stringove.\n\n```js\nconst user = { name: \"Ana\", age: 30 };\nconst keys = Object.keys(user);\nconsole.log(keys); // [\"name\", \"age\"]\n```\n\nRedosled u nizu je isti kao redosled kojim su svojstva napisana. U praksi to sluzi kada ne znas unapred sta sve stoji u objektu, pa hoces da vidis ili prodjes kroz sva svojstva. Vazno: u zagradu ide ceo objekat, a ne jedno njegovo svojstvo."
+  },
+  "task": {
+    "title": "Popravi spisak kljuceva",
+    "brief": "Kod treba da napravi niz imena svih svojstava objekta `car`, ali je u zagradu ubaceno pogresno. Ispravi liniju sa `// ovde` tako da `keys` bude niz kljuceva.\n\nPrimer 1: za `{ brand: \"Fiat\", year: 2020 }` rezultat je `[\"brand\", \"year\"]`.\nPrimer 2: za `{ color: \"red\" }` rezultat je `[\"color\"]`.",
+    "signature": "const keys (niz imena svojstava objekta car)",
+    "starter": "const car = { brand: \"Fiat\", year: 2020, color: \"red\" };\n\nconst keys = Object.keys(car.brand); // ovde",
+    "tests": [
+      {
+        "name": "keys je niz sva tri kljuceva, tim redom",
+        "code": "assert.deepEqual(keys, [\"brand\", \"year\", \"color\"]);"
+      },
+      {
+        "name": "ima tacno tri kljuca",
+        "code": "assert.equal(keys.length, 3);"
+      },
+      {
+        "name": "prvi kljuc je brand",
+        "code": "assert.equal(keys[0], \"brand\");"
+      }
+    ]
+  },
+  "answer": "const car = { brand: \"Fiat\", year: 2020, color: \"red\" };\n\nconst keys = Object.keys(car);",
+  "explanation": "`Object.keys` ocekuje ceo objekat, pa u zagradu ide `car`, a ne `car.brand`. Sa `car.brand` prosledjujes string \"Fiat\", pa dobijas njegove indekse umesto imena svojstava. Ispravno `Object.keys(car)` vraca `[\"brand\", \"year\", \"color\"]`.",
+  "format": "debug",
+  "id": "2026-09-09-vece",
+  "createdAt": "2026-09-09T18:00:42.397Z",
+  "slot": "vece"
+}
