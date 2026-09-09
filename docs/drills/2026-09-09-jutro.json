@@ -1,0 +1,34 @@
+{
+  "topic": "for petlja",
+  "lesson": {
+    "title": "for petlja: ponavljanje sa brojacem",
+    "body": "Petlja `for` ponavlja isti kod vise puta i sama vodi racuna o tome koji je krug u toku. U zagradi stoje tri dela odvojena tacka-zarezom: pocetna vrednost brojaca, uslov dokle se ponavlja, i kako se brojac menja posle svakog kruga. Zapis `i++` znaci isto sto i `i = i + 1`, dakle uvecaj brojac za jedan. Cim uslov postane netacan, petlja staje.\n\n```js\nfor (let i = 1; i <= 3; i++) {\n  console.log(i);\n}\n// ispisuje 1, pa 2, pa 3\n```\n\nOvo koristis kada ti treba tacan broj ponavljanja ili sam broj koraka, na primer da sabere brojeve od 1 do 10.",
+    "body_note": null
+  },
+  "task": {
+    "title": "Zbir brojeva do n",
+    "brief": "Napisi jednu liniju unutar petlje tako da funkcija `sumTo` vrati zbir svih celih brojeva od 1 do n. Brojac `i` u svakom krugu ima sledeci broj, a `total` cuva zbir do sada. Primeri: `sumTo(3)` daje `6` (1 + 2 + 3), `sumTo(5)` daje `15` (1 + 2 + 3 + 4 + 5).",
+    "signature": "function sumTo(n)",
+    "starter": "function sumTo(n) {\n  let total = 0;\n  for (let i = 1; i <= n; i++) {\n    // ovde\n  }\n  return total;\n}",
+    "tests": [
+      {
+        "name": "sumTo(3) je 6",
+        "code": "assert.equal(sumTo(3), 6);"
+      },
+      {
+        "name": "sumTo(5) je 15",
+        "code": "assert.equal(sumTo(5), 15);"
+      },
+      {
+        "name": "sumTo(0) je 0 jer petlja ne krene",
+        "code": "assert.equal(sumTo(0), 0);"
+      }
+    ]
+  },
+  "answer": "function sumTo(n) {\n  let total = 0;\n  for (let i = 1; i <= n; i++) {\n    total = total + i;\n  }\n  return total;\n}",
+  "explanation": "Petlja krece od `i = 1` i ide dok je `i <= n`, pa u svakom krugu dodaje tekuci broj na `total`. Posle poslednjeg kruga uslov postane netacan i petlja staje. Kada je `n` nula, uslov je netacan odmah, telo se ne izvrsi i vraca se pocetnih 0.",
+  "format": "challenge",
+  "id": "2026-09-09-jutro",
+  "createdAt": "2026-09-09T06:00:42.262Z",
+  "slot": "jutro"
+}
