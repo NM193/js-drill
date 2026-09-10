@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-10-vece",
+    "createdAt": "2026-09-10T18:00:51.043Z",
+    "topic": "spread niza",
+    "lessonTitle": "Spread: tri tacke ispred niza",
+    "taskTitle": "Spoji dva niza u jedan"
+  },
+  {
     "id": "2026-09-10-jutro",
     "createdAt": "2026-09-10T06:18:43.250Z",
     "topic": "Object.values",

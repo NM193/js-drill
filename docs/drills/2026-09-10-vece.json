@@ -1,0 +1,33 @@
+{
+  "topic": "spread niza",
+  "lesson": {
+    "title": "Spread: tri tacke ispred niza",
+    "body": "Tri tacke `...` ispred niza se zovu **spread** (rasipanje). One raspakuju niz - izvade sve njegove elemente i ubace ih tacno na to mesto gde stoje. Tako se lako pravi kopija niza ili se dva niza spajaju u jedan nov, a originalni nizovi ostaju netaknuti. U praksi se to koristi stalno, jer cesto ne zelimo da menjamo stari niz nego da dobijemo nov sa dodatim elementima.\n\n```js\nconst first = [1, 2];\nconst second = [3, 4];\nconst all = [...first, ...second]; // [1, 2, 3, 4]\nconst withZero = [0, ...first];    // [0, 1, 2]\n```"
+  },
+  "task": {
+    "title": "Spoji dva niza u jedan",
+    "brief": "Napravi promenljivu `all` koja sadrzi sve elemente iz `fruits` pa zatim sve iz `veggies`, koristeci spread. Primer: `[1, 2]` i `[3]` daju `[1, 2, 3]`; `['a']` i `['b', 'c']` daju `['a', 'b', 'c']`.",
+    "signature": "const all",
+    "starter": "const fruits = ['jabuka', 'kruska'];\nconst veggies = ['sargarepa', 'krompir'];\nconst all = // ovde",
+    "tests": [
+      {
+        "name": "all sadrzi sve elemente po redu",
+        "code": "assert.deepEqual(all, ['jabuka', 'kruska', 'sargarepa', 'krompir']);"
+      },
+      {
+        "name": "all ima 4 elementa",
+        "code": "assert.equal(all.length, 4);"
+      },
+      {
+        "name": "originalni niz fruits je ostao isti",
+        "code": "assert.equal(fruits.length, 2);\nassert.ok(all !== fruits);"
+      }
+    ]
+  },
+  "answer": "const fruits = ['jabuka', 'kruska'];\nconst veggies = ['sargarepa', 'krompir'];\nconst all = [...fruits, ...veggies];",
+  "explanation": "`...fruits` izvadi sve elemente iz `fruits`, `...veggies` iz `veggies`, i oba se po redu slazu u nov niz. Originalni nizovi se pri tome ne menjaju.",
+  "format": "challenge",
+  "id": "2026-09-10-vece",
+  "createdAt": "2026-09-10T18:00:51.043Z",
+  "slot": "vece"
+}
