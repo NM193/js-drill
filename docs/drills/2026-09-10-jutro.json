@@ -1,0 +1,33 @@
+{
+  "topic": "Object.values",
+  "lesson": {
+    "title": "Object.values",
+    "body": "Do sada si video `Object.keys`, koji daje niz imena svojstava objekta. `Object.values` radi slicno, ali daje niz vrednosti tih svojstava, u istom redosledu. Korisno je kad te ne zanimaju imena nego samo ono sto stoji unutra, na primer brojevi koje hoces da saberes ili prikazes. Ako je objekat prazan, dobijes prazan niz.\n\n```js\nconst prices = { bread: 80, milk: 120, eggs: 200 };\nconst values = Object.values(prices);\n// values je [80, 120, 200]\n```"
+  },
+  "task": {
+    "title": "Izvuci cene iz objekta",
+    "brief": "Funkcija getPrices prima objekat u kome su imena proizvoda kljucevi, a cene vrednosti. Treba da vrati niz svih cena. Izaberi tacnu varijantu (A, B ili C) i prepisi je u funkciju na mesto komentara `// ovde`.\n\nPrimeri:\n- getPrices({ bread: 80, milk: 120 }) -> [80, 120]\n- getPrices({ apple: 50 }) -> [50]",
+    "signature": "function getPrices(shop)",
+    "starter": "// A: return Object.keys(shop);\n// B: return Object.values(shop);\n// C: return shop.values();\n\nfunction getPrices(shop) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca cene dva proizvoda",
+        "code": "assert.deepEqual(getPrices({ bread: 80, milk: 120 }), [80, 120]);"
+      },
+      {
+        "name": "vraca cenu jednog proizvoda",
+        "code": "assert.deepEqual(getPrices({ apple: 50 }), [50]);"
+      },
+      {
+        "name": "prazan objekat daje prazan niz",
+        "code": "assert.deepEqual(getPrices({}), []);"
+      }
+    ]
+  },
+  "answer": "function getPrices(shop) {\n  return Object.values(shop);\n}",
+  "explanation": "Object.values(shop) vraca niz vrednosti objekta, a to su ovde cene. Object.keys bi vratio imena proizvoda umesto cena. shop.values() ne postoji na obicnom objektu i baca gresku.",
+  "format": "mcq",
+  "id": "2026-09-10-jutro",
+  "createdAt": "2026-09-10T06:18:43.250Z",
+  "slot": "jutro"
+}
