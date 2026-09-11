@@ -1,0 +1,33 @@
+{
+  "topic": "destrukturiranje niza",
+  "lesson": {
+    "title": "Destrukturiranje niza",
+    "body": "Destrukturiranje niza je nacin da iz niza izvadis vise vrednosti u posebne promenljive u jednoj liniji. Levo od `=` napises uglaste zagrade sa imenima promenljivih, a desno niz. Prvo ime dobija element sa indeksa 0, drugo ime element sa indeksa 1, i tako redom. Za razliku od destrukturiranja objekta, ovde se ne gleda ime svojstva nego redosled.\n\n```js\nconst point = [10, 20];\nconst [x, y] = point;\nconsole.log(x); // 10\nconsole.log(y); // 20\n```\n\nU praksi ovo koristis kad ti niz predstavlja par vrednosti, na primer koordinate ili ime i prezime, pa zelis svaku u svojoj promenljivoj."
+  },
+  "task": {
+    "title": "Ime i prezime iz niza",
+    "brief": "Funkcija fullName dobija niz od dva elementa: prvi je ime, drugi prezime. Treba da vrati string sa imenom, razmakom i prezimenom. Pogledaj varijante A, B i C u komentarima i u telo funkcije prepisi onu koja je tacna. Primeri: fullName([\"Ana\", \"Petrovic\"]) vraca \"Ana Petrovic\"; fullName([\"Marko\", \"Jovic\"]) vraca \"Marko Jovic\".",
+    "signature": "function fullName(parts)",
+    "starter": "// A:\n// const [first, last] = parts;\n// return first + \" \" + last;\n\n// B:\n// const { first, last } = parts;\n// return first + \" \" + last;\n\n// C:\n// const [last, first] = parts;\n// return first + \" \" + last;\n\nfunction fullName(parts) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "Ana Petrovic",
+        "code": "assert.equal(fullName([\"Ana\", \"Petrovic\"]), \"Ana Petrovic\");"
+      },
+      {
+        "name": "Marko Jovic",
+        "code": "assert.equal(fullName([\"Marko\", \"Jovic\"]), \"Marko Jovic\");"
+      },
+      {
+        "name": "redosled se cuva",
+        "code": "assert.equal(fullName([\"Prvi\", \"Drugi\"]), \"Prvi Drugi\");"
+      }
+    ]
+  },
+  "answer": "function fullName(parts) {\n  const [first, last] = parts;\n  return first + \" \" + last;\n}",
+  "explanation": "Tacna je varijanta A: uglaste zagrade levo od = vade elemente po redosledu, pa first dobija indeks 0, a last indeks 1. Varijanta B koristi viticaste zagrade, sto trazi svojstva po imenu i daje undefined. Varijanta C zamenjuje redosled imena, pa bi vratila \"Petrovic Ana\".",
+  "format": "mcq",
+  "id": "2026-09-11-vece",
+  "createdAt": "2026-09-11T18:01:05.953Z",
+  "slot": "vece"
+}

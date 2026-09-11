@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-11-vece",
+    "createdAt": "2026-09-11T18:01:05.953Z",
+    "topic": "destrukturiranje niza",
+    "lessonTitle": "Destrukturiranje niza",
+    "taskTitle": "Ime i prezime iz niza"
+  },
+  {
     "id": "2026-09-11-jutro",
     "createdAt": "2026-09-11T07:43:37.759Z",
     "topic": "spread objekta",
