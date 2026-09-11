@@ -1,0 +1,33 @@
+{
+  "topic": "spread objekta",
+  "lesson": {
+    "title": "Spread objekta: kopija sa izmenom",
+    "body": "Tri tackice `...` ispred objekta u viticastim zagradama kopiraju sva njegova svojstva u novi objekat. Original se pri tom ne menja. Redosled je bitan: ako posle `...user` napises svojstvo koje vec postoji, nova vrednost pregazi staru, jer ono sto je napisano kasnije pobedjuje.\n\n```js\nconst user = { name: \"Ana\", age: 30 };\nconst older = { ...user, age: 31 };\n// older je { name: \"Ana\", age: 31 }\n// user je i dalje { name: \"Ana\", age: 30 }\n```\n\nU praksi se ovako pravi izmenjena kopija objekta bez diranja originala, sto ces stalno videti u kodu koji AI generise."
+  },
+  "task": {
+    "title": "Novo ime, isti original",
+    "brief": "Funkcija `updateName` treba da vrati kopiju objekta `user` sa promenjenim `name`, a da original ostane isti. Trenutno vraca staro ime. Nadji i ispravi bag u liniji sa `// ovde`.\n\nPrimeri:\n- `updateName({ name: \"Ana\", age: 30 }, \"Mila\")` → `{ name: \"Mila\", age: 30 }`\n- `updateName({ name: \"Petar\" }, \"Jovan\")` → `{ name: \"Jovan\" }`",
+    "signature": "function updateName(user, newName)",
+    "starter": "function updateName(user, newName) {\n  const updated = { name: newName, ...user }; // ovde\n  return updated;\n}",
+    "tests": [
+      {
+        "name": "menja ime i cuva ostala svojstva",
+        "code": "assert.deepEqual(updateName({ name: \"Ana\", age: 30 }, \"Mila\"), { name: \"Mila\", age: 30 });"
+      },
+      {
+        "name": "original ostaje netaknut",
+        "code": "const u = { name: \"Ana\", age: 30 };\nupdateName(u, \"Mila\");\nassert.equal(u.name, \"Ana\");"
+      },
+      {
+        "name": "radi i kad objekat ima samo name",
+        "code": "assert.deepEqual(updateName({ name: \"Petar\" }, \"Jovan\"), { name: \"Jovan\" });"
+      }
+    ]
+  },
+  "answer": "function updateName(user, newName) {\n  const updated = { ...user, name: newName };\n  return updated;\n}",
+  "explanation": "Kod spread-a redosled odlucuje: ono sto je napisano kasnije pregazi ono ranije. U `{ name: newName, ...user }` prvo se upise novo ime, a onda ga `...user` vrati na staro. Kad `...user` stoji prvo, `name: newName` ga pregazi i kopija dobije novo ime.",
+  "format": "debug",
+  "id": "2026-09-11-jutro",
+  "createdAt": "2026-09-11T07:43:37.759Z",
+  "slot": "jutro"
+}
