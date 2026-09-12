@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-12-vece",
+    "createdAt": "2026-09-12T18:01:14.255Z",
+    "topic": "ternarni operator",
+    "lessonTitle": "Ternarni operator: if u jednoj liniji",
+    "taskTitle": "Na stanju ili rasprodato"
+  },
+  {
     "id": "2026-09-11-vece",
     "createdAt": "2026-09-11T18:01:05.953Z",
     "topic": "destrukturiranje niza",

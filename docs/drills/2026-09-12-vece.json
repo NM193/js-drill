@@ -1,0 +1,33 @@
+{
+  "topic": "ternarni operator",
+  "lesson": {
+    "title": "Ternarni operator: if u jednoj liniji",
+    "body": "Ternarni operator je kraci nacin da napises `if` i `else` kad samo biras izmedju dve vrednosti. Pise se `uslov ? vrednostAkoJeste : vrednostAkoNije`. Prvo se proverava uslov: ako je tacan, rezultat je vrednost posle `?`, a ako nije, vrednost posle `:`. Ceo izraz daje jednu vrednost, pa mozes da ga upises direktno u promenljivu ili da ga vratis iz funkcije.\n\n```js\nconst age = 20;\nconst label = age >= 18 ? \"punoletan\" : \"maloletan\";\nconsole.log(label); // \"punoletan\"\n```\n\nU praksi ga cesto vidis u kodu koji AI generise, narocito kad se bira koji tekst ili koja boja da se prikaze."
+  },
+  "task": {
+    "title": "Na stanju ili rasprodato",
+    "brief": "Funkcija stockLabel dobija broj komada na stanju. Ako je broj veci od 0, treba da vrati \"na stanju\", a inace \"rasprodato\". Popuni izraz iza return koristeci ternarni operator, u jednoj liniji. Primeri: stockLabel(5) vraca \"na stanju\"; stockLabel(0) vraca \"rasprodato\".",
+    "signature": "function stockLabel(count)",
+    "starter": "function stockLabel(count) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "5 komada je na stanju",
+        "code": "assert.equal(stockLabel(5), \"na stanju\");"
+      },
+      {
+        "name": "0 komada je rasprodato",
+        "code": "assert.equal(stockLabel(0), \"rasprodato\");"
+      },
+      {
+        "name": "1 komad je na stanju",
+        "code": "assert.equal(stockLabel(1), \"na stanju\");"
+      }
+    ]
+  },
+  "answer": "function stockLabel(count) {\n  return count > 0 ? \"na stanju\" : \"rasprodato\";\n}",
+  "explanation": "Uslov `count > 0` se proverava prvi. Ako je tacan, ternarni operator daje vrednost posle `?`, dakle \"na stanju\", a ako nije, vrednost posle `:`, dakle \"rasprodato\". Ceo izraz je jedna vrednost, pa se direktno vraca sa return.",
+  "format": "challenge",
+  "id": "2026-09-12-vece",
+  "createdAt": "2026-09-12T18:01:14.255Z",
+  "slot": "vece"
+}
