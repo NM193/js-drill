@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-14-jutro",
+    "createdAt": "2026-09-14T06:01:28.086Z",
+    "topic": "Object.entries",
+    "lessonTitle": "Object.entries: kljuc i vrednost zajedno",
+    "taskTitle": "Ispravi petlju sa Object.entries"
+  },
+  {
     "id": "2026-09-12-vece",
     "createdAt": "2026-09-12T18:01:14.255Z",
     "topic": "ternarni operator",

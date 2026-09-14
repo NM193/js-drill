@@ -1,0 +1,33 @@
+{
+  "topic": "Object.entries",
+  "lesson": {
+    "title": "Object.entries: kljuc i vrednost zajedno",
+    "body": "`Object.entries(obj)` vraca niz parova: za svako svojstvo objekta dobijes mali niz od dva clana, `[kljuc, vrednost]`. Zgodno je kad ti u petlji trebaju i ime svojstva i njegova vrednost u isto vreme. Posto je svaki par obican niz, iz njega se vrednosti vade uglastim zagradama, kao kod destrukturiranja niza.\n\n```js\nconst prices = { apple: 3, pear: 5 };\nfor (const [name, price] of Object.entries(prices)) {\n  console.log(name, price); // apple 3, pa pear 5\n}\n```\n\nU praksi se koristi da se objekat sa cenama ili podesavanjima prikaze kao lista."
+  },
+  "task": {
+    "title": "Ispravi petlju sa Object.entries",
+    "brief": "Funkcija `listItems(stock)` treba da vrati niz stringova oblika `\"ime: kolicina\"`, po jedan za svako svojstvo objekta. Kod ima jedan bag u liniji oznacenoj sa `// ovde` - ispravi ga.\n\nPrimeri:\n- `listItems({ apple: 3, pear: 5 })` -> `[\"apple: 3\", \"pear: 5\"]`\n- `listItems({ milk: 1 })` -> `[\"milk: 1\"]`",
+    "signature": "function listItems(stock)",
+    "starter": "function listItems(stock) {\n  const lines = [];\n  for (const { name, count } of Object.entries(stock)) { // ovde\n    lines.push(`${name}: ${count}`);\n  }\n  return lines;\n}",
+    "tests": [
+      {
+        "name": "dva svojstva daju dva stringa",
+        "code": "assert.deepEqual(listItems({ apple: 3, pear: 5 }), [\"apple: 3\", \"pear: 5\"]);"
+      },
+      {
+        "name": "jedno svojstvo daje jedan string",
+        "code": "assert.deepEqual(listItems({ milk: 1 }), [\"milk: 1\"]);"
+      },
+      {
+        "name": "prazan objekat daje prazan niz",
+        "code": "assert.deepEqual(listItems({}), []);"
+      }
+    ]
+  },
+  "answer": "function listItems(stock) {\n  const lines = [];\n  for (const [name, count] of Object.entries(stock)) {\n    lines.push(`${name}: ${count}`);\n  }\n  return lines;\n}",
+  "explanation": "Object.entries vraca parove kao nizove, npr. [\"apple\", 3], a ne objekte. Zato se par vadi uglastim zagradama `[name, count]`, a ne viticastim `{ name, count }` - sa viticastim bi obe promenljive bile undefined.",
+  "format": "debug",
+  "id": "2026-09-14-jutro",
+  "createdAt": "2026-09-14T06:01:28.086Z",
+  "slot": "jutro"
+}
