@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-14-vece",
+    "createdAt": "2026-09-14T18:01:25.683Z",
+    "topic": "typeof",
+    "lessonTitle": "typeof: koji je tip vrednosti",
+    "taskTitle": "Proveri da li je vrednost broj"
+  },
+  {
     "id": "2026-09-14-jutro",
     "createdAt": "2026-09-14T06:01:28.086Z",
     "topic": "Object.entries",

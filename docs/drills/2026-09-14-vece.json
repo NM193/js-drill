@@ -1,0 +1,33 @@
+{
+  "topic": "typeof",
+  "lesson": {
+    "title": "typeof: koji je tip vrednosti",
+    "body": "Svaka vrednost u JavaScriptu ima svoj tip: tekst je `string`, broj je `number`, a `true` i `false` su `boolean`. Kad hoces da proveris koji je tip neke vrednosti, koristis `typeof` - operator koji se pise ispred vrednosti, bez zagrada. Rezultat je uvek tekst sa imenom tipa, na primer `\"number\"`, pa se poredi sa stringom pod navodnicima. U praksi to koristis kad funkcija dobije nesto spolja i zelis da se uveris sta je pre nego sto s tim racunas. Vazno: `typeof \"42\"` je `\"string\"`, jer je pod navodnicima, iako izgleda kao broj.\n\n```js\ntypeof 42       // \"number\"\ntypeof \"zdravo\"  // \"string\"\ntypeof true     // \"boolean\"\n```"
+  },
+  "task": {
+    "title": "Proveri da li je vrednost broj",
+    "brief": "Funkcija isNumber prima bilo koju vrednost i treba da vrati `true` ako je ta vrednost broj, a `false` ako nije. Izaberi tacnu varijantu (A, B ili C) i prepisi je u funkciju na mesto komentara `// ovde`.\n\nPrimeri:\n- isNumber(42) -> true\n- isNumber(\"42\") -> false",
+    "signature": "function isNumber(value)",
+    "starter": "// A: return typeof value === \"number\";\n// B: return value === \"number\";\n// C: return typeof value === number;\n\nfunction isNumber(value) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "broj daje true",
+        "code": "assert.equal(isNumber(42), true);"
+      },
+      {
+        "name": "tekst koji lici na broj daje false",
+        "code": "assert.equal(isNumber(\"42\"), false);"
+      },
+      {
+        "name": "boolean daje false",
+        "code": "assert.equal(isNumber(true), false);"
+      }
+    ]
+  },
+  "answer": "function isNumber(value) {\n  return typeof value === \"number\";\n}",
+  "explanation": "typeof value daje tekst \"number\" kad je vrednost broj, pa se poredi sa stringom pod navodnicima. Varijanta B ne pita za tip nego poredi samu vrednost sa tekstom \"number\", sto je uvek false za 42. Varijanta C poredi sa number bez navodnika, a takva promenljiva ne postoji, pa kod baca gresku.",
+  "format": "mcq",
+  "id": "2026-09-14-vece",
+  "createdAt": "2026-09-14T18:01:25.683Z",
+  "slot": "vece"
+}
