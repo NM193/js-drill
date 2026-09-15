@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-15-vece",
+    "createdAt": "2026-09-15T18:00:54.509Z",
+    "topic": "return u funkciji",
+    "lessonTitle": "Funkcija bez return vraca undefined",
+    "taskTitle": "Vrati zbir, ne samo ispisi"
+  },
+  {
     "id": "2026-09-15-jutro",
     "createdAt": "2026-09-15T06:01:55.970Z",
     "topic": "let i const",

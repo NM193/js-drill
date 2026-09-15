@@ -1,0 +1,33 @@
+{
+  "topic": "return u funkciji",
+  "lesson": {
+    "title": "Funkcija bez return vraca undefined",
+    "body": "Funkcija je blok koda koji primi ulaz, nesto izracuna i vrati rezultat. Rezultat se vraca recju `return` - vrednost iza nje ide nazad onome ko je funkciju pozvao. Ako `return` nedostaje, funkcija ipak radi, ali vraca `undefined` - posebnu vrednost koja znaci \"nista nije vraceno\". Cesta greska pocetnika je da rezultat samo ispise sa `console.log` umesto da ga vrati; ispis se vidi u konzoli, ali kod dalje nema tu vrednost.\n\n```js\nfunction double(n) {\n  return n * 2;\n}\nconst result = double(4); // 8\n```\n\nU praksi `return` koristis kad ti rezultat treba dalje u kodu, na primer da ga sacuvas u promenljivu ili prosledis drugoj funkciji."
+  },
+  "task": {
+    "title": "Vrati zbir, ne samo ispisi",
+    "brief": "Funkcija `add` treba da vrati zbir dva broja, ali sada vraca `undefined` jer rezultat samo ispisuje. Ispravi liniju oznacenu sa `// ovde` tako da funkcija vrati zbir. Primeri: add(2, 3) daje 5; add(10, -4) daje 6.",
+    "signature": "function add(a, b)",
+    "starter": "function add(a, b) {\n  const sum = a + b;\n  console.log(sum); // ovde\n}",
+    "tests": [
+      {
+        "name": "add(2, 3) vraca 5",
+        "code": "assert.equal(add(2, 3), 5);"
+      },
+      {
+        "name": "add(10, -4) vraca 6",
+        "code": "assert.equal(add(10, -4), 6);"
+      },
+      {
+        "name": "rezultat je broj, ne undefined",
+        "code": "assert.equal(typeof add(1, 1), \"number\");"
+      }
+    ]
+  },
+  "answer": "function add(a, b) {\n  const sum = a + b;\n  return sum;\n}",
+  "explanation": "`console.log(sum)` samo ispisuje vrednost u konzolu, a funkcija bez `return` vraca `undefined`. Zamenom te linije sa `return sum;` zbir se vraca onome ko je pozvao funkciju, pa testovi dobiju pravi broj.",
+  "format": "debug",
+  "id": "2026-09-15-vece",
+  "createdAt": "2026-09-15T18:00:54.509Z",
+  "slot": "vece"
+}
