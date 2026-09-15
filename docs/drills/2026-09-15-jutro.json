@@ -1,0 +1,33 @@
+{
+  "topic": "let i const",
+  "lesson": {
+    "title": "Promenljive: let i const",
+    "body": "Promenljiva je ime za vrednost koju sacuvas da bi je koristio kasnije. Pravis je recju `const` ili `let`: `const` znaci da se vrednost posle ne sme menjati, a `let` znaci da sme. Ako pokusas da promenis nesto sto je `const`, JavaScript baci gresku umesto da tiho promeni vrednost.\n\n```js\nconst city = \"Beograd\";\nlet count = 0;\ncount = count + 1; // count je sada 1\n```\n\nPravilo u praksi: uvek pisi `const`, a `let` samo kad znas da ce se vrednost menjati - tako odmah vidis koje vrednosti u kodu su stalne."
+  },
+  "task": {
+    "title": "Grad koji se ne menja",
+    "brief": "Napravi promenljivu `city` sa vrednoscu \"Beograd\". Ta vrednost ne sme nikad da se promeni - izaberi pravu rec za pravljenje promenljive. Primeri: citanje `city` daje \"Beograd\"; pokusaj `city = \"Nis\"` baca gresku.",
+    "signature": "const city",
+    "starter": "// ovde\nlet visits = 0;\nvisits = visits + 1;",
+    "tests": [
+      {
+        "name": "city ima vrednost \"Beograd\"",
+        "code": "assert.equal(city, \"Beograd\");"
+      },
+      {
+        "name": "city ne moze da se promeni",
+        "code": "assert.throws(() => { city = \"Nis\"; });"
+      },
+      {
+        "name": "ostatak koda i dalje radi",
+        "code": "assert.equal(visits, 1);"
+      }
+    ]
+  },
+  "answer": "const city = \"Beograd\";\nlet visits = 0;\nvisits = visits + 1;",
+  "explanation": "`city` se nikad ne menja, pa ide `const` - zato pokusaj `city = \"Nis\"` baca gresku, sto test i ocekuje. `visits` se menja, zato je napravljen sa `let`.",
+  "format": "challenge",
+  "id": "2026-09-15-jutro",
+  "createdAt": "2026-09-15T06:01:55.970Z",
+  "slot": "jutro"
+}
