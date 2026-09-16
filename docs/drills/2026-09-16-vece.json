@@ -1,0 +1,33 @@
+{
+  "topic": "if uslov",
+  "lesson": {
+    "title": "Uslov sa if",
+    "body": "`if` izvrsava deo koda samo ako je uslov u zagradama tacan; taj kod ide u viticaste zagrade `{ }`. Ako uslov nije tacan, ceo blok se preskace i program nastavlja dalje.\n\n```js\nlet message = \"child\";\nif (age >= 18) {\n  message = \"adult\";\n}\n```\n\n`age >= 18` znaci: da li je `age` vece ili jednako 18. Ako je `age` 20, uslov je tacan i `message` postaje `\"adult\"`; ako je 15, blok se preskace i `message` ostaje `\"child\"`. Ovako aplikacija odlucuje sta da uradi u zavisnosti od podataka, npr. da li da prikaze dugme ili poruku o gresci. Kad ti treba i drugi put za slucaj kad uslov nije tacan, posle bloka dodas `else { ... }`."
+  },
+  "task": {
+    "title": "Odrasla osoba ili dete",
+    "brief": "Dopuni funkciju tako da `label` postane \"adult\" kad je `age` 18 ili vise. U suprotnom ostaje \"child\". Primer: ageLabel(20) vraca \"adult\", ageLabel(15) vraca \"child\".",
+    "signature": "function ageLabel(age)",
+    "starter": "function ageLabel(age) {\n  let label = \"child\";\n  // ovde\n  return label;\n}",
+    "tests": [
+      {
+        "name": "20 godina je odrasla osoba",
+        "code": "assert.equal(ageLabel(20), \"adult\");"
+      },
+      {
+        "name": "15 godina je dete",
+        "code": "assert.equal(ageLabel(15), \"child\");"
+      },
+      {
+        "name": "tacno 18 godina je odrasla osoba",
+        "code": "assert.equal(ageLabel(18), \"adult\");"
+      }
+    ]
+  },
+  "answer": "function ageLabel(age) {\n  let label = \"child\";\n  if (age >= 18) {\n    label = \"adult\";\n  }\n  return label;\n}",
+  "explanation": "Uslov `age >= 18` je tacan za 18 i sve vece brojeve, pa tada `label` dobija vrednost \"adult\". Za manje brojeve blok se preskace i `label` ostaje \"child\", sto funkcija na kraju vrati.",
+  "format": "challenge",
+  "id": "2026-09-16-vece",
+  "createdAt": "2026-09-16T18:01:18.916Z",
+  "slot": "vece"
+}
