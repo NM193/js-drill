@@ -1,0 +1,33 @@
+{
+  "topic": "arrow funkcije",
+  "lesson": {
+    "title": "Arrow funkcije",
+    "body": "Arrow funkcija je kraci nacin da se napise funkcija. Umesto reci `function` pise se lista parametara u zagradi, pa strelica `=>`, pa izraz koji funkcija vraca. Ako je telo samo jedan izraz, ne pisu se ni viticaste zagrade ni `return` - vrednost izraza se vraca sama. Ako stavis viticaste zagrade `{ }`, to postaje blok koda i `return` moras da napises rucno, inace funkcija vraca `undefined`.\n\n```js\nconst double = (n) => n * 2;\ndouble(4); // 8\n```\n\nOvaj zapis se stalno vidja u kodu koji generisu AI alati, pa je vazno da ga prepoznas."
+  },
+  "task": {
+    "title": "Saberi dva broja arrow funkcijom",
+    "brief": "Od tri ponudjene varijante izaberi onu koja je ispravna arrow funkcija `add` koja vraca zbir dva broja. Upisi je na mesto `// ovde`. Primeri: `add(2, 3)` vraca `5`; `add(10, -4)` vraca `6`.",
+    "signature": "const add = (a, b) => ...",
+    "starter": "// A: const add = (a, b) => a + b;\n// B: const add = (a, b) => { a + b; };\n// C: const add = (a, b) => return a + b;\n\n// ovde",
+    "tests": [
+      {
+        "name": "add(2, 3) vraca 5",
+        "code": "assert.equal(add(2, 3), 5);"
+      },
+      {
+        "name": "add(10, -4) vraca 6",
+        "code": "assert.equal(add(10, -4), 6);"
+      },
+      {
+        "name": "add(0, 0) vraca 0",
+        "code": "assert.equal(add(0, 0), 0);"
+      }
+    ]
+  },
+  "answer": "const add = (a, b) => a + b;",
+  "explanation": "Tacna je varijanta A: bez viticastih zagrada arrow funkcija sama vraca vrednost izraza posle strelice. Varijanta B vraca undefined jer u bloku sa zagradama nema return. Varijanta C je greska u sintaksi jer return ne sme da stoji van viticastih zagrada.",
+  "format": "mcq",
+  "id": "2026-09-16-jutro",
+  "createdAt": "2026-09-16T06:09:18.527Z",
+  "slot": "jutro"
+}
