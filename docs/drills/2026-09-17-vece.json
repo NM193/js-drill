@@ -1,0 +1,33 @@
+{
+  "topic": "sablon stringovi",
+  "lesson": {
+    "title": "Sablon stringovi sa backtick-om",
+    "body": "Sablon string je tekst koji pises izmedju kosih navodnika (backtick, znak ` na tastaturi). Unutar njega mozes da ubacis vrednost promenljive tako sto je stavis u `${...}`. JavaScript tada zameni `${ime}` pravom vrednoscu i napravi jedan spojen string. Ovo sluzi da lako sastavis poruku od teksta i podataka, bez sabiranja stringova plusem.\n\n```js\nconst name = \"Ana\";\nconst age = 30;\nconst text = `${name} ima ${age} godina`;\n// text je \"Ana ima 30 godina\"\n```\n\nObicni navodnici \" i ' ovo ne rade: u njima `${name}` ostaje bukvalno kao tekst."
+  },
+  "task": {
+    "title": "Pozdrav sa imenom",
+    "brief": "Funkcija greet(name) treba da vrati string \"Zdravo, IME!\" gde je IME vrednost parametra. Pogledaj tri ponudjene varijante A, B i C u komentarima, izaberi onu koja je tacna i prepisi je u telo funkcije umesto `// ovde`.\n\nPrimeri:\n- greet(\"Ana\") vraca \"Zdravo, Ana!\"\n- greet(\"Marko\") vraca \"Zdravo, Marko!\"",
+    "signature": "function greet(name)",
+    "starter": "// A: return \"Zdravo, ${name}!\";\n// B: return `Zdravo, ${name}!`;\n// C: return `Zdravo, name!`;\n\nfunction greet(name) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "greet(\"Ana\") vraca \"Zdravo, Ana!\"",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana!\");"
+      },
+      {
+        "name": "greet(\"Marko\") vraca \"Zdravo, Marko!\"",
+        "code": "assert.equal(greet(\"Marko\"), \"Zdravo, Marko!\");"
+      },
+      {
+        "name": "prazan string daje \"Zdravo, !\"",
+        "code": "assert.equal(greet(\"\"), \"Zdravo, !\");"
+      }
+    ]
+  },
+  "answer": "function greet(name) {\n  return `Zdravo, ${name}!`;\n}",
+  "explanation": "Tacan je B. Samo kosi navodnici (backtick) ukljucuju ${...}, pa A sa obicnim navodnicima vraca doslovno tekst ${name}. C koristi backtick, ali bez ${} rec name ostaje obican tekst i ne zamenjuje se vrednoscu.",
+  "format": "mcq",
+  "id": "2026-09-17-vece",
+  "createdAt": "2026-09-17T21:04:31.253Z",
+  "slot": "vece"
+}
