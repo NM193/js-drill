@@ -1,0 +1,33 @@
+{
+  "topic": "truthy i falsy",
+  "lesson": {
+    "title": "Truthy i falsy vrednosti",
+    "body": "U `if` uslovu ne mora da stoji samo `true` ili `false` - moze bilo koja vrednost, a JavaScript je sam tretira kao tacnu ili netacnu. Netacne vrednosti (kaze se **falsy**) su samo ove: `false`, `0`, `\"\"` (prazan string), `null`, `undefined` i `NaN`. Sve ostalo je tacno (**truthy**), ukljucujuci svaki neprazan string i svaki broj razlicit od nule. Zato ne pises `if (name === true)` nego samo `if (name)` - to u praksi znaci \"ako name ima neku vrednost\".\n\n```js\nconst name = \"\";\nif (name) {\n  console.log(\"ima ime\"); // ne ispise se, jer je \"\" falsy\n}\n```"
+  },
+  "task": {
+    "title": "Ispravi uslov za prazan tekst",
+    "brief": "Funkcija `label` treba da vrati tekst ako ga ima, a \"(prazno)\" ako je tekst prazan ili nedostaje. Uslov u `if` ima jedan bag - ispravi ga. Primer: label(\"Zdravo\") vraca \"Zdravo\"; label(\"\") vraca \"(prazno)\".",
+    "signature": "function label(text)",
+    "starter": "function label(text) {\n  if (text === true) { // ovde\n    return text;\n  }\n  return \"(prazno)\";\n}",
+    "tests": [
+      {
+        "name": "neprazan tekst se vraca kakav jeste",
+        "code": "assert.equal(label(\"Zdravo\"), \"Zdravo\");"
+      },
+      {
+        "name": "prazan string daje (prazno)",
+        "code": "assert.equal(label(\"\"), \"(prazno)\");"
+      },
+      {
+        "name": "undefined daje (prazno)",
+        "code": "assert.equal(label(undefined), \"(prazno)\");"
+      }
+    ]
+  },
+  "answer": "function label(text) {\n  if (text) {\n    return text;\n  }\n  return \"(prazno)\";\n}",
+  "explanation": "Poredjenje `text === true` nikad nije tacno za string, pa je funkcija uvek vracala \"(prazno)\". Dovoljno je `if (text)` - neprazan string je truthy, a prazan string i undefined su falsy.",
+  "format": "debug",
+  "id": "2026-09-17-jutro",
+  "createdAt": "2026-09-17T06:00:54.675Z",
+  "slot": "jutro"
+}
