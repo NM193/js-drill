@@ -1,0 +1,33 @@
+{
+  "topic": "string split",
+  "lesson": {
+    "title": "split: od stringa do niza",
+    "body": "Metoda `split` sece string na delove i vraca niz (listu) tih delova. U zagradu upisujes separator, znak na kom se sece, na primer zarez ili razmak. Sam separator ne ulazi u rezultat.\n\n```js\nconst list = \"jabuka,kruska,sljiva\";\nconst fruits = list.split(\",\");\n// fruits je [\"jabuka\", \"kruska\", \"sljiva\"]\n```\n\nU praksi ovo koristis kad dobijes podatke kao jedan dugacak tekst, na primer iz fajla ili URL-a, a treba ti svaki deo posebno."
+  },
+  "task": {
+    "title": "Podeli recenicu na reci",
+    "brief": "Dopuni funkciju tako da recenicu podeli na reci po razmaku i vrati ih kao niz.\n\nPrimer: getWords(\"ja ucim javascript\") vraca [\"ja\", \"ucim\", \"javascript\"]\nPrimer: getWords(\"zdravo\") vraca [\"zdravo\"]",
+    "signature": "function getWords(sentence)",
+    "starter": "function getWords(sentence) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "tri reci daju niz od tri elementa",
+        "code": "assert.deepEqual(getWords(\"ja ucim javascript\"), [\"ja\", \"ucim\", \"javascript\"]);"
+      },
+      {
+        "name": "jedna rec daje niz sa jednim elementom",
+        "code": "assert.deepEqual(getWords(\"zdravo\"), [\"zdravo\"]);"
+      },
+      {
+        "name": "broj reci odgovara duzini niza",
+        "code": "assert.equal(getWords(\"a b c\").length, 3);"
+      }
+    ]
+  },
+  "answer": "function getWords(sentence) {\n  return sentence.split(\" \");\n}",
+  "explanation": "`sentence.split(\" \")` sece string na svakom razmaku i vraca niz reci. Razmak kao separator ne ulazi u rezultat. Ako nema razmaka, dobijes niz sa jednim elementom, celim stringom.",
+  "format": "challenge",
+  "id": "2026-09-18-jutro",
+  "createdAt": "2026-09-18T09:06:36.223Z",
+  "slot": "jutro"
+}
