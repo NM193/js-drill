@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-19-jutro",
+    "createdAt": "2026-09-19T06:00:39.413Z",
+    "topic": "string length",
+    "lessonTitle": "Duzina stringa: length",
+    "taskTitle": "Ispravi bag: broj slova"
+  },
+  {
     "id": "2026-09-18-jutro",
     "createdAt": "2026-09-18T09:06:36.223Z",
     "topic": "string split",

@@ -1,0 +1,33 @@
+{
+  "topic": "string length",
+  "lesson": {
+    "title": "Duzina stringa: length",
+    "body": "Svaki string zna koliko znakova ima. To se cita preko `length`, sto znaci duzina. Vazno: `length` nije funkcija, nego osobina stringa, pa se pise BEZ zagrada. Ako napises `length()`, JavaScript javi gresku da to nije funkcija.\n\n```js\nconst name = \"Ana\";\nconsole.log(name.length); // 3\nconsole.log(\"\".length);   // 0\n```\n\nU praksi se koristi za provere, na primer da li je lozinka dovoljno dugacka ili da li je polje u formi prazno."
+  },
+  "task": {
+    "title": "Ispravi bag: broj slova",
+    "brief": "Funkcija countLetters treba da vrati koliko znakova ima rec. Kod ima jedan bag na liniji sa `// ovde`. Ispravi ga.\n\nPrimeri:\n- countLetters(\"Ana\") vraca 3\n- countLetters(\"\") vraca 0",
+    "signature": "function countLetters(word)",
+    "starter": "function countLetters(word) {\n  return word.length(); // ovde\n}",
+    "tests": [
+      {
+        "name": "Ana ima 3 slova",
+        "code": "assert.equal(countLetters(\"Ana\"), 3);"
+      },
+      {
+        "name": "prazan string ima 0 znakova",
+        "code": "assert.equal(countLetters(\"\"), 0);"
+      },
+      {
+        "name": "JavaScript ima 10 slova",
+        "code": "assert.equal(countLetters(\"JavaScript\"), 10);"
+      }
+    ]
+  },
+  "answer": "function countLetters(word) {\n  return word.length;\n}",
+  "explanation": "Bag je bio u zagradama posle length. Duzina stringa je osobina, ne funkcija, pa se cita kao word.length bez zagrada. Sa zagradama JavaScript pokusava da pozove broj kao funkciju i baca gresku.",
+  "format": "debug",
+  "id": "2026-09-19-jutro",
+  "createdAt": "2026-09-19T06:00:39.413Z",
+  "slot": "jutro"
+}
