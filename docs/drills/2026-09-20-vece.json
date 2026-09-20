@@ -1,0 +1,33 @@
+{
+  "topic": "string includes",
+  "lesson": {
+    "title": "Provera da li string sadrzi deo",
+    "body": "Metoda `includes` proverava da li se jedan string nalazi unutar drugog. Pise se tako sto prvo ide veliki string, pa tacka, pa `includes` sa trazenim delom u zagradi. Rezultat je uvek `true` ili `false`, pa se lepo uklapa u `if` uslov. Redosled je bitan: `big.includes(small)`, nikad obrnuto.\n\n```js\nconst message = \"Hello world\";\nmessage.includes(\"world\"); // true\nmessage.includes(\"Ana\"); // false\n```\n\nU praksi se koristi da proveris da li tekst sadrzi neku rec, npr. da li email ima znak `@`."
+  },
+  "task": {
+    "title": "Da li email ima znak @",
+    "brief": "Napisi funkciju hasAt koja vraca true ako email sadrzi znak @, a false ako ne sadrzi. Od tri ponudjene varijante A, B i C izaberi tacnu i prepisi je na mesto oznaceno sa // ovde.\n\nPrimeri:\n- hasAt(\"ana@mail.com\") -> true\n- hasAt(\"ana.mail.com\") -> false",
+    "signature": "function hasAt(email)",
+    "starter": "// A: return \"@\".includes(email);\n// B: return email.includes(\"@\");\n// C: return email === \"@\";\n\nfunction hasAt(email) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "email sa @ vraca true",
+        "code": "assert.equal(hasAt(\"ana@mail.com\"), true);"
+      },
+      {
+        "name": "email bez @ vraca false",
+        "code": "assert.equal(hasAt(\"ana.mail.com\"), false);"
+      },
+      {
+        "name": "kratak string sa @ vraca true",
+        "code": "assert.equal(hasAt(\"a@b\"), true);"
+      }
+    ]
+  },
+  "answer": "function hasAt(email) {\n  return email.includes(\"@\");\n}",
+  "explanation": "Tacna je varijanta B: veliki string ide ispred tacke, a ono sto trazimo u zagradu. Varijanta A pita da li se ceo email nalazi unutar znaka @, sto je obrnuto. Varijanta C proverava da li je email tacno jednak znaku @, a ne da li ga sadrzi.",
+  "format": "mcq",
+  "id": "2026-09-20-vece",
+  "createdAt": "2026-09-20T18:01:01.793Z",
+  "slot": "vece"
+}
