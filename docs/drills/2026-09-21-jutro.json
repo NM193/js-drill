@@ -1,0 +1,33 @@
+{
+  "topic": "string toUpperCase",
+  "lesson": {
+    "title": "Velika slova sa toUpperCase",
+    "body": "Svaki string ima ugradjenu funkciju `toUpperCase()` koja vraca isti tekst, ali sa svim velikim slovima. Poziva se tako sto iza stringa ili promenljive stavis tacku, ime funkcije i zagrade. Vazno: original se ne menja, nego dobijas novi string, pa rezultat treba sacuvati u promenljivu. Suprotna je `toLowerCase()`, koja sve pretvara u mala slova.\n\n```js\nconst name = \"ana\";\nconst loud = name.toUpperCase();\nconsole.log(loud); // \"ANA\"\nconsole.log(name); // \"ana\" - original ostaje isti\n```\n\nU praksi se koristi za naslove, skracenice, ili da uporedis unos korisnika bez obzira na velika i mala slova."
+  },
+  "task": {
+    "title": "Vrati tekst velikim slovima",
+    "brief": "Dopuni funkciju `shout` tako da vrati tekst koji je dobila, ali sa svim velikim slovima.\n\nPrimeri:\n- `shout(\"zdravo\")` → `\"ZDRAVO\"`\n- `shout(\"Ana Petrovic\")` → `\"ANA PETROVIC\"`",
+    "signature": "function shout(text)",
+    "starter": "function shout(text) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "jedna rec postaje velika slova",
+        "code": "assert.equal(shout(\"zdravo\"), \"ZDRAVO\");"
+      },
+      {
+        "name": "vise reci sa razmakom",
+        "code": "assert.equal(shout(\"Ana Petrovic\"), \"ANA PETROVIC\");"
+      },
+      {
+        "name": "brojevi ostaju isti",
+        "code": "assert.equal(shout(\"abc123\"), \"ABC123\");"
+      }
+    ]
+  },
+  "answer": "function shout(text) {\n  return text.toUpperCase();\n}",
+  "explanation": "`text.toUpperCase()` vraca novi string sa svim velikim slovima, a `return` ga vraca iz funkcije. Original `text` se ne menja. Brojevi i razmaci ostaju isti jer nemaju veliku verziju.",
+  "format": "challenge",
+  "id": "2026-09-21-jutro",
+  "createdAt": "2026-09-21T07:45:33.761Z",
+  "slot": "jutro"
+}
