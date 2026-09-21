@@ -1,0 +1,33 @@
+{
+  "topic": "niz indeksi",
+  "lesson": {
+    "title": "Nizovi: indeksi krecu od nule",
+    "body": "Niz je lista vrednosti u uglastim zagradama, npr. lista imena ili brojeva. Svaka vrednost u nizu ima svoj redni broj koji se zove indeks. Brojanje krece od nule: prvi element je na indeksu 0, drugi na 1, treci na 2. Do elementa se dolazi tako sto se posle imena niza napise indeks u uglastim zagradama. U praksi tako uzimas jedan konkretan element iz liste, npr. prvog korisnika ili prvu stavku u korpi.\n\n```js\nconst fruits = [\"jabuka\", \"kruska\", \"sljiva\"];\nconst first = fruits[0]; // \"jabuka\"\nconst last = fruits[2]; // \"sljiva\"\n```"
+  },
+  "task": {
+    "title": "Prvi dan u nedelji",
+    "brief": "Kod treba da iz niza dana izvuce prvi i treci dan. Jedna linija ima bag - popravi je. Primer: days[0] daje \"pon\", days[2] daje \"sre\". Testovi citaju promenljive firstDay i thirdDay.",
+    "signature": "const firstDay, const thirdDay",
+    "starter": "const days = [\"pon\", \"uto\", \"sre\", \"cet\", \"pet\"];\nconst firstDay = days[1]; // ovde\nconst thirdDay = days[2];",
+    "tests": [
+      {
+        "name": "firstDay je prvi dan u nizu",
+        "code": "assert.equal(firstDay, \"pon\");"
+      },
+      {
+        "name": "thirdDay je treci dan u nizu",
+        "code": "assert.equal(thirdDay, \"sre\");"
+      },
+      {
+        "name": "niz days nije menjan",
+        "code": "assert.deepEqual(days, [\"pon\", \"uto\", \"sre\", \"cet\", \"pet\"]);"
+      }
+    ]
+  },
+  "answer": "const days = [\"pon\", \"uto\", \"sre\", \"cet\", \"pet\"];\nconst firstDay = days[0];\nconst thirdDay = days[2];",
+  "explanation": "Indeksi u nizu krecu od nule, pa je prvi element na days[0], a ne na days[1]. Linija sa days[1] je zapravo uzimala drugi dan (\"uto\"). Treci dan je na indeksu 2, sto je vec bilo tacno.",
+  "format": "debug",
+  "id": "2026-09-21-vece",
+  "createdAt": "2026-09-21T18:00:47.215Z",
+  "slot": "vece"
+}
