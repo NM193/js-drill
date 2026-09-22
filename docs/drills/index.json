@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-22-jutro",
+    "createdAt": "2026-09-22T06:26:31.650Z",
+    "topic": "niz push",
+    "lessonTitle": "Dodavanje u niz sa push",
+    "taskTitle": "Dodaj na kraj niza"
+  },
+  {
     "id": "2026-09-21-vece",
     "createdAt": "2026-09-21T18:00:47.215Z",
     "topic": "niz indeksi",

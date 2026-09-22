@@ -1,0 +1,33 @@
+{
+  "topic": "niz push",
+  "lesson": {
+    "title": "Dodavanje u niz sa push",
+    "body": "Niz mozes da prosiris i posle pravljenja. Metoda `push` dodaje novu vrednost na kraj niza. Ona menja sam niz - ne pravi novi. Ono sto `push` vrati je nova duzina niza (broj), a ne niz, pa je to cesta greska.\n\n```js\nconst fruits = [\"jabuka\", \"kruska\"];\nfruits.push(\"sljiva\");\nconsole.log(fruits); // [\"jabuka\", \"kruska\", \"sljiva\"]\n```\n\nU praksi `push` koristis kad skupljas stavke jednu po jednu, npr. dok korisnik dodaje proizvode u korpu."
+  },
+  "task": {
+    "title": "Dodaj na kraj niza",
+    "brief": "Funkcija addItem treba da doda item na kraj niza list i vrati ceo niz. Ispod su tri varijante A, B i C - samo jedna radi tacno. Prepisi tu varijantu u telo funkcije. Primeri: addItem([1, 2], 3) vraca [1, 2, 3]; addItem([\"a\"], \"b\") vraca [\"a\", \"b\"].",
+    "signature": "function addItem(list, item)",
+    "starter": "// A:\n// list.push(item);\n// return list;\n//\n// B:\n// return list.push(item);\n//\n// C:\n// list[0] = item;\n// return list;\n\nfunction addItem(list, item) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "dodaje broj na kraj niza brojeva",
+        "code": "assert.deepEqual(addItem([1, 2], 3), [1, 2, 3]);"
+      },
+      {
+        "name": "dodaje string na kraj niza stringova",
+        "code": "assert.deepEqual(addItem([\"a\"], \"b\"), [\"a\", \"b\"]);"
+      },
+      {
+        "name": "menja postojeci niz, ne pravi novi",
+        "code": "const nums = [10];\naddItem(nums, 20);\nassert.equal(nums.length, 2);"
+      }
+    ]
+  },
+  "answer": "function addItem(list, item) {\n  list.push(item);\n  return list;\n}",
+  "explanation": "Tacna je varijanta A: push doda item na kraj, a zatim vratimo ceo niz. Varijanta B vraca ono sto push vrati, a to je nova duzina niza (broj), ne niz. Varijanta C prepisuje prvi element umesto da doda novi.",
+  "format": "mcq",
+  "id": "2026-09-22-jutro",
+  "createdAt": "2026-09-22T06:26:31.650Z",
+  "slot": "jutro"
+}
