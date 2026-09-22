@@ -1,0 +1,33 @@
+{
+  "topic": "niz at",
+  "lesson": {
+    "title": "Metoda at kod nizova",
+    "body": "Niz ima metodu `at` koja vraca element na zadatoj poziciji, isto kao uglaste zagrade. Razlika je sto `at` prima i negativan broj, koji broji od kraja niza: `-1` je poslednji element, `-2` pretposlednji. Tako uzimas poslednji element bez racunanja duzine niza.\n\n```js\nconst colors = [\"red\", \"green\", \"blue\"];\ncolors.at(0);  // \"red\"\ncolors.at(-1); // \"blue\"\n```\n\nU praksi se `at(-1)` cesto koristi da procitas poslednju poruku, poslednji unos ili poslednji rezultat."
+  },
+  "task": {
+    "title": "Poslednji element niza",
+    "brief": "Dopuni funkciju tako da vrati poslednji element niza `list` pomocu `at`.\n\nPrimeri:\n- `lastOf([3, 7, 9])` daje `9`\n- `lastOf([\"jabuka\", \"kruska\"])` daje `\"kruska\"`",
+    "signature": "function lastOf(list)",
+    "starter": "function lastOf(list) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca poslednji broj",
+        "code": "assert.equal(lastOf([3, 7, 9]), 9);"
+      },
+      {
+        "name": "vraca poslednji string",
+        "code": "assert.equal(lastOf([\"jabuka\", \"kruska\"]), \"kruska\");"
+      },
+      {
+        "name": "radi i za niz sa jednim elementom",
+        "code": "assert.equal(lastOf([42]), 42);"
+      }
+    ]
+  },
+  "answer": "function lastOf(list) {\n  return list.at(-1);\n}",
+  "explanation": "`at(-1)` vraca poslednji element jer negativan broj broji od kraja niza. Radi za bilo koju duzinu niza, pa nema potrebe da racunas `list.length - 1`.",
+  "format": "challenge",
+  "id": "2026-09-22-vece",
+  "createdAt": "2026-09-22T18:00:58.360Z",
+  "slot": "vece"
+}
