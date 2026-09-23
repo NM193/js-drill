@@ -1,0 +1,33 @@
+{
+  "topic": "for...of petlja",
+  "lesson": {
+    "title": "for...of: prolazak kroz niz bez brojaca",
+    "body": "Petlja `for...of` prolazi kroz niz i za svaki element izvrsi isti blok koda. Klasicna `for` petlja trazi brojac i indeks, a ovde ti to ne treba: u zagradi napises `const ime of niz` i u svakom krugu `ime` sadrzi jedan element, redom od prvog do poslednjeg. Unutar bloka uvek radis sa tom promenljivom, a ne sa celim nizom. U praksi ovako sabiras cene, ispisujes listu ili proveravas svaki unos.\n\n```js\nconst names = [\"Ana\", \"Marko\"];\nfor (const name of names) {\n  console.log(name); // prvo \"Ana\", pa \"Marko\"\n}\n```"
+  },
+  "task": {
+    "title": "Ispravi zbir cena",
+    "brief": "Kod treba da sabere sve cene iz niza u promenljivu `total`. Ima jedan bag u liniji oznacenoj sa `// ovde`: unutar petlje se sabira pogresna stvar. Ispravi tu liniju. Primer: niz [10, 20, 30] daje total 60. Niz [1, 2] bi dao total 3.",
+    "signature": "let total",
+    "starter": "const prices = [10, 20, 30];\nlet total = 0;\nfor (const price of prices) {\n  total = total + prices; // ovde\n}",
+    "tests": [
+      {
+        "name": "total je zbir svih cena",
+        "code": "assert.equal(total, 60);"
+      },
+      {
+        "name": "total je broj, ne string",
+        "code": "assert.equal(typeof total, \"number\");"
+      },
+      {
+        "name": "niz prices je ostao isti",
+        "code": "assert.deepEqual(prices, [10, 20, 30]);"
+      }
+    ]
+  },
+  "answer": "const prices = [10, 20, 30];\nlet total = 0;\nfor (const price of prices) {\n  total = total + price;\n}",
+  "explanation": "U svakom krugu petlje promenljiva `price` sadrzi jedan element niza, pa se sabira ona, a ne ceo niz `prices`. Kad sabereš broj i niz, JavaScript ih spoji u string, pa total nikad ne postane 60. Sa `price` dobijas 0 + 10 + 20 + 30 = 60.",
+  "format": "debug",
+  "id": "2026-09-23-jutro",
+  "createdAt": "2026-09-23T06:01:09.135Z",
+  "slot": "jutro"
+}
