@@ -1,0 +1,33 @@
+{
+  "topic": "forEach",
+  "lesson": {
+    "title": "forEach: prolazak kroz niz",
+    "body": "`forEach` je metoda niza koja pokrece tvoju funkciju jednom za svaki element, redom. Ne treba ti brojac kao u `for` petlji, jer `forEach` sam prolazi kroz ceo niz.\n\n```js\nconst prices = [10, 20, 30];\nprices.forEach(p => {\n  console.log(p);\n});\n```\n\nOvo ispisuje 10, pa 20, pa 30. Vazno: `forEach` uvek vraca `undefined`, a to znaci \"nema vrednosti\". Zato se koristi kad hoces nesto da uradis sa svakim elementom, na primer da ga ispises ili dodas na zbir. Ne koristi se kad hoces da dobijes nov rezultat."
+  },
+  "task": {
+    "title": "Saberi sve brojeve u nizu",
+    "brief": "Funkcija `sum` treba da vrati zbir svih brojeva u nizu. Izaberi tacnu varijantu (A, B ili C) i upisi je na mesto `// ovde`.\n\nPrimeri:\n- `sum([1, 2, 3])` vraca `6`\n- `sum([10, 5])` vraca `15`",
+    "signature": "function sum(numbers)",
+    "starter": "// A: numbers.forEach(n => { total += n; });\n// B: total = numbers.forEach(n => n);\n// C: numbers.forEach(total += n);\n\nfunction sum(numbers) {\n  let total = 0;\n  // ovde\n  return total;\n}",
+    "tests": [
+      {
+        "name": "sabira tri broja",
+        "code": "assert.equal(sum([1, 2, 3]), 6);"
+      },
+      {
+        "name": "sabira dva broja",
+        "code": "assert.equal(sum([10, 5]), 15);"
+      },
+      {
+        "name": "prazan niz daje 0",
+        "code": "assert.equal(sum([]), 0);"
+      }
+    ]
+  },
+  "answer": "function sum(numbers) {\n  let total = 0;\n  numbers.forEach(n => { total += n; });\n  return total;\n}",
+  "explanation": "Tacna je varijanta A: `forEach` pokrece funkciju za svaki broj, a ona ga dodaje na `total`. B ne radi jer `forEach` vraca `undefined`, pa bi `total` postao `undefined`. C ne radi jer `n` tu ne postoji: `forEach` mora da dobije funkciju, a ne izraz.",
+  "format": "mcq",
+  "id": "2026-09-24-vece",
+  "createdAt": "2026-09-24T18:00:21.789Z",
+  "slot": "vece"
+}
