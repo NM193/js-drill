@@ -1,0 +1,33 @@
+{
+  "topic": "map",
+  "lesson": {
+    "title": "map: novi niz od postojeceg",
+    "body": "`map` prolazi kroz svaki element niza i pravi **novi** niz iste duzine. Za svaki element pozove funkciju koju mu das. Ono sto ta funkcija vrati ulazi u novi niz na isto mesto.\n\n```js\nconst prices = [100, 200, 300];\nconst withTax = prices.map((p) => p + 20);\n// withTax je [120, 220, 320], prices je i dalje [100, 200, 300]\n```\n\nPrvi niz ostaje isti, `map` ga ne menja. Za razliku od `forEach`, `map` vraca rezultat koji mozes da sacuvas u promenljivu. U praksi se koristi stalno, na primer da od liste cena dobijes cene sa porezom ili od liste imena listu za prikaz."
+  },
+  "task": {
+    "title": "Udvostruci svaki broj",
+    "brief": "Dopuni `return` tako da funkcija vrati novi niz u kome je svaki broj pomnozen sa 2. Koristi `map`. Primeri: `doubleAll([1, 2, 3])` vraca `[2, 4, 6]`, a `doubleAll([5, 50])` vraca `[10, 100]`.",
+    "signature": "function doubleAll(numbers)",
+    "starter": "function doubleAll(numbers) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "udvostrucuje [1, 2, 3]",
+        "code": "assert.deepEqual(doubleAll([1, 2, 3]), [2, 4, 6]);"
+      },
+      {
+        "name": "udvostrucuje [5, 50]",
+        "code": "assert.deepEqual(doubleAll([5, 50]), [10, 100]);"
+      },
+      {
+        "name": "ne menja pocetni niz",
+        "code": "const input = [4, 7];\ndoubleAll(input);\nassert.deepEqual(input, [4, 7]);"
+      }
+    ]
+  },
+  "answer": "function doubleAll(numbers) {\n  return numbers.map((n) => n * 2);\n}",
+  "explanation": "`numbers.map((n) => n * 2)` pozove arrow funkciju za svaki broj i od onoga sto ona vrati napravi novi niz. Pocetni niz `numbers` ostaje isti, pa treci test prolazi. Bez `map` bi morao sam da napravis prazan niz i da ga puni u petlji.",
+  "format": "challenge",
+  "id": "2026-09-25-jutro",
+  "createdAt": "2026-09-25T06:43:02.491Z",
+  "slot": "jutro"
+}

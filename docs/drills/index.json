@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-25-jutro",
+    "createdAt": "2026-09-25T06:43:02.491Z",
+    "topic": "map",
+    "lessonTitle": "map: novi niz od postojeceg",
+    "taskTitle": "Udvostruci svaki broj"
+  },
+  {
     "id": "2026-09-24-vece",
     "createdAt": "2026-09-24T18:00:21.789Z",
     "topic": "forEach",
