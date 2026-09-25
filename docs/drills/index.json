@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-25-vece",
+    "createdAt": "2026-09-25T18:00:43.021Z",
+    "topic": "filter",
+    "lessonTitle": "filter: izdvajanje po uslovu",
+    "taskTitle": "Popravi izdvajanje skupih cena"
+  },
+  {
     "id": "2026-09-25-jutro",
     "createdAt": "2026-09-25T06:43:02.491Z",
     "topic": "map",

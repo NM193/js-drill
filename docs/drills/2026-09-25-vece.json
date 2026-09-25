@@ -1,0 +1,33 @@
+{
+  "topic": "filter",
+  "lesson": {
+    "title": "filter: izdvajanje po uslovu",
+    "body": "`filter` prolazi kroz niz i pravi **novi** niz samo od elemenata koji ispunjavaju uslov. Za svaki element pozove funkciju koju mu das: ako ona vrati `true`, element ulazi u novi niz, a ako vrati `false`, preskace se.\n\n```js\nconst ages = [12, 25, 17, 40];\nconst adults = ages.filter((age) => age >= 18);\n// adults je [25, 40], ages je i dalje [12, 25, 17, 40]\n```\n\nZa razliku od `map`, koji menja svaki element, `filter` elemente ne menja, nego samo bira koje zadrzava. Zato novi niz moze da bude kraci od prvog. U praksi se koristi stalno, na primer da iz liste proizvoda izdvojis samo one koji su na stanju."
+  },
+  "task": {
+    "title": "Popravi izdvajanje skupih cena",
+    "brief": "Funkcija treba da vrati samo cene vece od 200, ali umesto brojeva vraca niz `true` i `false`. Nadji bag na liniji ispod `// ovde` i ispravi ga. Primeri: `expensiveOnly([120, 450, 80, 900, 300])` vraca `[450, 900, 300]`, a `expensiveOnly([50, 250])` vraca `[250]`.",
+    "signature": "function expensiveOnly(prices)",
+    "starter": "function expensiveOnly(prices) {\n  // ovde\n  return prices.map((price) => price > 200);\n}",
+    "tests": [
+      {
+        "name": "izdvaja cene vece od 200",
+        "code": "assert.deepEqual(expensiveOnly([120, 450, 80, 900, 300]), [450, 900, 300]);"
+      },
+      {
+        "name": "radi i za kraci niz",
+        "code": "assert.deepEqual(expensiveOnly([50, 250]), [250]);"
+      },
+      {
+        "name": "ne menja pocetni niz",
+        "code": "const input = [100, 500];\nexpensiveOnly(input);\nassert.deepEqual(input, [100, 500]);"
+      }
+    ]
+  },
+  "answer": "function expensiveOnly(prices) {\n  return prices.filter((price) => price > 200);\n}",
+  "explanation": "`map` pravi novi niz od onoga sto funkcija vrati, pa je za svaku cenu ubacivao `true` ili `false`. `filter` koristi taj `true` ili `false` samo kao odluku da li da zadrzi element, pa u novi niz ulaze prave cene. Pocetni niz `prices` ostaje isti, pa treci test prolazi.",
+  "format": "debug",
+  "id": "2026-09-25-vece",
+  "createdAt": "2026-09-25T18:00:43.021Z",
+  "slot": "vece"
+}
