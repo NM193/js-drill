@@ -1,0 +1,33 @@
+{
+  "topic": "objekti svojstva",
+  "lesson": {
+    "title": "Objekti: tacka i uglaste zagrade",
+    "body": "Objekat cuva vise vrednosti pod imenima, na primer podatke o jednom korisniku. Svako ime sa svojom vrednoscu zove se svojstvo (engl. property). Svojstvo citas tackom kad znas njegovo ime dok pises kod, a uglastim zagradama kad je ime zapisano u promenljivoj:\n\n```js\nconst user = { name: \"Ana\", age: 28 };\nuser.name;          // \"Ana\"\nconst key = \"age\";\nuser[key];          // 28\n```\n\nU praksi uglaste zagrade koristis kad ime svojstva stize spolja, na primer iz forme ili sa servera. Pazi: `user.key` trazi svojstvo koje se bas zove \"key\", pa vraca `undefined`."
+  },
+  "task": {
+    "title": "Procitaj svojstvo po imenu",
+    "brief": "Funkcija dobija objekat i ime svojstva kao string. Vrati vrednost tog svojstva. Primer 1: getField({ name: \"Ana\", age: 28 }, \"name\") vraca \"Ana\". Primer 2: getField({ name: \"Ana\", age: 28 }, \"age\") vraca 28.",
+    "signature": "function getField(obj, key)",
+    "starter": "function getField(obj, key) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "cita svojstvo name",
+        "code": "assert.equal(getField({ name: \"Ana\", age: 28 }, \"name\"), \"Ana\");"
+      },
+      {
+        "name": "cita svojstvo age",
+        "code": "assert.equal(getField({ name: \"Ana\", age: 28 }, \"age\"), 28);"
+      },
+      {
+        "name": "radi i za drugi objekat",
+        "code": "assert.equal(getField({ city: \"Novi Sad\" }, \"city\"), \"Novi Sad\");"
+      }
+    ]
+  },
+  "answer": "function getField(obj, key) {\n  return obj[key];\n}",
+  "explanation": "Ime svojstva se nalazi u promenljivoj `key`, pa ga citas uglastim zagradama: `obj[key]`. Zapis `obj.key` bi trazio svojstvo koje se doslovno zove \"key\" i vratio bi `undefined`.",
+  "format": "challenge",
+  "id": "2026-09-26-vece",
+  "createdAt": "2026-09-26T18:00:28.830Z",
+  "slot": "vece"
+}
