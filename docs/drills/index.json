@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-26-jutro",
+    "createdAt": "2026-09-26T06:00:45.134Z",
+    "topic": "find",
+    "lessonTitle": "find: prvi element koji odgovara",
+    "taskTitle": "Prva skupa cena"
+  },
+  {
     "id": "2026-09-25-vece",
     "createdAt": "2026-09-25T18:00:43.021Z",
     "topic": "filter",

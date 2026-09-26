@@ -1,0 +1,33 @@
+{
+  "topic": "find",
+  "lesson": {
+    "title": "find: prvi element koji odgovara",
+    "body": "`find` prolazi kroz niz i vraća **prvi** element za koji je uslov tačan. Uslov pišeš kao arrow funkciju, isto kao kod `filter`. Razlika je u tome što `filter` vraća novi niz, a `find` vraća samo jednu vrednost. Čim nađe prvi element koji odgovara, staje i ne gleda dalje. Ako nijedan element ne odgovara, vraća `undefined`, što znači \"nema vrednosti\".\n\n```js\nconst numbers = [3, 8, 12, 5];\nconst firstBig = numbers.find((n) => n > 5); // 8\nconst huge = numbers.find((n) => n > 100); // undefined\n```\n\nU praksi ga koristiš kad ti treba jedna stvar iz liste, na primer prvi proizvod koji košta više od neke cene."
+  },
+  "task": {
+    "title": "Prva skupa cena",
+    "brief": "Funkcija dobija niz cena i treba da vrati prvu cenu veću od 100. Ako takve cene nema, vraća `undefined`. Izaberi tačnu varijantu (A, B ili C) i prepiši je na mesto `// ovde`. Primeri: `firstExpensive([40, 90, 150, 300])` vraća `150`, a `firstExpensive([20, 50])` vraća `undefined`.",
+    "signature": "function firstExpensive(prices)",
+    "starter": "// A: return prices.filter((p) => p > 100);\n// B: return prices.find((p) => p > 100);\n// C: return prices.find((p) => p < 100);\n\nfunction firstExpensive(prices) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "vraća prvu cenu veću od 100, ne sve takve",
+        "code": "assert.equal(firstExpensive([40, 90, 150, 300]), 150);"
+      },
+      {
+        "name": "radi i kad je prva cena odmah skupa",
+        "code": "assert.equal(firstExpensive([500, 120]), 500);"
+      },
+      {
+        "name": "vraća undefined kad nema skupe cene",
+        "code": "assert.equal(firstExpensive([20, 50]), undefined);"
+      }
+    ]
+  },
+  "answer": "function firstExpensive(prices) {\n  return prices.find((p) => p > 100);\n}",
+  "explanation": "Tačna je varijanta B, jer `find` vraća samo prvi element za koji je `p > 100` tačno. Varijanta A vraća niz `[150, 300]` umesto jednog broja, jer `filter` uvek pravi novi niz. Varijanta C ima obrnut uslov, pa vraća prvu jeftinu cenu, `40`.",
+  "format": "mcq",
+  "id": "2026-09-26-jutro",
+  "createdAt": "2026-09-26T06:00:45.134Z",
+  "slot": "jutro"
+}
