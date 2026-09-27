@@ -1,0 +1,33 @@
+{
+  "topic": "ugnjezdeni objekti",
+  "lesson": {
+    "title": "Objekat unutar objekta",
+    "body": "Vrednost svojstva u objektu moze da bude i drugi objekat. To se zove ugnjezdeni objekat: objekat koji zivi unutar drugog objekta. Do unutrasnjih vrednosti se dolazi sa dve tacke zaredom, korak po korak. Prva tacka uzima unutrasnji objekat, druga tacka uzima svojstvo iz njega.\n\n```js\nconst user = { name: \"Ana\", address: { city: \"Novi Sad\", zip: 21000 } };\nconsole.log(user.address.city); // \"Novi Sad\"\nconsole.log(user.address.zip);  // 21000\n```\n\nOvo je svuda u praksi: podaci sa servera skoro uvek stizu kao objekti u objektima, pa je vazno znati kako se stigne do dubljih vrednosti."
+  },
+  "task": {
+    "title": "Ispravi put do grada",
+    "brief": "Funkcija getCity treba da vrati grad korisnika, ali sada vraca undefined. Grad nije direktno u user objektu, nego unutar user.address. Ispravi liniju oznacenu sa // ovde.\n\nPrimeri:\n- getCity({ name: \"Ana\", address: { city: \"Novi Sad\", zip: 21000 } }) -> \"Novi Sad\"\n- getCity({ name: \"Marko\", address: { city: \"Beograd\", zip: 11000 } }) -> \"Beograd\"",
+    "signature": "function getCity(user)",
+    "starter": "function getCity(user) {\n  return user.city; // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca grad za Anu",
+        "code": "assert.equal(getCity({ name: \"Ana\", address: { city: \"Novi Sad\", zip: 21000 } }), \"Novi Sad\");"
+      },
+      {
+        "name": "vraca grad za Marka",
+        "code": "assert.equal(getCity({ name: \"Marko\", address: { city: \"Beograd\", zip: 11000 } }), \"Beograd\");"
+      },
+      {
+        "name": "radi i kad address ima samo city",
+        "code": "assert.equal(getCity({ name: \"Ivana\", address: { city: \"Nis\" } }), \"Nis\");"
+      }
+    ]
+  },
+  "answer": "function getCity(user) {\n  return user.address.city;\n}",
+  "explanation": "Svojstvo city ne postoji direktno na user objektu, pa user.city daje undefined. Grad se nalazi unutar ugnjezdenog objekta address, pa put mora da bude user.address.city. Prva tacka ulazi u address, druga uzima city iz njega.",
+  "format": "debug",
+  "id": "2026-09-27-jutro",
+  "createdAt": "2026-09-27T06:00:41.693Z",
+  "slot": "jutro"
+}
