@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-27-vece",
+    "createdAt": "2026-09-27T18:00:32.399Z",
+    "topic": "destrukturiranje objekta",
+    "lessonTitle": "Destrukturiranje objekta",
+    "taskTitle": "Izvuci grad iz objekta"
+  },
+  {
     "id": "2026-09-27-jutro",
     "createdAt": "2026-09-27T06:00:41.693Z",
     "topic": "ugnjezdeni objekti",

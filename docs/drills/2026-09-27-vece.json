@@ -1,0 +1,33 @@
+{
+  "topic": "destrukturiranje objekta",
+  "lesson": {
+    "title": "Destrukturiranje objekta",
+    "body": "**Destrukturiranje** je kraći način da izvučeš vrednosti iz objekta u posebne promenljive. Umesto da pišeš `user.name`, levo od znaka `=` napišeš vitičaste zagrade `{ }` sa imenom svojstva. Ime promenljive mora da bude isto kao ime svojstva u objektu. Ako to svojstvo ne postoji, promenljiva dobija `undefined`.\n\n```js\nconst user = { name: \"Ana\", age: 25 };\nconst { name, age } = user;\nconsole.log(name); // \"Ana\"\n```\n\nU praksi ćeš ovo stalno viđati u kodu koji ti napiše AI, na primer kad se iz podataka sa servera izvlači samo ono što je potrebno."
+  },
+  "task": {
+    "title": "Izvuci grad iz objekta",
+    "brief": "Izaberi varijantu A, B ili C koja iz objekta `user` izvlači svojstvo `city` u promenljivu `city`. Upiši je na mesto `// ovde`. Primeri: `getCity({ name: \"Ana\", city: \"Beograd\" })` vraća `\"Beograd\"`, a `getCity({ name: \"Marko\", city: \"Nis\" })` vraća `\"Nis\"`.",
+    "signature": "function getCity(user)",
+    "starter": "// A: const { city } = user;\n// B: const city = { user };\n// C: const [ city ] = user;\n\nfunction getCity(user) {\n  // ovde\n  return city;\n}",
+    "tests": [
+      {
+        "name": "vraca grad za Anu",
+        "code": "assert.equal(getCity({ name: \"Ana\", city: \"Beograd\" }), \"Beograd\");"
+      },
+      {
+        "name": "vraca grad za Marka",
+        "code": "assert.equal(getCity({ name: \"Marko\", city: \"Nis\" }), \"Nis\");"
+      },
+      {
+        "name": "vraca undefined kad grada nema",
+        "code": "assert.equal(getCity({ name: \"Ivan\" }), undefined);"
+      }
+    ]
+  },
+  "answer": "function getCity(user) {\n  const { city } = user;\n  return city;\n}",
+  "explanation": "Varijanta A koristi vitičaste zagrade, pa iz objekta izvlači svojstvo `city` u promenljivu sa istim imenom. Varijanta B ne čita ništa iz objekta, nego pravi novi objekat. Varijanta C koristi uglaste zagrade, koje služe za nizove, pa baca grešku jer `user` nije niz.",
+  "format": "mcq",
+  "id": "2026-09-27-vece",
+  "createdAt": "2026-09-27T18:00:32.399Z",
+  "slot": "vece"
+}
