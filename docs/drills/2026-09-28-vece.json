@@ -1,0 +1,33 @@
+{
+  "topic": "poruka o gresci",
+  "lesson": {
+    "title": "Kako procitati poruku o gresci",
+    "body": "Kada nesto ne valja, JavaScript zaustavi program i ispise poruku o gresci. Ta poruka ima dva dela: **tip greske** na pocetku i **opis** posle dvotacke.\n\n```js\nconst name = 'Ana';\nconsole.log(nme);\n// ReferenceError: nme is not defined\n```\n\n`ReferenceError` znaci da kod koristi ime promenljive koje ne postoji, a to je najcesce obicna slovna greska. Opis `nme is not defined` kaze tacno koje ime nije pronadjeno. Kada ti pregledac ili AI alat prijavi gresku, procitaj tip i ime iz poruke, pa to ime potrazi u kodu."
+  },
+  "task": {
+    "title": "Popravi slovnu gresku",
+    "brief": "Ovaj kod puca sa porukom `ReferenceError: discont is not defined`. Procitaj poruku, nadji pogresno ime i ispravi liniju oznacenu sa `// ovde`, tako da `total` bude cena umanjena za popust. Primer 1: kada je price 100, a discount 20, total je 80. Primer 2: kada bi price bio 50, a discount 10, total bi bio 40.",
+    "signature": "const total",
+    "starter": "const price = 100;\nconst discount = 20;\nconst total = price - discont; // ovde",
+    "tests": [
+      {
+        "name": "total je 80",
+        "code": "assert.equal(total, 80);"
+      },
+      {
+        "name": "price je i dalje 100",
+        "code": "assert.equal(price, 100);"
+      },
+      {
+        "name": "discount je i dalje 20",
+        "code": "assert.equal(discount, 20);"
+      }
+    ]
+  },
+  "answer": "const price = 100;\nconst discount = 20;\nconst total = price - discount;",
+  "explanation": "Poruka `ReferenceError: discont is not defined` kaze da ime `discont` ne postoji. Promenljiva se zove `discount`, pa je bilo dovoljno ispraviti slovnu gresku. Tip greske ti kaze sta se desilo, a opis ti kaze koje ime da trazis.",
+  "format": "debug",
+  "id": "2026-09-28-vece",
+  "createdAt": "2026-09-28T18:00:37.592Z",
+  "slot": "vece"
+}
