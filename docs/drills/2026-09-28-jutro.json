@@ -1,0 +1,33 @@
+{
+  "topic": "podrazumevani parametri",
+  "lesson": {
+    "title": "Podrazumevane vrednosti parametara",
+    "body": "Parametar funkcije može da dobije podrazumevanu vrednost. To je vrednost koja se koristi kad onaj ko poziva funkciju ne prosledi taj argument. Piše se znakom `=` odmah posle imena parametra, u potpisu funkcije. Bez nje bi parametar koji nije prosleđen bio `undefined`.\n\n```js\nfunction greet(name = \"gost\") {\n  return `Zdravo, ${name}!`;\n}\ngreet(); // \"Zdravo, gost!\"\n```\n\nAko proslediš vrednost, na primer `greet(\"Ana\")`, dobiješ `\"Zdravo, Ana!\"` i podrazumevana vrednost se ne koristi. U praksi ovo služi za podešavanja koja skoro uvek imaju istu vrednost, pa ne moraš da ih pišeš pri svakom pozivu."
+  },
+  "task": {
+    "title": "Valuta koja se podrazumeva",
+    "brief": "Funkcija `formatPrice` pravi tekst cene. Kad joj se ne prosledi valuta, sada vraća `\"100 undefined\"`. U liniji označenoj sa `// ovde` dodaj u potpis podrazumevanu vrednost `\"RSD\"` za parametar `currency`. Primer 1: `formatPrice(100)` vraća `\"100 RSD\"`. Primer 2: `formatPrice(5, \"EUR\")` vraća `\"5 EUR\"`.",
+    "signature": "function formatPrice(amount, currency)",
+    "starter": "function formatPrice(amount, currency) { // ovde\n  return `${amount} ${currency}`;\n}",
+    "tests": [
+      {
+        "name": "bez valute koristi RSD",
+        "code": "assert.equal(formatPrice(100), \"100 RSD\");"
+      },
+      {
+        "name": "prosleđena valuta ima prednost",
+        "code": "assert.equal(formatPrice(5, \"EUR\"), \"5 EUR\");"
+      },
+      {
+        "name": "radi i za nulu bez valute",
+        "code": "assert.equal(formatPrice(0), \"0 RSD\");"
+      }
+    ]
+  },
+  "answer": "function formatPrice(amount, currency = \"RSD\") {\n  return `${amount} ${currency}`;\n}",
+  "explanation": "Deo `= \"RSD\"` posle `currency` kaže funkciji da koristi `\"RSD\"` kad valuta nije prosleđena. Kad je proslediš, na primer `\"EUR\"`, koristi se ta vrednost. Bez podrazumevane vrednosti `currency` bi bio `undefined` i to bi se videlo u tekstu.",
+  "format": "challenge",
+  "id": "2026-09-28-jutro",
+  "createdAt": "2026-09-28T06:39:34.199Z",
+  "slot": "jutro"
+}
