@@ -1,0 +1,33 @@
+{
+  "topic": "for petlja",
+  "lesson": {
+    "title": "Petlja for: ponavljanje sa brojacem",
+    "body": "Petlja `for` ponavlja isti kod vise puta i sama broji koliko je puta prosla. U zagradi ima tri dela odvojena tackom-zarezom: pocetna vrednost brojaca (`let i = 1`), uslov koji kaze do kada se ponavlja (`i <= 3`) i korak koji se izvrsi posle svakog kruga (`i++`, sto znaci \"povecaj i za 1\").\n\n```js\nlet total = 0;\nfor (let i = 1; i <= 3; i++) {\n  total = total + i;\n}\n```\n\nPosle ove petlje `total` je 6, jer je sabrano 1 + 2 + 3. U praksi `for` koristis kad ti treba sam brojac ili tacan broj ponavljanja, a ne samo elementi niza."
+  },
+  "task": {
+    "title": "Proizvod brojeva od 1 do n",
+    "brief": "Funkcija `product` treba da pomnozi sve brojeve od 1 do `n` i vrati rezultat. Petlja je vec napisana. Dopisi jednu liniju na mestu `// ovde` tako da se `result` u svakom krugu pomnozi sa `i`.\n\nPrimeri:\n- `product(4)` vraca `24` (1 * 2 * 3 * 4)\n- `product(5)` vraca `120` (1 * 2 * 3 * 4 * 5)",
+    "signature": "function product(n)",
+    "starter": "function product(n) {\n  let result = 1;\n  for (let i = 1; i <= n; i++) {\n    // ovde\n  }\n  return result;\n}",
+    "tests": [
+      {
+        "name": "product(4) vraca 24",
+        "code": "assert.equal(product(4), 24);"
+      },
+      {
+        "name": "product(5) vraca 120",
+        "code": "assert.equal(product(5), 120);"
+      },
+      {
+        "name": "product(1) vraca 1",
+        "code": "assert.equal(product(1), 1);"
+      }
+    ]
+  },
+  "answer": "function product(n) {\n  let result = 1;\n  for (let i = 1; i <= n; i++) {\n    result = result * i;\n  }\n  return result;\n}",
+  "explanation": "Petlja prolazi kroz brojeve od 1 do n, a u svakom krugu `result` postaje stara vrednost puta trenutni `i`. Za n = 4 to je 1 * 1 * 2 * 3 * 4, sto daje 24. `result` pocinje od 1, a ne od 0, jer bi mnozenje nulom uvek dalo 0.",
+  "format": "challenge",
+  "id": "2026-09-29-vece",
+  "createdAt": "2026-09-29T18:00:30.488Z",
+  "slot": "vece"
+}
