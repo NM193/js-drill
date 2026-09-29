@@ -1,0 +1,33 @@
+{
+  "topic": "try i catch",
+  "lesson": {
+    "title": "try i catch: kad nesto pukne",
+    "body": "Kad kod naidje na gresku, program staje i ostatak koda se ne izvrsava. To mozes da sprecis sa `try` i `catch`. Kod koji moze da pukne stavis u `try` blok (blok je deo koda izmedju viticastih zagrada `{ }`). U `catch` blok napises sta da se desi ako pukne. Promenljiva u zagradi posle `catch`, ovde `error`, je sama greska sa porukom koju vec znas da citas. U praksi ovo koristis kad podatak mozda ne postoji, na primer kad korisnik nije ulogovan, da aplikacija ne bi pala.\n\n```js\nconst user = undefined;\ntry { console.log(user.name); }\ncatch (error) { console.log(\"Nema korisnika\"); }\n```"
+  },
+  "task": {
+    "title": "Duzina imena bez pucanja",
+    "brief": "Funkcija `nameLength(user)` vraca broj slova u imenu korisnika. Ako korisnik ne postoji (`undefined` ili `null`), `user.name` baca gresku, a funkcija tada treba da vrati `0`. Izaberi tacnu varijantu (A, B ili C) i upisi je umesto `// ovde`. Primeri: `nameLength({ name: \"Ana\" })` vraca `3`, a `nameLength(undefined)` vraca `0`.",
+    "signature": "function nameLength(user)",
+    "starter": "// A: try { return user.name.length; } catch (error) { return 0; }\n// B: return user.name.length;\n// C: try { return 0; } catch (error) { return user.name.length; }\n\nfunction nameLength(user) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca duzinu imena kad korisnik postoji",
+        "code": "assert.equal(nameLength({ name: \"Ana\" }), 3);"
+      },
+      {
+        "name": "vraca 0 kad je korisnik undefined",
+        "code": "assert.equal(nameLength(undefined), 0);"
+      },
+      {
+        "name": "vraca 0 kad je korisnik null",
+        "code": "assert.equal(nameLength(null), 0);"
+      }
+    ]
+  },
+  "answer": "function nameLength(user) {\n  try { return user.name.length; } catch (error) { return 0; }\n}",
+  "explanation": "`user.name` baca gresku kad je `user` `undefined` ili `null`, pa taj kod mora da stoji u `try` bloku, a kad pukne, `catch` vrati `0`. Varijanta B nema `try`, pa program pukne. Kod C u `try` bloku nista ne puca, pa se `catch` nikad ne izvrsi i funkcija uvek vraca `0`.",
+  "format": "mcq",
+  "id": "2026-09-29-jutro",
+  "createdAt": "2026-09-29T07:11:01.747Z",
+  "slot": "jutro"
+}

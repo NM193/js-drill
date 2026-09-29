@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-29-jutro",
+    "createdAt": "2026-09-29T07:11:01.747Z",
+    "topic": "try i catch",
+    "lessonTitle": "try i catch: kad nesto pukne",
+    "taskTitle": "Duzina imena bez pucanja"
+  },
+  {
     "id": "2026-09-28-vece",
     "createdAt": "2026-09-28T18:00:37.592Z",
     "topic": "poruka o gresci",
