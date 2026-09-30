@@ -1,0 +1,33 @@
+{
+  "topic": "poredjenje ===",
+  "lesson": {
+    "title": "Zasto === a ne ==",
+    "body": "Kada porediš dve vrednosti, JavaScript ima dva znaka: `==` i `===`. Znak `==` pre poređenja pokušava da pretvori vrednosti u isti tip, pa tekst \"5\" i broj 5 proglasi jednakim. Znak `===` (stroga jednakost) proverava i vrednost i tip, pa bez tih iznenađenja kaže `false` kad se tipovi razlikuju.\n\n```js\n5 == \"5\"   // true\n5 === \"5\"  // false\n5 === 5    // true\n```\n\nU praksi uvek koristi `===`, jer tako izbegavaš greške kad npr. iz forme stigne tekst \"5\" umesto broja 5. Pazi i na jedan znak `=`: on ne poredi, nego upisuje vrednost."
+  },
+  "task": {
+    "title": "Da li je broj tačno 7?",
+    "brief": "Izaberi koja od tri varijante (A, B ili C) tačno proverava da li je `value` baš broj 7, pa je upiši umesto `// ovde`. Primeri: `isSeven(7)` vraća `true`, a `isSeven(\"7\")` vraća `false`.",
+    "signature": "function isSeven(value)",
+    "starter": "// A: value == 7\n// B: value === 7\n// C: value = 7\n\nfunction isSeven(value) {\n  return ; // ovde\n}",
+    "tests": [
+      {
+        "name": "broj 7 vraća true",
+        "code": "assert.equal(isSeven(7), true);"
+      },
+      {
+        "name": "tekst \"7\" vraća false",
+        "code": "assert.equal(isSeven(\"7\"), false);"
+      },
+      {
+        "name": "broj 8 vraća false",
+        "code": "assert.equal(isSeven(8), false);"
+      }
+    ]
+  },
+  "answer": "function isSeven(value) {\n  return value === 7;\n}",
+  "explanation": "Tačna je varijanta B: `===` proverava i vrednost i tip, pa tekst \"7\" nije isto što i broj 7. Varijanta A sa `==` pretvara \"7\" u broj i pogrešno vraća `true`. Varijanta C sa jednim `=` ništa ne poredi, nego upiše 7 u `value` i vrati 7 umesto `true` ili `false`.",
+  "format": "mcq",
+  "id": "2026-09-30-vece",
+  "createdAt": "2026-09-30T18:00:29.795Z",
+  "slot": "vece"
+}
