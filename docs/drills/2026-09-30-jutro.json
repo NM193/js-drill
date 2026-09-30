@@ -1,0 +1,33 @@
+{
+  "topic": "typeof",
+  "lesson": {
+    "title": "Koji je tip vrednosti: typeof",
+    "body": "Svaka vrednost u JavaScriptu ima tip, na primer tekst (string), broj (number) ili tacno/netacno (boolean). Operator `typeof` (rec koja se pise ispred vrednosti) vraca ime tog tipa kao tekst. Posto je rezultat tekst, porediš ga sa imenom tipa pod navodnicima, na primer `\"number\"`.\n\n```js\ntypeof 42;            // \"number\"\ntypeof \"42\";          // \"string\"\ntypeof 42 === \"number\"; // true\n```\n\nU praksi ti ovo pomaze da proveris sta si stvarno dobio, recimo da li je iz forme stigao broj ili tekst koji samo izgleda kao broj."
+  },
+  "task": {
+    "title": "Popravi proveru da li je broj",
+    "brief": "Funkcija `isNumber` treba da vrati `true` ako je vrednost broj, a `false` ako nije. Trenutno puca jer je u jednoj liniji greska. Popravi liniju oznacenu sa `// ovde`. Primeri: `isNumber(42)` vraca `true`, `isNumber(\"42\")` vraca `false`.",
+    "signature": "function isNumber(value)",
+    "starter": "function isNumber(value) {\n  return typeof value === number; // ovde\n}",
+    "tests": [
+      {
+        "name": "broj 42 je broj",
+        "code": "assert.equal(isNumber(42), true);"
+      },
+      {
+        "name": "tekst \"42\" nije broj",
+        "code": "assert.equal(isNumber(\"42\"), false);"
+      },
+      {
+        "name": "true nije broj",
+        "code": "assert.equal(isNumber(true), false);"
+      }
+    ]
+  },
+  "answer": "function isNumber(value) {\n  return typeof value === \"number\";\n}",
+  "explanation": "`typeof` uvek vraca tekst, na primer \"number\". Bez navodnika JavaScript misli da je `number` ime promenljive, a takva ne postoji, pa baca gresku. Kad dodas navodnike, porediš tekst sa tekstom i sve radi.",
+  "format": "debug",
+  "id": "2026-09-30-jutro",
+  "createdAt": "2026-09-30T09:18:33.121Z",
+  "slot": "jutro"
+}

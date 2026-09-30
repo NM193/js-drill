@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-09-30-jutro",
+    "createdAt": "2026-09-30T09:18:33.121Z",
+    "topic": "typeof",
+    "lessonTitle": "Koji je tip vrednosti: typeof",
+    "taskTitle": "Popravi proveru da li je broj"
+  },
+  {
     "id": "2026-09-29-vece",
     "createdAt": "2026-09-29T18:00:30.488Z",
     "topic": "for petlja",
