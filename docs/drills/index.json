@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-01-vece",
+    "createdAt": "2026-10-01T18:00:24.394Z",
+    "topic": "return",
+    "lessonTitle": "Funkcija vraca vrednost sa return",
+    "taskTitle": "Popravi funkciju double"
+  },
+  {
     "id": "2026-10-01-jutro",
     "createdAt": "2026-10-01T06:00:30.279Z",
     "topic": "let i const",

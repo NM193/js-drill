@@ -1,0 +1,33 @@
+{
+  "topic": "return",
+  "lesson": {
+    "title": "Funkcija vraca vrednost sa return",
+    "body": "Funkcija je imenovan deo koda koji mozes da pozoves vise puta. Ono sto stavis u zagrade, na primer `n`, zove se parametar, a to je vrednost koju funkcija dobija pri pozivu. Da bi funkcija vratila rezultat, pises `return` ispred izraza. Bez `return`, funkcija izracuna vrednost pa je odmah zaboravi i vrati `undefined`, sto znaci \"nema vrednosti\".\n\n```js\nfunction addOne(n) {\n  return n + 1;\n}\nconst x = addOne(5); // x je 6\n```\n\nU praksi skoro svaka funkcija koja nesto racuna mora da ima `return`, inace dobijes `undefined` i ne znas zasto."
+  },
+  "task": {
+    "title": "Popravi funkciju double",
+    "brief": "Funkcija `double` treba da vrati broj pomnozen sa 2, ali sada vraca `undefined`. Popravi liniju oznacenu sa `// ovde`. Primeri: `double(4)` vraca `8`, `double(-3)` vraca `-6`.",
+    "signature": "function double(n)",
+    "starter": "function double(n) {\n  n * 2; // ovde\n}",
+    "tests": [
+      {
+        "name": "double(4) vraca 8",
+        "code": "assert.equal(double(4), 8);"
+      },
+      {
+        "name": "double(-3) vraca -6",
+        "code": "assert.equal(double(-3), -6);"
+      },
+      {
+        "name": "double(0) vraca 0",
+        "code": "assert.equal(double(0), 0);"
+      }
+    ]
+  },
+  "answer": "function double(n) {\n  return n * 2;\n}",
+  "explanation": "Linija `n * 2;` izracuna rezultat, ali ga ne vrati, pa funkcija vraca `undefined`. Kad dodas `return` ispred izraza, funkcija vraca izracunatu vrednost onome ko je pozvao.",
+  "format": "debug",
+  "id": "2026-10-01-vece",
+  "createdAt": "2026-10-01T18:00:24.394Z",
+  "slot": "vece"
+}
