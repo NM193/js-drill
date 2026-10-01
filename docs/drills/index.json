@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-01-jutro",
+    "createdAt": "2026-10-01T06:00:30.279Z",
+    "topic": "let i const",
+    "lessonTitle": "Promenljive: let i const",
+    "taskTitle": "Dodaj poene igracu"
+  },
+  {
     "id": "2026-09-30-vece",
     "createdAt": "2026-09-30T18:00:29.795Z",
     "topic": "poredjenje ===",

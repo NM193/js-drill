@@ -1,0 +1,29 @@
+{
+  "topic": "let i const",
+  "lesson": {
+    "title": "Promenljive: let i const",
+    "body": "Promenljiva je ime pod kojim cuvas neku vrednost da bi je kasnije koristio. Pravi se sa `const` ili sa `let`. `const` znaci da tom imenu vise ne mozes dati novu vrednost. `let` dozvoljava da kasnije upises novu vrednost, bez ponovnog pisanja `let`:\n\n```js\nconst city = \"Beograd\";\nlet count = 1;\ncount = 2; // radi, sad je count 2\n```\n\nPo pravilu koristi `const`, a `let` samo kad znas da ce se vrednost menjati, na primer brojac ili rezultat u igri. Tako odmah vidis koje vrednosti se menjaju, a koje ostaju iste."
+  },
+  "task": {
+    "title": "Dodaj poene igracu",
+    "brief": "Igrac `Ana` je pocela sa 0 poena i upravo je osvojila 5. Na mestu `// ovde` upisi novu vrednost u postojecu promenljivu `points` tako da bude 5. Ne pravi novu promenljivu i ne diraj `playerName`. Primer 1: pre tvoje linije `points` je 0, posle je 5. Primer 2: `playerName` ostaje \"Ana\".",
+    "signature": "let points",
+    "starter": "const playerName = \"Ana\";\nlet points = 0;\n// ovde",
+    "tests": [
+      {
+        "name": "points je sada 5",
+        "code": "assert.equal(points, 5);"
+      },
+      {
+        "name": "playerName je i dalje Ana",
+        "code": "assert.equal(playerName, \"Ana\");"
+      }
+    ]
+  },
+  "answer": "const playerName = \"Ana\";\nlet points = 0;\npoints = 5;",
+  "explanation": "Posto je `points` napravljen sa `let`, mozes mu dati novu vrednost samo sa `points = 5;`, bez ponovnog pisanja `let`. Da si pokusao isto sa `playerName`, dobio bi gresku jer je on `const`. Zato ime igraca, koje se ne menja, ide u `const`, a poeni, koji se menjaju, idu u `let`.",
+  "format": "challenge",
+  "id": "2026-10-01-jutro",
+  "createdAt": "2026-10-01T06:00:30.279Z",
+  "slot": "jutro"
+}
