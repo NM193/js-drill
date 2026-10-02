@@ -1,0 +1,33 @@
+{
+  "topic": "if i else",
+  "lesson": {
+    "title": "Biranje puta: if i else",
+    "body": "`if` izvrsava blok koda samo kada je uslov tacan, odnosno kada daje `true`. `else` je rezervni blok koji se izvrsava kada uslov nije tacan. Tako program bira jedan od dva puta.\n\n```js\nconst temp = 25;\nif (temp >= 20) { console.log(\"toplo\"); }\nelse { console.log(\"hladno\"); }\n```\n\nZnak `>=` znaci \"vece ili jednako\". U praksi ovako proveravas, na primer, da li je korisnik ulogovan ili da li je korpa prazna, pa prikazes jedno ili drugo."
+  },
+  "task": {
+    "title": "Punoletan ili maloletan",
+    "brief": "Funkcija vec vraca \"punoletan\" kada je `age` 18 ili vise. Na mestu `// ovde` dopisi `else` blok koji vraca \"maloletan\". Primeri: `getLabel(20)` vraca \"punoletan\", `getLabel(15)` vraca \"maloletan\".",
+    "signature": "function getLabel(age)",
+    "starter": "function getLabel(age) {\n  if (age >= 18) {\n    return \"punoletan\";\n  } // ovde\n}",
+    "tests": [
+      {
+        "name": "20 godina je punoletan",
+        "code": "assert.equal(getLabel(20), \"punoletan\");"
+      },
+      {
+        "name": "15 godina je maloletan",
+        "code": "assert.equal(getLabel(15), \"maloletan\");"
+      },
+      {
+        "name": "tacno 18 godina je punoletan",
+        "code": "assert.equal(getLabel(18), \"punoletan\");"
+      }
+    ]
+  },
+  "answer": "function getLabel(age) {\n  if (age >= 18) {\n    return \"punoletan\";\n  } else {\n    return \"maloletan\";\n  }\n}",
+  "explanation": "Kada je `age >= 18` tacno, izvrsava se prvi blok i funkcija vraca \"punoletan\". U svim ostalim slucajevima uslov nije tacan, pa se izvrsava `else` blok i vraca se \"maloletan\". Zbog `>=` i tacno 18 godina upada u prvi blok.",
+  "format": "challenge",
+  "id": "2026-10-02-vece",
+  "createdAt": "2026-10-02T18:00:28.688Z",
+  "slot": "vece"
+}
