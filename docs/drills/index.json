@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-02-jutro",
+    "createdAt": "2026-10-02T06:46:17.559Z",
+    "topic": "arrow funkcije",
+    "lessonTitle": "Arrow funkcije: kraci zapis",
+    "taskTitle": "Izaberi tacnu arrow funkciju"
+  },
+  {
     "id": "2026-10-01-vece",
     "createdAt": "2026-10-01T18:00:24.394Z",
     "topic": "return",
