@@ -1,0 +1,33 @@
+{
+  "topic": "truthy i falsy",
+  "lesson": {
+    "title": "Truthy i falsy vrednosti",
+    "body": "Kada stavis neku vrednost u `if`, JavaScript je sam pretvara u tacno ili netacno. Najvaznije vrednosti koje se ponasaju kao netacne zovu se **falsy**: `false`, `0`, `\"\"` (prazan string), `null` i `undefined`. Sve ostalo je **truthy**, sto znaci da se ponasa kao tacno, na primer `5` ili `\"Ana\"`.\n\n```js\nconst count = 0;\nif (count) { console.log(\"ima\"); }   // preskace se, 0 je falsy\nif (\"Ana\") { console.log(\"ime\"); }  // ispisuje se, \"Ana\" je truthy\n```\n\nZato `if (x)` proverava da li `x` uopste ima neku vrednost, a `x === true` je tacno samo kad je `x` bas `true`. U praksi tako proveravas da li je korisnik nesto upisao ili da li broj nije nula."
+  },
+  "task": {
+    "title": "Popravi proveru korpe",
+    "brief": "Funkcija treba da vrati \"ima stvari\" kad je broj stvari u korpi veci od nule, a \"prazna korpa\" kad je nula. Sada uvek vraca \"prazna korpa\". Popravi uslov u liniji sa `// ovde` tako da koristi truthy proveru. Primeri: cartLabel(3) vraca \"ima stvari\", cartLabel(0) vraca \"prazna korpa\".",
+    "signature": "function cartLabel(count)",
+    "starter": "function cartLabel(count) {\n  if (count === true) { // ovde\n    return \"ima stvari\";\n  }\n  return \"prazna korpa\";\n}",
+    "tests": [
+      {
+        "name": "3 stvari daje \"ima stvari\"",
+        "code": "assert.equal(cartLabel(3), \"ima stvari\");"
+      },
+      {
+        "name": "0 stvari daje \"prazna korpa\"",
+        "code": "assert.equal(cartLabel(0), \"prazna korpa\");"
+      },
+      {
+        "name": "1 stvar daje \"ima stvari\"",
+        "code": "assert.equal(cartLabel(1), \"ima stvari\");"
+      }
+    ]
+  },
+  "answer": "function cartLabel(count) {\n  if (count) {\n    return \"ima stvari\";\n  }\n  return \"prazna korpa\";\n}",
+  "explanation": "Uslov `count === true` je tacan samo kad je `count` bas `true`, a broj 3 nije isto sto i `true`, pa se uvek vracalo \"prazna korpa\". Sa `if (count)` JavaScript proverava da li je broj truthy. Svaki broj osim 0 je truthy, a 0 je falsy, pa to radi tacno ono sto treba.",
+  "format": "debug",
+  "id": "2026-10-03-jutro",
+  "createdAt": "2026-10-03T06:00:35.695Z",
+  "slot": "jutro"
+}
