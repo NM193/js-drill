@@ -1,0 +1,33 @@
+{
+  "topic": "template stringovi",
+  "lesson": {
+    "title": "Template stringovi sa backtick-ovima",
+    "body": "Template string je tekst napisan izmedju kosih navodnika (backtick, znak `). U njega mozes da ubacis vrednost promenljive tako sto napises `${ime}`. JavaScript tada na to mesto upise pravu vrednost. Ovo radi **samo** sa backtick-ovima. U obicnim navodnicima `\"...\"` tekst `${ime}` ostaje upisan doslovno, sa sve znakom $.\n\n```js\nconst city = \"Beograd\";\nconst a = `Zivim u ${city}`; // \"Zivim u Beograd\"\nconst b = \"Zivim u ${city}\"; // \"Zivim u ${city}\"\n```\n\nU praksi tako pravis poruke za korisnika, na primer pozdrav sa njegovim imenom, bez spajanja teksta znakom +."
+  },
+  "task": {
+    "title": "Pozdrav sa imenom",
+    "brief": "Funkcija `greet` prima ime i vraca pozdrav u obliku `Zdravo, IME!`. Izaberi tacnu varijantu (A, B ili C) i upisi je posle `return`. Primeri: `greet(\"Ana\")` vraca `\"Zdravo, Ana!\"`, a `greet(\"Marko\")` vraca `\"Zdravo, Marko!\"`.",
+    "signature": "function greet(name)",
+    "starter": "// A: \"Zdravo, ${name}!\"\n// B: `Zdravo, ${name}!`\n// C: `Zdravo, name!`\n\nfunction greet(name) {\n  return ; // ovde\n}",
+    "tests": [
+      {
+        "name": "pozdravlja Anu",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana!\");"
+      },
+      {
+        "name": "pozdravlja Marka",
+        "code": "assert.equal(greet(\"Marko\"), \"Zdravo, Marko!\");"
+      },
+      {
+        "name": "ne ostavlja ${ u tekstu",
+        "code": "assert.ok(!greet(\"Ivan\").includes(\"$\"));"
+      }
+    ]
+  },
+  "answer": "function greet(name) {\n  return `Zdravo, ${name}!`;\n}",
+  "explanation": "Tacna je varijanta B, jer `${name}` menja vrednost samo unutar backtick-ova. Varijanta A koristi obicne navodnike, pa vraca doslovan tekst `Zdravo, ${name}!`. Varijanta C nema `${}`, pa uvek vraca rec `name` umesto pravog imena.",
+  "format": "mcq",
+  "id": "2026-10-03-vece",
+  "createdAt": "2026-10-03T18:00:25.542Z",
+  "slot": "vece"
+}
