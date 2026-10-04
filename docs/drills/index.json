@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-04-jutro",
+    "createdAt": "2026-10-04T06:00:48.047Z",
+    "topic": "string length",
+    "lessonTitle": "Duzina stringa sa length",
+    "taskTitle": "Koliko znakova ima tekst"
+  },
+  {
     "id": "2026-10-03-vece",
     "createdAt": "2026-10-03T18:00:25.542Z",
     "topic": "template stringovi",

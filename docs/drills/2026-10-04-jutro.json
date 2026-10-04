@@ -1,0 +1,33 @@
+{
+  "topic": "string length",
+  "lesson": {
+    "title": "Duzina stringa sa length",
+    "body": "Svaki string zna koliko ima znakova. Taj broj dobijas tako sto napises `.length` posle stringa ili promenljive, bez zagrada.\n\n```js\nconst name = \"Ana\";\nname.length; // 3\n\"hi there\".length; // 8\n```\n\nRazmak se broji kao znak, pa `\"hi there\"` ima 8 znakova. Prazan string `\"\"` ima duzinu 0. U praksi tako proveravas da li je lozinka dovoljno duga ili da li je polje u formi ostalo prazno."
+  },
+  "task": {
+    "title": "Koliko znakova ima tekst",
+    "brief": "Dopuni funkciju `getLength` tako da vrati broj znakova u stringu `text`. Umesto `// ovde` napisi samo izraz. Primeri: `getLength(\"Ana\")` vraca `3`, a `getLength(\"hi there\")` vraca `8`.",
+    "signature": "function getLength(text)",
+    "starter": "function getLength(text) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "kratka rec ima 3 znaka",
+        "code": "assert.equal(getLength(\"Ana\"), 3);"
+      },
+      {
+        "name": "razmak se broji kao znak",
+        "code": "assert.equal(getLength(\"hi there\"), 8);"
+      },
+      {
+        "name": "prazan string ima duzinu 0",
+        "code": "assert.equal(getLength(\"\"), 0);"
+      }
+    ]
+  },
+  "answer": "function getLength(text) {\n  return text.length;\n}",
+  "explanation": "`text.length` daje broj znakova u stringu, i razmaci se tu racunaju. Zato `\"hi there\"` ima 8, a prazan string `\"\"` ima 0. Pise se `.length` bez zagrada, nikako `.length()`.",
+  "format": "challenge",
+  "id": "2026-10-04-jutro",
+  "createdAt": "2026-10-04T06:00:48.047Z",
+  "slot": "jutro"
+}
