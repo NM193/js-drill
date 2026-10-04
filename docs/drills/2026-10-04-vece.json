@@ -1,0 +1,33 @@
+{
+  "topic": "string includes",
+  "lesson": {
+    "title": "Da li tekst sadrzi deo: includes",
+    "body": "Metoda `includes` proverava da li se neki tekst nalazi unutar drugog teksta. Metoda je funkcija koja pripada vrednosti i poziva se preko tacke, na primer `text.includes(...)`. Vraca `true` ako nadje trazeni tekst, a `false` ako ga ne nadje. Pazi: razlikuje velika i mala slova, pa `\"Kafu\"` i `\"kafu\"` nisu isto. U praksi time proveravas, na primer, da li email sadrzi `@` ili da li poruka pominje neku rec.\n\n```js\nconst text = \"Volim kafu\";\ntext.includes(\"kafu\"); // true\ntext.includes(\"Kafu\"); // false\n```"
+  },
+  "task": {
+    "title": "Popravi pretragu reci",
+    "brief": "Promenljiva `mentionsJs` treba da bude `true` jer poruka pominje JavaScript, ali je sada `false`. Ispravi liniju oznacenu sa `// ovde`, a poruku ne menjaj. Primeri: `\"Zdravo svete\".includes(\"svete\")` daje `true`, a `\"Zdravo svete\".includes(\"Svete\")` daje `false`.",
+    "signature": "const mentionsJs",
+    "starter": "const message = \"Dobrodosli u JavaScript kurs\";\nconst mentionsJs = message.includes(\"javascript\"); // ovde",
+    "tests": [
+      {
+        "name": "mentionsJs je true",
+        "code": "assert.equal(mentionsJs, true);"
+      },
+      {
+        "name": "mentionsJs je boolean",
+        "code": "assert.equal(typeof mentionsJs, \"boolean\");"
+      },
+      {
+        "name": "poruka nije promenjena",
+        "code": "assert.equal(message, \"Dobrodosli u JavaScript kurs\");"
+      }
+    ]
+  },
+  "answer": "const message = \"Dobrodosli u JavaScript kurs\";\nconst mentionsJs = message.includes(\"JavaScript\");",
+  "explanation": "`includes` razlikuje velika i mala slova, pa se `\"javascript\"` ne nalazi u poruci u kojoj pise `\"JavaScript\"`. Kad trazeni tekst napises tacno kao u poruci, `includes` vraca `true`.",
+  "format": "debug",
+  "id": "2026-10-04-vece",
+  "createdAt": "2026-10-04T18:00:33.498Z",
+  "slot": "vece"
+}
