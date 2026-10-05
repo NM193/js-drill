@@ -1,0 +1,29 @@
+{
+  "topic": "string split",
+  "lesson": {
+    "title": "Secenje stringa sa split",
+    "body": "Metoda `split` sece jedan string na vise delova i vraca niz, odnosno listu vrednosti. U zagradu stavljas znak po kome se sece, na primer zarez. Taj znak se ne pojavljuje u rezultatu.\n\n```js\nconst colors = \"crvena,plava,zuta\";\nconst parts = colors.split(\",\");\n// parts je [\"crvena\", \"plava\", \"zuta\"]\n```\n\nU praksi ovo koristis kad podatke dobijes kao jedan dugacak tekst, na primer tagove odvojene zarezom. Sa `split(\" \")` recenicu delis na reci, po razmaku."
+  },
+  "task": {
+    "title": "Iseci listu voca",
+    "brief": "Napravi promenljivu `fruits` tako sto ces string `text` iseci po zarezu pomocu `split`. Primer 1: \"jabuka,kruska,sljiva\" daje [\"jabuka\", \"kruska\", \"sljiva\"]. Primer 2: \"a,b\" bi dalo [\"a\", \"b\"].",
+    "signature": "const fruits",
+    "starter": "const text = \"jabuka,kruska,sljiva\";\n// ovde: napravi const fruits\n",
+    "tests": [
+      {
+        "name": "fruits sadrzi tri voca",
+        "code": "assert.deepEqual(fruits, [\"jabuka\", \"kruska\", \"sljiva\"]);"
+      },
+      {
+        "name": "fruits ima tacno 3 dela",
+        "code": "assert.equal(fruits.length, 3);"
+      }
+    ]
+  },
+  "answer": "const text = \"jabuka,kruska,sljiva\";\nconst fruits = text.split(\",\");\n",
+  "explanation": "`text.split(\",\")` sece string na svakom zarezu i vraca niz od tri dela. Zarezi se ne pojavljuju u rezultatu. Originalni `text` ostaje nepromenjen.",
+  "format": "challenge",
+  "id": "2026-10-05-vece",
+  "createdAt": "2026-10-05T20:19:12.438Z",
+  "slot": "vece"
+}
