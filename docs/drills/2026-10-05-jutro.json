@@ -1,0 +1,33 @@
+{
+  "topic": "string toUpperCase",
+  "lesson": {
+    "title": "Velika slova sa toUpperCase",
+    "body": "`toUpperCase()` pravi novu verziju stringa u kojoj su sva slova velika. Pises ga posle tacke, odmah iza stringa ili promenljive. Na kraju obavezno idu zagrade `()`, jer one znace \"uradi to sada\". Bez zagrada ne dobijas tekst, nego samo samu komandu koja nije izvrsena. U praksi se koristi za naslove, oznake kao \"NOVO\" ili kad hoces da tekst izgleda isto bez obzira na to kako ga je korisnik ukucao.\n\n```js\nconst city = \"beograd\";\ncity.toUpperCase(); // \"BEOGRAD\"\n\"Ana\".toUpperCase(); // \"ANA\"\n```"
+  },
+  "task": {
+    "title": "Izaberi: rec velikim slovima",
+    "brief": "Funkcija `shout` treba da vrati istu rec, ali velikim slovima. Izaberi tacnu varijantu (A, B ili C) i upisi je posle `return`. Primeri: `shout(\"zdravo\")` vraca `\"ZDRAVO\"`, a `shout(\"Ana\")` vraca `\"ANA\"`.",
+    "signature": "function shout(word)",
+    "starter": "// A: word.toUpperCase()\n// B: word.toUpperCase\n// C: toUpperCase(word)\n\nfunction shout(word) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "zdravo postaje ZDRAVO",
+        "code": "assert.equal(shout(\"zdravo\"), \"ZDRAVO\");"
+      },
+      {
+        "name": "Ana postaje ANA",
+        "code": "assert.equal(shout(\"Ana\"), \"ANA\");"
+      },
+      {
+        "name": "js postaje JS",
+        "code": "assert.equal(shout(\"js\"), \"JS\");"
+      }
+    ]
+  },
+  "answer": "function shout(word) {\n  return word.toUpperCase();\n}",
+  "explanation": "Tacna je varijanta A: `toUpperCase` se pise posle tacke i mora da ima zagrade `()` da bi se zaista izvrsio. B nema zagrade, pa vraca samu komandu umesto teksta. C ne radi jer `toUpperCase` ne postoji sam za sebe, nego uvek ide uz neki string.",
+  "format": "mcq",
+  "id": "2026-10-05-jutro",
+  "createdAt": "2026-10-05T06:00:40.785Z",
+  "slot": "jutro"
+}
