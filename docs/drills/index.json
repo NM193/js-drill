@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-07-jutro",
+    "createdAt": "2026-10-07T06:52:08.965Z",
+    "topic": "niz indeksi",
+    "lessonTitle": "Nizovi i indeksi od nule",
+    "taskTitle": "Popravi indeks prvog elementa"
+  },
+  {
     "id": "2026-10-05-vece",
     "createdAt": "2026-10-05T20:19:12.438Z",
     "topic": "string split",

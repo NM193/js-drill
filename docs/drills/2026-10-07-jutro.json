@@ -1,0 +1,33 @@
+{
+  "topic": "niz indeksi",
+  "lesson": {
+    "title": "Nizovi i indeksi od nule",
+    "body": "Niz je lista vrednosti u uglastim zagradama, odvojenih zarezom. Svaka vrednost u nizu ima svoj redni broj koji se zove **indeks**. Indeksi pocinju od nule, ne od jedan: prvi element je na indeksu `0`, drugi na `1`, i tako dalje.\n\n```js\nconst colors = [\"red\", \"green\", \"blue\"];\ncolors[0]; // \"red\"\ncolors[2]; // \"blue\"\n```\n\nVrednost iz niza citas tako sto posle imena niza u uglaste zagrade napises indeks. U praksi tako uzimas, na primer, prvog korisnika iz liste ili prvi proizvod u korpi."
+  },
+  "task": {
+    "title": "Popravi indeks prvog elementa",
+    "brief": "Promenljiva `first` treba da bude prvi element niza `fruits`, ali kod uzima pogresan element. Ispravi indeks u liniji sa `// ovde`. Primer 1: za niz `[\"apple\", \"banana\", \"cherry\"]`, `first` treba da bude `\"apple\"`. Primer 2: `last` treba da bude `\"cherry\"`, i ta linija je vec tacna.",
+    "signature": "const first, const last",
+    "starter": "const fruits = [\"apple\", \"banana\", \"cherry\"];\nconst first = fruits[1]; // ovde\nconst last = fruits[2];",
+    "tests": [
+      {
+        "name": "first je prvi element niza",
+        "code": "assert.equal(first, \"apple\");"
+      },
+      {
+        "name": "last je poslednji element niza",
+        "code": "assert.equal(last, \"cherry\");"
+      },
+      {
+        "name": "niz fruits nije promenjen",
+        "code": "assert.deepEqual(fruits, [\"apple\", \"banana\", \"cherry\"]);"
+      }
+    ]
+  },
+  "answer": "const fruits = [\"apple\", \"banana\", \"cherry\"];\nconst first = fruits[0];\nconst last = fruits[2];",
+  "explanation": "Indeksi u nizu pocinju od nule, pa je prvi element `fruits[0]`, a ne `fruits[1]`. Indeks `1` je zapravo drugi element, `\"banana\"`. Zato je poslednji od tri elementa na indeksu `2`.",
+  "format": "debug",
+  "id": "2026-10-07-jutro",
+  "createdAt": "2026-10-07T06:52:08.965Z",
+  "slot": "jutro"
+}
