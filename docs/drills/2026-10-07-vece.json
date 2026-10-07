@@ -1,0 +1,33 @@
+{
+  "topic": "niz push",
+  "lesson": {
+    "title": "Dodavanje na kraj niza: push",
+    "body": "`push` dodaje novi element na **kraj** niza. Pišeš ga posle tačke: `niz.push(vrednost)`. On menja niz koji već postoji i ne pravi novi niz. U praksi ga koristiš kad nešto dodaješ u listu, na primer proizvod u korpu ili novu poruku u chat.\n\n```js\nconst fruits = [\"jabuka\", \"kruska\"];\nfruits.push(\"sljiva\");\n// fruits je sad [\"jabuka\", \"kruska\", \"sljiva\"]\n```"
+  },
+  "task": {
+    "title": "Dodaj stvar u listu",
+    "brief": "Funkcija `addItem` treba da doda `item` na kraj niza `list` i da vrati taj niz. Izaberi tačnu liniju (A, B ili C) i upiši je na mesto `// ovde`. Primer 1: `addItem([\"mleko\"], \"hleb\")` vraća `[\"mleko\", \"hleb\"]`. Primer 2: `addItem([1, 2], 3)` vraća `[1, 2, 3]`.",
+    "signature": "function addItem(list, item)",
+    "starter": "// A: list.push(item);\n// B: list + item;\n// C: list[0] = item;\n\nfunction addItem(list, item) {\n  // ovde\n  return list;\n}",
+    "tests": [
+      {
+        "name": "dodaje hleb na kraj liste",
+        "code": "assert.deepEqual(addItem([\"mleko\"], \"hleb\"), [\"mleko\", \"hleb\"]);"
+      },
+      {
+        "name": "dodaje broj na kraj niza brojeva",
+        "code": "assert.deepEqual(addItem([1, 2], 3), [1, 2, 3]);"
+      },
+      {
+        "name": "menja originalni niz",
+        "code": "const cart = [\"jaja\"];\naddItem(cart, \"sir\");\nassert.deepEqual(cart, [\"jaja\", \"sir\"]);"
+      }
+    ]
+  },
+  "answer": "function addItem(list, item) {\n  list.push(item);\n  return list;\n}",
+  "explanation": "Tačno je A: `push` dodaje `item` na kraj niza i menja baš taj niz `list`. B sabere niz i vrednost u novu vrednost koju niko ne čuva, pa niz ostaje isti. C prepisuje prvi element umesto da doda novi na kraj.",
+  "format": "mcq",
+  "id": "2026-10-07-vece",
+  "createdAt": "2026-10-07T18:00:37.891Z",
+  "slot": "vece"
+}
