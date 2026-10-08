@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-08-vece",
+    "createdAt": "2026-10-08T18:00:35.072Z",
+    "topic": "for...of",
+    "lessonTitle": "Petlja for...of",
+    "taskTitle": "Popravi zbir niza"
+  },
+  {
     "id": "2026-10-08-jutro",
     "createdAt": "2026-10-08T06:00:23.905Z",
     "topic": "niz at",

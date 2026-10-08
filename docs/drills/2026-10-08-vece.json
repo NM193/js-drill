@@ -1,0 +1,33 @@
+{
+  "topic": "for...of",
+  "lesson": {
+    "title": "Petlja for...of",
+    "body": "`for...of` prolazi kroz niz i u svakom krugu (jednom prolasku petlje) daje ti sledeci element. Ne treba ti brojac ni indeks. Promenljiva posle `const` sama dobija vrednost elementa.\n\n```js\nconst prices = [100, 250];\nfor (const price of prices) {\n  console.log(price); // prvo 100, pa 250\n}\n```\n\nU praksi ga koristis kad hoces nesto da uradis sa svakim elementom niza, na primer da saberes sve cene u korpi."
+  },
+  "task": {
+    "title": "Popravi zbir niza",
+    "brief": "Funkcija `sum` treba da sabere sve brojeve iz niza, ali vraca pogresan rezultat. Pronadji bag na liniji sa `// ovde` i popravi ga. Primeri: `sum([1, 2, 3])` vraca `6`, a `sum([10, 5])` vraca `15`.",
+    "signature": "function sum(numbers)",
+    "starter": "function sum(numbers) {\n  let total = 0;\n  for (const n of numbers) {\n    total = total + 1; // ovde\n  }\n  return total;\n}",
+    "tests": [
+      {
+        "name": "sabira tri broja",
+        "code": "assert.equal(sum([1, 2, 3]), 6);"
+      },
+      {
+        "name": "sabira dva broja",
+        "code": "assert.equal(sum([10, 5]), 15);"
+      },
+      {
+        "name": "prazan niz daje 0",
+        "code": "assert.equal(sum([]), 0);"
+      }
+    ]
+  },
+  "answer": "function sum(numbers) {\n  let total = 0;\n  for (const n of numbers) {\n    total = total + n;\n  }\n  return total;\n}",
+  "explanation": "U svakom krugu petlje `n` je sledeci broj iz niza. Bag je bio sto se na `total` dodavalo `1`, pa je funkcija brojala elemente umesto da ih sabira. Kad se doda `n`, dobija se zbir svih brojeva.",
+  "format": "debug",
+  "id": "2026-10-08-vece",
+  "createdAt": "2026-10-08T18:00:35.072Z",
+  "slot": "vece"
+}
