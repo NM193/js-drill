@@ -1,0 +1,33 @@
+{
+  "topic": "niz at",
+  "lesson": {
+    "title": "Poslednji element niza: at(-1)",
+    "body": "Metoda `at` vraća element niza sa zadatog mesta. `at(0)` je prvi element, baš kao `niz[0]`. Prava korist je negativan broj: `at(-1)` vraća poslednji element, `at(-2)` pretposlednji. Tako ne moraš da brojiš koliko elemenata niz ima. U praksi se to koristi kad ti treba najnovija stavka iz liste, na primer poslednja poruka.\n\n```js\nconst colors = [\"red\", \"green\", \"blue\"];\ncolors.at(0);  // \"red\"\ncolors.at(-1); // \"blue\"\n```"
+  },
+  "task": {
+    "title": "Vrati poslednji element",
+    "brief": "Funkcija `lastItem` prima niz i treba da vrati njegov poslednji element. Zameni broj u `at(0)` tako da vraća poslednji element. Primer: `lastItem([1, 2, 3])` vraća `3`. Primer: `lastItem([\"a\", \"b\"])` vraća `\"b\"`.",
+    "signature": "function lastItem(list)",
+    "starter": "function lastItem(list) {\n  return list.at(0); // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca poslednji broj",
+        "code": "assert.equal(lastItem([1, 2, 3]), 3);"
+      },
+      {
+        "name": "vraca poslednji string",
+        "code": "assert.equal(lastItem([\"a\", \"b\"]), \"b\");"
+      },
+      {
+        "name": "radi i sa jednim elementom",
+        "code": "assert.equal(lastItem([7]), 7);"
+      }
+    ]
+  },
+  "answer": "function lastItem(list) {\n  return list.at(-1);\n}",
+  "explanation": "`at(-1)` broji od kraja niza, pa uvek vraća poslednji element. Isto bi radilo za niz od 3 i od 300 elemenata. Broj `0` je vraćao prvi element, a ne poslednji.",
+  "format": "challenge",
+  "id": "2026-10-08-jutro",
+  "createdAt": "2026-10-08T06:00:23.905Z",
+  "slot": "jutro"
+}

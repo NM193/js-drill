@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-08-jutro",
+    "createdAt": "2026-10-08T06:00:23.905Z",
+    "topic": "niz at",
+    "lessonTitle": "Poslednji element niza: at(-1)",
+    "taskTitle": "Vrati poslednji element"
+  },
+  {
     "id": "2026-10-07-vece",
     "createdAt": "2026-10-07T18:00:37.891Z",
     "topic": "niz push",
