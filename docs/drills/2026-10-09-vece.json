@@ -1,0 +1,33 @@
+{
+  "topic": "map",
+  "lesson": {
+    "title": "map: nov niz od postojeceg",
+    "body": "`map` prolazi kroz niz i za svaki element pozove funkciju koju mu das. Ono sto ta funkcija vrati postaje element novog niza, na istom mestu. Za razliku od `forEach`, koji ne vraca nista, `map` vraca taj nov niz, iste duzine kao stari. Originalni niz ostaje netaknut.\n\n```js\nconst prices = [10, 20, 30];\nconst doubled = prices.map((p) => p * 2);\n// doubled je [20, 40, 60], prices je i dalje [10, 20, 30]\n```\n\nU praksi se koristi stalno, na primer kad od liste cena pravis listu cena sa popustom."
+  },
+  "task": {
+    "title": "Dodaj 10 svakom broju",
+    "brief": "Funkcija `addTen` dobija niz brojeva i treba da vrati nov niz u kome je svaki broj veci za 10. Na mestu `// ovde` upisi u `result` nov niz napravljen uz pomoc `map`. Primeri: `addTen([1, 2, 3])` vraca `[11, 12, 13]`, a `addTen([0, -5])` vraca `[10, 5]`.",
+    "signature": "function addTen(numbers)",
+    "starter": "function addTen(numbers) {\n  let result = [];\n  // ovde\n  return result;\n}",
+    "tests": [
+      {
+        "name": "dodaje 10 na svaki broj",
+        "code": "assert.deepEqual(addTen([1, 2, 3]), [11, 12, 13]);"
+      },
+      {
+        "name": "radi i sa nulom i negativnim brojem",
+        "code": "assert.deepEqual(addTen([0, -5]), [10, 5]);"
+      },
+      {
+        "name": "ne menja originalni niz",
+        "code": "const nums = [5];\nconst out = addTen(nums);\nassert.deepEqual(nums, [5]);\nassert.deepEqual(out, [15]);"
+      }
+    ]
+  },
+  "answer": "function addTen(numbers) {\n  let result = [];\n  result = numbers.map((n) => n + 10);\n  return result;\n}",
+  "explanation": "`numbers.map((n) => n + 10)` pozove arrow funkciju za svaki broj i od vracenih vrednosti napravi nov niz. Taj nov niz upisujemo u `result` i vracamo ga. Originalni niz `numbers` se ne menja, sto proverava treci test.",
+  "format": "challenge",
+  "id": "2026-10-09-vece",
+  "createdAt": "2026-10-09T18:00:53.784Z",
+  "slot": "vece"
+}
