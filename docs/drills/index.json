@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-09-jutro",
+    "createdAt": "2026-10-09T06:00:41.551Z",
+    "topic": "forEach",
+    "lessonTitle": "forEach: prolazak kroz niz",
+    "taskTitle": "Zbir cena u korpi"
+  },
+  {
     "id": "2026-10-08-vece",
     "createdAt": "2026-10-08T18:00:35.072Z",
     "topic": "for...of",

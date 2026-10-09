@@ -1,0 +1,33 @@
+{
+  "topic": "forEach",
+  "lesson": {
+    "title": "forEach: prolazak kroz niz",
+    "body": "`forEach` prolazi kroz svaki element niza i za svaki element poziva funkciju koju mu dajes. Ne treba ti brojac kao u `for` petlji, jer element stize direktno kao parametar.\n\n```js\nlet total = 0;\n[5, 10, 20].forEach((n) => { total += n; });\n// total je sada 35\n```\n\nOvde `total += n` znaci \"dodaj n na total\". `forEach` sam ne vraca nista (vraca `undefined`), pa rezultat skupljas u promenljivu koja je napravljena pre petlje. U praksi ga koristis kad nesto treba da uradis sa svakim elementom, na primer da saberes sve cene u korpi."
+  },
+  "task": {
+    "title": "Zbir cena u korpi",
+    "brief": "Funkcija `total` dobija niz cena i treba da vrati njihov zbir. Izaberi tacnu varijantu (A, B ili C) i upisi je na mesto `// ovde`. Primeri: `total([5, 10, 20])` vraca `35`, a `total([])` vraca `0`.",
+    "signature": "function total(prices)",
+    "starter": "// A: prices.forEach((p) => { sum = p; });\n// B: prices.forEach((p) => { sum += p; });\n// C: sum = prices.forEach((p) => p);\n\nfunction total(prices) {\n  let sum = 0;\n  // ovde\n  return sum;\n}",
+    "tests": [
+      {
+        "name": "zbir tri cene je 35",
+        "code": "assert.equal(total([5, 10, 20]), 35);"
+      },
+      {
+        "name": "prazan niz daje 0",
+        "code": "assert.equal(total([]), 0);"
+      },
+      {
+        "name": "zbir 1, 2 i 3 je 6",
+        "code": "assert.equal(total([1, 2, 3]), 6);"
+      }
+    ]
+  },
+  "answer": "function total(prices) {\n  let sum = 0;\n  prices.forEach((p) => { sum += p; });\n  return sum;\n}",
+  "explanation": "B je tacna jer dodaje svaku cenu na `sum`, pa na kraju `sum` sadrzi zbir. A svaki put upise u `sum` samo trenutnu cenu, pa na kraju ostane samo poslednja. C ne radi jer `forEach` vraca `undefined`, a ne zbir.",
+  "format": "mcq",
+  "id": "2026-10-09-jutro",
+  "createdAt": "2026-10-09T06:00:41.551Z",
+  "slot": "jutro"
+}
