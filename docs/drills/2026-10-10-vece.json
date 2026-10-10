@@ -1,0 +1,33 @@
+{
+  "topic": "find",
+  "lesson": {
+    "title": "find: prvi element koji odgovara",
+    "body": "`find` prolazi kroz niz i vraća **prvi** element za koji uslov vrati `true`. Uslov pišeš kao arrow funkciju, isto kao kod `filter`. Razlika je u tome što `filter` vraća novi niz, a `find` vraća samo jedan element. Ako nijedan element ne odgovara uslovu, dobiješ `undefined`.\n\n```js\nconst prices = [5, 12, 30, 8];\nconst firstBig = prices.find((p) => p > 10); // 12\nconst huge = prices.find((p) => p > 100); // undefined\n```\n\nU praksi ga koristiš kad tražiš jednu stvar, na primer korisnika po imenu ili prvi proizvod koji je na stanju."
+  },
+  "task": {
+    "title": "Prvi broj veći od 10",
+    "brief": "Funkcija `firstOver10` treba da vrati prvi broj iz niza koji je veći od 10. Ako takvog broja nema, vraća `undefined`. Izaberi tačnu varijantu (A, B ili C) i upiši je posle `return`, umesto `// ovde`.\n\nPrimeri:\n- `firstOver10([5, 12, 30, 8])` vraća `12`\n- `firstOver10([1, 2, 3])` vraća `undefined`",
+    "signature": "function firstOver10(numbers)",
+    "starter": "// A: numbers.filter((n) => n > 10)\n// B: numbers.find((n) => n > 10)\n// C: numbers.find((n) => n < 10)\n\nfunction firstOver10(numbers) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "vraća prvi broj veći od 10",
+        "code": "assert.equal(firstOver10([5, 12, 30, 8]), 12);"
+      },
+      {
+        "name": "vraća undefined kad nema broja većeg od 10",
+        "code": "assert.equal(firstOver10([1, 2, 3]), undefined);"
+      },
+      {
+        "name": "vraća prvi, ne najveći",
+        "code": "assert.equal(firstOver10([3, 50, 11]), 50);"
+      }
+    ]
+  },
+  "answer": "function firstOver10(numbers) {\n  return numbers.find((n) => n > 10);\n}",
+  "explanation": "Tačna je varijanta B: `find` vraća prvi element za koji je uslov `n > 10` tačan. Varijanta A koristi `filter`, pa vraća ceo niz `[12, 30]` umesto jednog broja. Varijanta C ima obrnut uslov i vraća prvi broj manji od 10.",
+  "format": "mcq",
+  "id": "2026-10-10-vece",
+  "createdAt": "2026-10-10T19:27:06.606Z",
+  "slot": "vece"
+}
