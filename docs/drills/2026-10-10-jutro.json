@@ -1,0 +1,33 @@
+{
+  "topic": "filter",
+  "lesson": {
+    "title": "filter: izdvajanje po uslovu",
+    "body": "`filter` pravi **novi niz** samo od elemenata koji prodju proveru. Prosledis mu funkciju koja za svaki element vraca `true` ili `false`. Ako vrati `true`, element ostaje, a ako vrati `false`, element se izbacuje. Originalni niz se ne menja.\n\n```js\nconst ages = [12, 25, 17, 40];\nconst adults = ages.filter((age) => age >= 18);\n// adults je [25, 40]\n```\n\nU praksi ga koristis kad iz liste hoces samo deo, na primer aktivne korisnike, neplacene racune ili proizvode koji su na stanju."
+  },
+  "task": {
+    "title": "Popravi filter za jeftine cene",
+    "brief": "Funkcija `onlyCheap` treba da vrati samo cene manje od 100, ali vraca pogresne. U liniji oznacenoj sa `// ovde` je bag. Ispravi uslov.\n\nPrimeri:\n- `onlyCheap([120, 45, 300, 80])` vraca `[45, 80]`\n- `onlyCheap([10, 200, 99])` vraca `[10, 99]`",
+    "signature": "function onlyCheap(prices)",
+    "starter": "function onlyCheap(prices) {\n  return prices.filter((price) => price > 100); // ovde\n}",
+    "tests": [
+      {
+        "name": "izdvaja cene manje od 100",
+        "code": "assert.deepEqual(onlyCheap([120, 45, 300, 80]), [45, 80]);"
+      },
+      {
+        "name": "radi i za drugu listu",
+        "code": "assert.deepEqual(onlyCheap([10, 200, 99]), [10, 99]);"
+      },
+      {
+        "name": "originalni niz ostaje isti",
+        "code": "const list = [5, 150];\nonlyCheap(list);\nassert.deepEqual(list, [5, 150]);"
+      }
+    ]
+  },
+  "answer": "function onlyCheap(prices) {\n  return prices.filter((price) => price < 100);\n}",
+  "explanation": "Uslov u `filter` odlucuje koji elementi ostaju u novom nizu. Pisalo je `price > 100`, pa su ostajale skupe cene. Sa `price < 100` ostaju samo jeftine, a originalni niz se ne menja.",
+  "format": "debug",
+  "id": "2026-10-10-jutro",
+  "createdAt": "2026-10-10T07:44:22.193Z",
+  "slot": "jutro"
+}

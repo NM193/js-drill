@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-10-jutro",
+    "createdAt": "2026-10-10T07:44:22.193Z",
+    "topic": "filter",
+    "lessonTitle": "filter: izdvajanje po uslovu",
+    "taskTitle": "Popravi filter za jeftine cene"
+  },
+  {
     "id": "2026-10-09-vece",
     "createdAt": "2026-10-09T18:00:53.784Z",
     "topic": "map",
