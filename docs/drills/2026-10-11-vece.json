@@ -1,0 +1,29 @@
+{
+  "topic": "nizovi objekata",
+  "lesson": {
+    "title": "Niz objekata i čitanje korak po korak",
+    "body": "Niz može da sadrži objekte. Tako se najčešće čuvaju podaci, na primer lista korisnika koju dobiješ sa servera. Vrednost se čita korak po korak, s leva na desno. Prvo uglastim zagradama uzmeš element niza, pa tačkom uzmeš njegovo svojstvo (vrednost sačuvanu pod nekim imenom).\n\n```js\nconst users = [{ name: \"Ana\" }, { name: \"Marko\" }];\nusers[0].name; // \"Ana\"\nusers[1].name; // \"Marko\"\n```\n\nIsto važi i za objekat koji se nalazi u drugom objektu: `user.address.city` znači da iz `user` uzimaš `address`, a iz `address` uzimaš `city`."
+  },
+  "task": {
+    "title": "Popravi čitanje imena iz niza",
+    "brief": "Promenljiva `secondName` treba da sadrži ime drugog korisnika, ali je redosled koraka pogrešan pa kod puca. Popravi liniju sa `// ovde`. Primeri: `users[0].name` daje \"Ana\", a `users[1].age` daje 30.",
+    "signature": "const secondName",
+    "starter": "const users = [\n  { name: \"Ana\", age: 25 },\n  { name: \"Marko\", age: 30 }\n];\nconst secondName = users.name[1]; // ovde",
+    "tests": [
+      {
+        "name": "secondName je \"Marko\"",
+        "code": "assert.equal(secondName, \"Marko\");"
+      },
+      {
+        "name": "niz users je ostao isti",
+        "code": "assert.equal(users.length, 2);\nassert.equal(users[0].name, \"Ana\");"
+      }
+    ]
+  },
+  "answer": "const users = [\n  { name: \"Ana\", age: 25 },\n  { name: \"Marko\", age: 30 }\n];\nconst secondName = users[1].name;",
+  "explanation": "Niz `users` nema svojstvo `name`, pa je `users.name` jednako `undefined`. Iz `undefined` ne može da se čita `[1]`, i zato JavaScript baca TypeError. Prvo uzmi drugi element sa `users[1]`, pa onda njegovo ime sa `.name`.",
+  "format": "debug",
+  "id": "2026-10-11-vece",
+  "createdAt": "2026-10-11T18:00:44.535Z",
+  "slot": "vece"
+}
