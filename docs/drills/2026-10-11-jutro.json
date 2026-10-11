@@ -1,0 +1,33 @@
+{
+  "topic": "objekti svojstva",
+  "lesson": {
+    "title": "Svojstva objekta: tacka i zagrade",
+    "body": "Objekat cuva vise vrednosti pod imenima, kao kartica sa poljima. Svako polje se zove svojstvo: ima ime (kljuc) i vrednost. Svojstvo citas tackom kad unapred znas njegovo ime, a uglastim zagradama kad je ime sacuvano u promenljivoj.\n\n```js\nconst user = { name: \"Ana\", age: 28 };\nuser.name;   // \"Ana\"\nconst key = \"age\";\nuser[key];   // 28\n```\n\nZagrade ti trebaju kad ime polja stize spolja, na primer iz forme ili iz odgovora servera. Pazi: `user.key` trazi polje koje se bas zove \"key\", pa vraca `undefined`."
+  },
+  "task": {
+    "title": "Procitaj svojstvo po imenu",
+    "brief": "Dopuni `return` tako da funkcija vrati vrednost svojstva. Ime tog svojstva je u parametru `key`. Primer 1: `getValue({ name: \"Ana\" }, \"name\")` vraca `\"Ana\"`. Primer 2: `getValue({ age: 28 }, \"age\")` vraca `28`.",
+    "signature": "function getValue(obj, key)",
+    "starter": "function getValue(obj, key) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca ime kad je key \"name\"",
+        "code": "assert.equal(getValue({ name: \"Ana\", age: 28 }, \"name\"), \"Ana\");"
+      },
+      {
+        "name": "vraca godine kad je key \"age\"",
+        "code": "assert.equal(getValue({ name: \"Ana\", age: 28 }, \"age\"), 28);"
+      },
+      {
+        "name": "radi i za drugi objekat",
+        "code": "assert.equal(getValue({ city: \"Beograd\" }, \"city\"), \"Beograd\");"
+      }
+    ]
+  },
+  "answer": "function getValue(obj, key) {\n  return obj[key];\n}",
+  "explanation": "Ime svojstva je sacuvano u promenljivoj `key`, pa se koriste uglaste zagrade: `obj[key]`. Zapis `obj.key` bi trazio svojstvo koje se bas zove \"key\" i vratio bi `undefined`.",
+  "format": "challenge",
+  "id": "2026-10-11-jutro",
+  "createdAt": "2026-10-11T06:39:45.039Z",
+  "slot": "jutro"
+}
