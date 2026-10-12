@@ -1,0 +1,33 @@
+{
+  "topic": "podrazumevani parametri",
+  "lesson": {
+    "title": "Podrazumevane vrednosti parametara",
+    "body": "Kada pozoves funkciju bez nekog argumenta, taj parametar dobije vrednost `undefined`, sto znaci \"nema vrednosti\". **Podrazumevana vrednost** je rezervna vrednost koju parametar dobije kada argument nije prosledjen. Pise se sa `=` odmah u zagradi, pored imena parametra:\n\n```js\nfunction order(drink = \"voda\") { return drink; }\norder();       // \"voda\"\norder(\"kafa\"); // \"kafa\"\n```\n\nAko prosledis argument, koristi se on, a rezervna vrednost se preskace. U praksi ovo sluzi da funkcija radi i kada pozivalac nesto izostavi, na primer kolicina 1 ili jezik \"sr\"."
+  },
+  "task": {
+    "title": "Pozdrav i kad nema imena",
+    "brief": "Dopuni potpis funkcije `greet` tako da parametar `name` ima podrazumevanu vrednost `\"gost\"`. Menja se samo red sa `// ovde`. Primeri: `greet(\"Ana\")` vraca `\"Zdravo, Ana!\"`, a `greet()` vraca `\"Zdravo, gost!\"`.",
+    "signature": "function greet(name)",
+    "starter": "function greet(name) { // ovde\n  return `Zdravo, ${name}!`;\n}",
+    "tests": [
+      {
+        "name": "koristi prosledjeno ime",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana!\");"
+      },
+      {
+        "name": "bez argumenta koristi \"gost\"",
+        "code": "assert.equal(greet(), \"Zdravo, gost!\");"
+      },
+      {
+        "name": "prosledjeno ime ima prednost nad podrazumevanim",
+        "code": "assert.equal(greet(\"Marko\"), \"Zdravo, Marko!\");"
+      }
+    ]
+  },
+  "answer": "function greet(name = \"gost\") {\n  return `Zdravo, ${name}!`;\n}",
+  "explanation": "`name = \"gost\"` u zagradi znaci: ako `name` nije prosledjen, koristi \"gost\". Zato `greet()` vraca \"Zdravo, gost!\". Kada prosledis ime, kao u `greet(\"Ana\")`, koristi se to ime.",
+  "format": "challenge",
+  "id": "2026-10-12-vece",
+  "createdAt": "2026-10-12T18:00:43.871Z",
+  "slot": "vece"
+}

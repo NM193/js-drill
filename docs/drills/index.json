@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-12-vece",
+    "createdAt": "2026-10-12T18:00:43.871Z",
+    "topic": "podrazumevani parametri",
+    "lessonTitle": "Podrazumevane vrednosti parametara",
+    "taskTitle": "Pozdrav i kad nema imena"
+  },
+  {
     "id": "2026-10-12-jutro",
     "createdAt": "2026-10-12T06:10:03.067Z",
     "topic": "destrukturiranje",
