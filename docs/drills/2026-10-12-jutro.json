@@ -1,0 +1,33 @@
+{
+  "topic": "destrukturiranje",
+  "lesson": {
+    "title": "Destrukturiranje objekta",
+    "body": "**Destrukturiranje** je kraći način da izvadiš svojstva iz objekta u posebne promenljive. Umesto da svaki put pišeš `user.name` i `user.age`, napišeš jednu liniju sa vitičastim zagradama levo od znaka `=`.\n\n```js\nconst user = { name: \"Ana\", age: 30 };\nconst { name, age } = user;\n// name je \"Ana\", age je 30\n```\n\nIme promenljive u zagradama mora biti isto kao ime svojstva u objektu, inače dobijaš `undefined`. U praksi ovo stalno viđaš u kodu koji ti AI napiše, naročito na početku funkcija koje primaju objekat."
+  },
+  "task": {
+    "title": "Izvuci grad iz korisnika",
+    "brief": "Funkcija `getCity` prima objekat korisnika i vraća njegov grad. Izaberi liniju A, B ili C koja destrukturiranjem pravi promenljivu `city` i upiši je na mesto `// ovde`. Primeri: `getCity({ name: \"Ana\", city: \"Beograd\" })` vraća `\"Beograd\"`, a `getCity({ name: \"Marko\", city: \"Nis\" })` vraća `\"Nis\"`.",
+    "signature": "function getCity(user)",
+    "starter": "// A: const { city } = user;\n// B: const city = { user };\n// C: const { town } = user;\n\nfunction getCity(user) {\n  // ovde\n  return city;\n}",
+    "tests": [
+      {
+        "name": "Vraca grad za Anu",
+        "code": "assert.equal(getCity({ name: \"Ana\", city: \"Beograd\" }), \"Beograd\");"
+      },
+      {
+        "name": "Vraca grad za Marka",
+        "code": "assert.equal(getCity({ name: \"Marko\", city: \"Nis\" }), \"Nis\");"
+      },
+      {
+        "name": "Radi i kad objekat ima samo grad",
+        "code": "assert.equal(getCity({ city: \"Novi Sad\" }), \"Novi Sad\");"
+      }
+    ]
+  },
+  "answer": "function getCity(user) {\n  const { city } = user;\n  return city;\n}",
+  "explanation": "Tačna je A: `const { city } = user;` pravi promenljivu `city` i u nju stavlja vrednost iz `user.city`. B ne vadi svojstvo, nego pravi novi objekat `{ user }`, pa funkcija vraća objekat umesto grada. C traži svojstvo `town` koje ne postoji, pa promenljiva `city` uopšte ne nastaje i `return city` baca grešku.",
+  "format": "mcq",
+  "id": "2026-10-12-jutro",
+  "createdAt": "2026-10-12T06:10:03.067Z",
+  "slot": "jutro"
+}
