@@ -1,0 +1,33 @@
+{
+  "topic": "poruka o gresci",
+  "lesson": {
+    "title": "Kako se cita poruka o gresci",
+    "body": "Kad nesto pukne, JavaScript ispise poruku o gresci, na primer `ReferenceError: scor is not defined`. Deo pre dvotacke je vrsta greske, a deo posle nje kaze sta tacno ne valja. `ReferenceError` znaci da koristis ime koje ne postoji, najcesce zbog slovne greske. Pored poruke stoji i broj linije, pa znas gde da gledas.\n\n```js\nconst score = 10;\nconst double = scor * 2;\n// ReferenceError: scor is not defined\n```\n\nU praksi, kad kod od AI alata pukne, prvo procitaj vrstu greske i ime koje se pominje - to je cesto dovoljno da nadjes bag."
+  },
+  "task": {
+    "title": "Popravi ime iz poruke",
+    "brief": "Kod puca sa porukom `ReferenceError: prise is not defined`. Procitaj poruku i ispravi liniju ispod `// ovde` tako da funkcija vraca cenu umanjenu za popust. Primeri: `getTotal(100, 20)` vraca `80`, a `getTotal(50, 5)` vraca `45`.",
+    "signature": "function getTotal(price, discount)",
+    "starter": "function getTotal(price, discount) {\n  // ovde\n  return prise - discount;\n}",
+    "tests": [
+      {
+        "name": "getTotal(100, 20) vraca 80",
+        "code": "assert.equal(getTotal(100, 20), 80);"
+      },
+      {
+        "name": "getTotal(50, 5) vraca 45",
+        "code": "assert.equal(getTotal(50, 5), 45);"
+      },
+      {
+        "name": "bez popusta vraca punu cenu",
+        "code": "assert.equal(getTotal(10, 0), 10);"
+      }
+    ]
+  },
+  "answer": "function getTotal(price, discount) {\n  return price - discount;\n}",
+  "explanation": "Poruka `ReferenceError: prise is not defined` kaze da ime `prise` ne postoji. Parametar se zove `price`, pa je to bila slovna greska. Kad ispravis ime, funkcija vraca cenu minus popust.",
+  "format": "debug",
+  "id": "2026-10-13-jutro",
+  "createdAt": "2026-10-13T06:32:14.037Z",
+  "slot": "jutro"
+}
