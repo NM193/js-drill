@@ -1,0 +1,33 @@
+{
+  "topic": "try i catch",
+  "lesson": {
+    "title": "try i catch: hvatanje gresaka",
+    "body": "Kad nesto u kodu pukne, JavaScript baca gresku (prijavi problem) i program staje. Sa `try` i `catch` mozes tu gresku da uhvatis, pa program nastavlja dalje. U `try { }` stavis kod koji moze da pukne, a u `catch (error) { }` pises sta da se uradi ako pukne. U promenljivoj `error` je uhvacena greska. Ako u `try` nista ne pukne, `catch` se preskace.\n\n```js\ntry { null.toUpperCase(); }\ncatch (error) { console.log(\"Uhvaceno!\"); }\nconsole.log(\"Program ide dalje\");\n```\n\nU praksi ovo koristis kad podaci mogu da budu losi, na primer kad korisnik posalje nesto pogresno. Tada vratis rezervnu vrednost i aplikacija ne padne."
+  },
+  "task": {
+    "title": "Velika slova bez pucanja",
+    "brief": "Funkcija `safeUpper(text)` vraca tekst napisan velikim slovima. Ako `text` nije string (na primer `null`), vraca prazan string `\"\"` i ne puca. Izaberi tacnu varijantu (A, B ili C) i prepisi je u funkciju na mesto `// ovde`. Primeri: `safeUpper(\"ana\")` vraca `\"ANA\"`, `safeUpper(null)` vraca `\"\"`.",
+    "signature": "function safeUpper(text)",
+    "starter": "// A: return text.toUpperCase();\n// B: try { return text.toUpperCase(); } catch (error) { return \"\"; }\n// C: try { return \"\"; } catch (error) { return text.toUpperCase(); }\n\nfunction safeUpper(text) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "obican tekst postaje velikim slovima",
+        "code": "assert.equal(safeUpper(\"ana\"), \"ANA\");"
+      },
+      {
+        "name": "null vraca prazan string umesto greske",
+        "code": "assert.equal(safeUpper(null), \"\");"
+      },
+      {
+        "name": "radi i za tekst sa vec nekim velikim slovom",
+        "code": "assert.equal(safeUpper(\"Zdravo\"), \"ZDRAVO\");"
+      }
+    ]
+  },
+  "answer": "function safeUpper(text) {\n  try { return text.toUpperCase(); } catch (error) { return \"\"; }\n}",
+  "explanation": "Tacna je varijanta B. Poziv koji moze da pukne je u `try`, pa kad je `text` jednak `null`, greska se uhvati i `catch` vrati `\"\"`. Varijanta A nema `try`, pa za `null` program pukne, a C je obrnuta: `try` uvek uspe i vrati `\"\"`, pa se tekst nikad ne pretvori u velika slova.",
+  "format": "mcq",
+  "id": "2026-10-13-vece",
+  "createdAt": "2026-10-13T18:23:22.809Z",
+  "slot": "vece"
+}

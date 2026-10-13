@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-13-vece",
+    "createdAt": "2026-10-13T18:23:22.809Z",
+    "topic": "try i catch",
+    "lessonTitle": "try i catch: hvatanje gresaka",
+    "taskTitle": "Velika slova bez pucanja"
+  },
+  {
     "id": "2026-10-13-jutro",
     "createdAt": "2026-10-13T06:32:14.037Z",
     "topic": "poruka o gresci",
