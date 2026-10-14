@@ -1,0 +1,33 @@
+{
+  "topic": "typeof",
+  "lesson": {
+    "title": "Tip vrednosti: typeof",
+    "body": "Svaka vrednost u JavaScriptu ima svoj tip. Tekst je `string`, broj je `number`, a `true` i `false` su `boolean`. Operator `typeof` je rec koja se pise ispred vrednosti i vraca ime njenog tipa kao tekst.\n\n```js\ntypeof 42;      // \"number\"\ntypeof \"Ana\";   // \"string\"\ntypeof false;   // \"boolean\"\n```\n\nU praksi ti treba kad nisi siguran sta je stiglo, na primer da li je cena iz forme broj ili tekst. Rezultat je uvek string, pa ga poredis sa `\"number\"`, a ne sa `number`."
+  },
+  "task": {
+    "title": "Vrati tip vrednosti",
+    "brief": "Dopuni funkciju `getType` tako da vrati tip vrednosti koju dobije, kao tekst. Upisi izraz na mesto oznaceno sa `// ovde`. Primeri: `getType(42)` vraca `\"number\"`, a `getType(\"hello\")` vraca `\"string\"`.",
+    "signature": "function getType(value)",
+    "starter": "function getType(value) {\n  return ; // ovde\n}",
+    "tests": [
+      {
+        "name": "broj daje \"number\"",
+        "code": "assert.equal(getType(42), \"number\");"
+      },
+      {
+        "name": "tekst daje \"string\"",
+        "code": "assert.equal(getType(\"hello\"), \"string\");"
+      },
+      {
+        "name": "true daje \"boolean\"",
+        "code": "assert.equal(getType(true), \"boolean\");"
+      }
+    ]
+  },
+  "answer": "function getType(value) {\n  return typeof value;\n}",
+  "explanation": "`typeof` napisan ispred vrednosti vraca ime njenog tipa kao tekst. Zato `typeof value` daje `\"number\"` za 42 i `\"string\"` za `\"hello\"`. Funkcija samo vraca taj rezultat.",
+  "format": "challenge",
+  "id": "2026-10-14-jutro",
+  "createdAt": "2026-10-14T06:30:25.688Z",
+  "slot": "jutro"
+}

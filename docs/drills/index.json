@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-14-jutro",
+    "createdAt": "2026-10-14T06:30:25.688Z",
+    "topic": "typeof",
+    "lessonTitle": "Tip vrednosti: typeof",
+    "taskTitle": "Vrati tip vrednosti"
+  },
+  {
     "id": "2026-10-13-vece",
     "createdAt": "2026-10-13T18:23:22.809Z",
     "topic": "try i catch",
