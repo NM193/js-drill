@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-14-vece",
+    "createdAt": "2026-10-14T18:15:14.928Z",
+    "topic": "stroga jednakost",
+    "lessonTitle": "Zasto === a ne ==",
+    "taskTitle": "Popravi proveru za nulu"
+  },
+  {
     "id": "2026-10-14-jutro",
     "createdAt": "2026-10-14T06:30:25.688Z",
     "topic": "typeof",

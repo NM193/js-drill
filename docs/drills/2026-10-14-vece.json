@@ -1,0 +1,33 @@
+{
+  "topic": "stroga jednakost",
+  "lesson": {
+    "title": "Zasto === a ne ==",
+    "body": "JavaScript ima dva nacina da uporedi dve vrednosti: `==` i `===`. Dvostruko `==` pre poredjenja pretvara obe vrednosti u isti tip, pa string `\"5\"` i broj `5` ispadnu jednaki. Trostruko `===` se zove stroga jednakost i nista ne pretvara: vrednosti moraju biti iste i istog tipa.\n\n```js\n\"5\" == 5    // true\n\"5\" === 5   // false\n\"\" == 0     // true\n\"\" === 0    // false\n```\n\nU praksi uvek koristi `===`, jer `==` tiho vrati `true` i kad to ne ocekujes, na primer za prazan string i nulu."
+  },
+  "task": {
+    "title": "Popravi proveru za nulu",
+    "brief": "Funkcija `isZero` treba da vrati `true` samo kad dobije broj `0`. Sada greskom vraca `true` i za prazan string `\"\"`. Popravi poredjenje u liniji sa `// ovde`. Primeri: `isZero(0)` -> `true`, `isZero(\"\")` -> `false`.",
+    "signature": "function isZero(value)",
+    "starter": "function isZero(value) {\n  return value == 0; // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca true za broj 0",
+        "code": "assert.equal(isZero(0), true);"
+      },
+      {
+        "name": "vraca false za prazan string",
+        "code": "assert.equal(isZero(\"\"), false);"
+      },
+      {
+        "name": "vraca false za string \"0\"",
+        "code": "assert.equal(isZero(\"0\"), false);"
+      }
+    ]
+  },
+  "answer": "function isZero(value) {\n  return value === 0;\n}",
+  "explanation": "`==` pre poredjenja pretvara prazan string i string `\"0\"` u broj 0, pa misli da su jednaki nuli. `===` ne pretvara tipove, pa vraca `true` samo kad je `value` bas broj `0`. Zato je dovoljno da zamenis `==` sa `===`.",
+  "format": "debug",
+  "id": "2026-10-14-vece",
+  "createdAt": "2026-10-14T18:15:14.928Z",
+  "slot": "vece"
+}
