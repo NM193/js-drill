@@ -1,0 +1,33 @@
+{
+  "topic": "funkcije i return",
+  "lesson": {
+    "title": "Funkcija, parametri i return",
+    "body": "Funkcija je imenovani komad koda koji pišeš jednom i pozivaš koliko god puta hoćeš. Piše se sa `function`, imenom i zagradama u kojima su **parametri**: imena za vrednosti koje funkcija dobije kada je pozoveš. Ako ima više parametara, odvajaju se zarezom. Reč `return` vraća rezultat nazad, na mesto gde je funkcija pozvana.\n\n```js\nfunction addOne(x) {\n  return x + 1;\n}\naddOne(5); // 6\n```\n\nAko izostaviš `return`, funkcija vraća `undefined`, to jest „nema vrednosti“. U praksi funkciju koristiš da isti račun ne pišeš na deset mesta, nego ga napišeš jednom i samo je pozoveš."
+  },
+  "task": {
+    "title": "Saberi dva broja",
+    "brief": "Dopuni liniju sa `return` tako da funkcija `sum` vraća zbir parametara `a` i `b`. Primeri: `sum(2, 3)` vraća `5`, a `sum(10, -4)` vraća `6`.",
+    "signature": "function sum(a, b)",
+    "starter": "function sum(a, b) {\n  return 0; // ovde\n}",
+    "tests": [
+      {
+        "name": "sum(2, 3) vraća 5",
+        "code": "assert.equal(sum(2, 3), 5);"
+      },
+      {
+        "name": "sum(10, -4) vraća 6",
+        "code": "assert.equal(sum(10, -4), 6);"
+      },
+      {
+        "name": "sum(100, 1) vraća 101",
+        "code": "assert.equal(sum(100, 1), 101);"
+      }
+    ]
+  },
+  "answer": "function sum(a, b) {\n  return a + b;\n}",
+  "explanation": "`return a + b;` sabira dva parametra i vraća rezultat na mesto gde je funkcija pozvana. Funkcija sada radi za bilo koja dva broja koja joj prosleđuješ. Bez `return`, poziv `sum(2, 3)` bi vratio `undefined` i testovi ne bi prošli.",
+  "format": "challenge",
+  "id": "2026-10-15-vece",
+  "createdAt": "2026-10-15T18:00:44.959Z",
+  "slot": "vece"
+}

@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-15-vece",
+    "createdAt": "2026-10-15T18:00:44.959Z",
+    "topic": "funkcije i return",
+    "lessonTitle": "Funkcija, parametri i return",
+    "taskTitle": "Saberi dva broja"
+  },
+  {
     "id": "2026-10-15-jutro",
     "createdAt": "2026-10-15T06:53:35.771Z",
     "topic": "let i const",
