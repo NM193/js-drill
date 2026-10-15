@@ -1,0 +1,29 @@
+{
+  "topic": "let i const",
+  "lesson": {
+    "title": "Promenljive: let i const",
+    "body": "Promenljiva je ime koje daješ nekoj vrednosti da bi je kasnije koristio. Pravi se rečju `const` ili `let`. Vrednost u `const` se posle ne može promeniti, a pokušaj da joj upišeš novu baca grešku. Vrednost u `let` možeš kasnije da zameniš novom, pa je `let` dobar za brojače, zbirove i poene u igri. Po pravilu koristi `const`, a `let` samo kad znaš da će se vrednost menjati.\n\n```js\nconst name = \"Ana\";\nlet count = 0;\ncount = count + 1; // count je sada 1\n```"
+  },
+  "task": {
+    "title": "Poeni u igri",
+    "brief": "Igrač počinje sa 0 poena i odmah dobija 10. Samo jedna od tri varijante radi. Izaberi je i prepiši umesto `// ovde`. Primer 1: posle tvog koda `score` je 10. Primer 2: ako kasnije dodaš još 5, `score` je 15.",
+    "signature": "let score",
+    "starter": "// A: const score = 0; score = score + 10;\n// B: let score = 0; score = score + 10;\n// C: let score = 0; score + 10;\n\n// ovde",
+    "tests": [
+      {
+        "name": "score je 10 posle dodavanja poena",
+        "code": "assert.equal(score, 10);"
+      },
+      {
+        "name": "score može ponovo da se menja",
+        "code": "score = score + 5;\nassert.equal(score, 15);"
+      }
+    ]
+  },
+  "answer": "let score = 0;\nscore = score + 10;",
+  "explanation": "A puca sa greškom `Assignment to constant variable`, jer `const` ne dozvoljava novu vrednost. C izračuna `score + 10`, ali zbir nikad ne upiše nazad u `score`, pa on ostaje 0. B koristi `let` jer se poeni menjaju, i novu vrednost upisuje sa `score = ...`.",
+  "format": "mcq",
+  "id": "2026-10-15-jutro",
+  "createdAt": "2026-10-15T06:53:35.771Z",
+  "slot": "jutro"
+}
