@@ -1,0 +1,33 @@
+{
+  "topic": "arrow funkcije",
+  "lesson": {
+    "title": "Arrow funkcije: kraci zapis",
+    "body": "Arrow funkcija je kraci zapis obicne funkcije. Umesto reci `function` pise se strelica `=>`, a funkcija se obicno cuva u `const` promenljivoj. Ako posle strelice odmah stoji izraz, njegov rezultat se vraca sam, bez `return`. Ako posle strelice stavis viticaste zagrade `{ }`, to je telo funkcije kao kod obicne funkcije, i tada moras sam da napises `return`:\n\n```js\nconst double = (n) => n * 2;\nconst doubleLong = (n) => { return n * 2; };\ndouble(4); // 8\n```\n\nU praksi ces arrow funkcije videti svuda u kodu koji ti AI napise, narocito kad je funkcija kratka."
+  },
+  "task": {
+    "title": "Funkcija koja vraca undefined",
+    "brief": "Funkcija `triple` treba da vrati broj pomnozen sa 3, ali sada vraca `undefined`. Ispravi liniju oznacenu sa `// ovde`. Primeri: `triple(2)` daje `6`, `triple(5)` daje `15`.",
+    "signature": "const triple = (n) => broj",
+    "starter": "// Ocekivano: triple(2) je 6, triple(5) je 15\n// Sada vraca undefined\nconst triple = (n) => {\n  n * 3; // ovde\n};",
+    "tests": [
+      {
+        "name": "triple(2) vraca 6",
+        "code": "assert.equal(triple(2), 6);"
+      },
+      {
+        "name": "triple(5) vraca 15",
+        "code": "assert.equal(triple(5), 15);"
+      },
+      {
+        "name": "triple(-1) vraca -3",
+        "code": "assert.equal(triple(-1), -3);"
+      }
+    ]
+  },
+  "answer": "const triple = (n) => {\n  return n * 3;\n};",
+  "explanation": "Kad arrow funkcija ima viticaste zagrade, rezultat se ne vraca sam, pa bez `return` funkcija vraca `undefined`. Kad dodas `return`, vrednost `n * 3` izlazi iz funkcije. Radi i kraci zapis bez zagrada: `const triple = (n) => n * 3;`.",
+  "format": "debug",
+  "id": "2026-10-16-jutro",
+  "createdAt": "2026-10-16T06:00:50.199Z",
+  "slot": "jutro"
+}

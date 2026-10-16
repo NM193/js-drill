@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-16-jutro",
+    "createdAt": "2026-10-16T06:00:50.199Z",
+    "topic": "arrow funkcije",
+    "lessonTitle": "Arrow funkcije: kraci zapis",
+    "taskTitle": "Funkcija koja vraca undefined"
+  },
+  {
     "id": "2026-10-15-vece",
     "createdAt": "2026-10-15T18:00:44.959Z",
     "topic": "funkcije i return",
