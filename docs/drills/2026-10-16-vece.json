@@ -1,0 +1,33 @@
+{
+  "topic": "if i else",
+  "lesson": {
+    "title": "Uslovi: if i else",
+    "body": "`if` znaci \"ako\": kod u viticastim zagradama `{ }` se izvrsava samo kad je uslov u obicnim zagradama `( )` tacan. `else` znaci \"inace\" i hvata sve ostale slucajeve, pa se uvek izvrsi tacno jedna od dve grane (grana je deo koda koji se izvrsava). Uslov je najcesce poredjenje: `>` je vece, `<` je manje, a `>=` je vece ili jednako.\n\n```js\nconst temp = 30;\nlet text;\nif (temp > 25) { text = \"toplo\"; } else { text = \"hladno\"; }\n```\n\nOvde je `text` sada `\"toplo\"`, a da je `temp` bio 10, bio bi `\"hladno\"`. U praksi tako aplikacija bira sta da uradi, na primer da li da pusti korisnika dalje ili da mu pokaze poruku o gresci."
+  },
+  "task": {
+    "title": "Da li sme da glasa",
+    "brief": "Funkcija `canVote(age)` treba da vrati `\"da\"` ako je `age` 18 ili vise, a `\"ne\"` ako je manje. Izaberi tacnu varijantu (A, B ili C) i upisi je na mesto `// ovde`. Primeri: `canVote(20)` vraca `\"da\"`, a `canVote(15)` vraca `\"ne\"`.",
+    "signature": "function canVote(age)",
+    "starter": "// A: if (age >= 18) { result = \"da\"; } result = \"ne\";\n// B: if (age >= 18) { result = \"da\"; } else { result = \"ne\"; }\n// C: if (age >= 18) { result = \"ne\"; } else { result = \"da\"; }\n\nfunction canVote(age) {\n  let result;\n  // ovde\n  return result;\n}",
+    "tests": [
+      {
+        "name": "20 godina sme da glasa",
+        "code": "assert.equal(canVote(20), \"da\");"
+      },
+      {
+        "name": "15 godina ne sme da glasa",
+        "code": "assert.equal(canVote(15), \"ne\");"
+      },
+      {
+        "name": "tacno 18 godina sme da glasa",
+        "code": "assert.equal(canVote(18), \"da\");"
+      }
+    ]
+  },
+  "answer": "function canVote(age) {\n  let result;\n  if (age >= 18) { result = \"da\"; } else { result = \"ne\"; }\n  return result;\n}",
+  "explanation": "Tacna je varijanta B: `if` upise `\"da\"` kad je uslov tacan, a `else` upise `\"ne\"` u svim ostalim slucajevima. U A nema `else`, pa se `result = \"ne\"` izvrsi svaki put i pregazi `\"da\"`. U C su vrednosti zamenjene, pa bi punoletna osoba dobila `\"ne\"`.",
+  "format": "mcq",
+  "id": "2026-10-16-vece",
+  "createdAt": "2026-10-16T18:17:02.508Z",
+  "slot": "vece"
+}
