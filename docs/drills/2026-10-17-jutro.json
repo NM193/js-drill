@@ -1,0 +1,33 @@
+{
+  "topic": "truthy i falsy",
+  "lesson": {
+    "title": "Truthy i falsy vrednosti",
+    "body": "Kada stavis neku vrednost u `if`, JavaScript je sam pretvori u `true` ili `false`. Vrednosti koje se ponasaju kao `false` zovu se **falsy**: `false`, `0`, `\"\"` (prazan string), `null`, `undefined` i `NaN` (rezultat racunice koja nema smisla, npr. `\"a\" * 2`). Sve ostalo je **truthy**, to jest ponasa se kao `true`, cak i string `\"0\"`.\n\n```js\nif (\"Ana\") console.log(\"ovo se ispise\");\nif (\"\") console.log(\"ovo se ne ispise\");\nif (0) console.log(\"ni ovo\");\n```\n\nU praksi ovako brzo proveris da li nesto uopste postoji, na primer da li je korisnik upisao ime u formu."
+  },
+  "task": {
+    "title": "Pozdrav samo kad ima imena",
+    "brief": "Upisi uslov u `if` tako da funkcija pozdravi po imenu samo kad ime nije prazno. Ne treba ti `===`, dovoljno je da u zagrade stavis samu vrednost. Primeri: `greet(\"Ana\")` vraca `\"Zdravo, Ana\"`, a `greet(\"\")` vraca `\"Zdravo, gost\"`.",
+    "signature": "function greet(name)",
+    "starter": "function greet(name) {\n  if () { // ovde: upisi uslov u zagrade\n    return `Zdravo, ${name}`;\n  }\n  return \"Zdravo, gost\";\n}",
+    "tests": [
+      {
+        "name": "neprazno ime je truthy, vraca pozdrav sa imenom",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana\");"
+      },
+      {
+        "name": "prazan string je falsy, vraca pozdrav za gosta",
+        "code": "assert.equal(greet(\"\"), \"Zdravo, gost\");"
+      },
+      {
+        "name": "undefined je falsy, vraca pozdrav za gosta",
+        "code": "assert.equal(greet(undefined), \"Zdravo, gost\");"
+      }
+    ]
+  },
+  "answer": "function greet(name) {\n  if (name) {\n    return `Zdravo, ${name}`;\n  }\n  return \"Zdravo, gost\";\n}",
+  "explanation": "Prazan string i `undefined` su falsy, pa `if (name)` za njih preskace blok i funkcija vraca \"Zdravo, gost\". Svako neprazno ime je truthy, pa se vraca pozdrav sa imenom. Ne treba poredjenje sa `===`, jer `if` sam proverava da li vrednost postoji.",
+  "format": "challenge",
+  "id": "2026-10-17-jutro",
+  "createdAt": "2026-10-17T06:22:32.053Z",
+  "slot": "jutro"
+}
