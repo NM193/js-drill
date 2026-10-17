@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-17-vece",
+    "createdAt": "2026-10-17T18:00:56.272Z",
+    "topic": "sablon stringovi",
+    "lessonTitle": "Sablon stringovi sa backtick-ovima",
+    "taskTitle": "Popravi poruku o ceni"
+  },
+  {
     "id": "2026-10-17-jutro",
     "createdAt": "2026-10-17T06:22:32.053Z",
     "topic": "truthy i falsy",

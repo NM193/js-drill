@@ -1,0 +1,33 @@
+{
+  "topic": "sablon stringovi",
+  "lesson": {
+    "title": "Sablon stringovi sa backtick-ovima",
+    "body": "Sablon string (engl. *template literal*) je tekst napisan izmedju backtick znakova (`` ` ``), a ne izmedju obicnih navodnika. U njega mozes da ubacis vrednost promenljive tako sto napises `${ime}`. JavaScript na tom mestu stavi pravu vrednost promenljive.\n\n```js\nconst name = \"Ana\";\nconst greeting = `Zdravo, ${name}!`;\n// greeting je \"Zdravo, Ana!\"\n```\n\nAko koristis obicne navodnike, `${name}` ostaje obican tekst i nista se ne zameni. U praksi ovo koristis stalno: za poruke korisniku, naslove i svaki tekst koji se sklapa od vise delova."
+  },
+  "task": {
+    "title": "Popravi poruku o ceni",
+    "brief": "Promenljiva `message` treba da prikaze pravu cenu. Umesto toga, u njoj pise `${product}` i `${price}` kao obican tekst. Popravi liniju oznacenu sa `// ovde` tako da se vrednosti stvarno ubace. Primer 1: kad je `product = \"kafa\"` i `price = 250`, `message` je `\"Cena za kafa je 250 dinara.\"`. Primer 2: kad je `product = \"caj\"` i `price = 180`, `message` bi bio `\"Cena za caj je 180 dinara.\"`.",
+    "signature": "const message",
+    "starter": "const product = \"kafa\";\nconst price = 250;\nconst message = \"Cena za ${product} je ${price} dinara.\"; // ovde",
+    "tests": [
+      {
+        "name": "message sadrzi tacnu poruku",
+        "code": "assert.equal(message, \"Cena za kafa je 250 dinara.\");"
+      },
+      {
+        "name": "u poruci nije ostao tekst ${",
+        "code": "assert.ok(!message.includes(\"${\"));"
+      },
+      {
+        "name": "u poruci je prava cena",
+        "code": "assert.ok(message.includes(\"250\"));"
+      }
+    ]
+  },
+  "answer": "const product = \"kafa\";\nconst price = 250;\nconst message = `Cena za ${product} je ${price} dinara.`;",
+  "explanation": "Vrednost se ubacuje preko `${...}` samo u stringu koji je napisan izmedju backtick znakova. Sa obicnim navodnicima JavaScript ne dira `${product}` i ostavlja ga kao tekst. Zato je dovoljno da navodnike zamenis backtick znakovima.",
+  "format": "debug",
+  "id": "2026-10-17-vece",
+  "createdAt": "2026-10-17T18:00:56.272Z",
+  "slot": "vece"
+}
