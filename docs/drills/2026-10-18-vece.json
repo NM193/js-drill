@@ -1,0 +1,33 @@
+{
+  "topic": "string includes",
+  "lesson": {
+    "title": "Da li tekst sadrzi nesto: includes",
+    "body": "`includes` proverava da li se jedan tekst nalazi unutar drugog. Pises ga posle stringa, sa tackom, a u zagrade stavis deo koji trazis. Uvek vraca boolean, odnosno `true` (nadjeno) ili `false` (nije nadjeno).\n\n```js\nconst email = \"ana@gmail.com\";\nemail.includes(\"@gmail\"); // true\nemail.includes(\"yahoo\");  // false\n```\n\nPazi: razlikuje velika i mala slova, pa `\"Ana\".includes(\"ana\")` daje `false`. U praksi ga koristis za pretragu, na primer da proveris da li naslov sadrzi rec koju je korisnik ukucao."
+  },
+  "task": {
+    "title": "Provera Gmail adrese",
+    "brief": "Dopuni funkciju `isGmail` tako da vrati `true` ako `email` sadrzi tekst `\"@gmail.com\"`, a inace `false`. Primer: `isGmail(\"ana@gmail.com\")` daje `true`, a `isGmail(\"marko@yahoo.com\")` daje `false`.",
+    "signature": "function isGmail(email)",
+    "starter": "function isGmail(email) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "gmail adresa vraca true",
+        "code": "assert.equal(isGmail(\"ana@gmail.com\"), true);"
+      },
+      {
+        "name": "yahoo adresa vraca false",
+        "code": "assert.equal(isGmail(\"marko@yahoo.com\"), false);"
+      },
+      {
+        "name": "druga gmail adresa vraca true",
+        "code": "assert.equal(isGmail(\"petar.p@gmail.com\"), true);"
+      }
+    ]
+  },
+  "answer": "function isGmail(email) {\n  return email.includes(\"@gmail.com\");\n}",
+  "explanation": "`includes` trazi tekst `\"@gmail.com\"` unutar `email` i sam vraca `true` ili `false`. Zato ti ne treba `if`, jer funkcija taj rezultat odmah vraca.",
+  "format": "challenge",
+  "id": "2026-10-18-vece",
+  "createdAt": "2026-10-18T18:02:23.800Z",
+  "slot": "vece"
+}
