@@ -1,0 +1,33 @@
+{
+  "topic": "string length",
+  "lesson": {
+    "title": "Duzina stringa: length",
+    "body": "Svaki string zna koliko ima znakova, a to saznajes preko `length`. Pise se bez zagrada, jer `length` nije funkcija nego svojstvo, odnosno podatak koji string vec nosi u sebi. Broje se i razmaci, cifre i znakovi interpunkcije. Prazan string ima duzinu 0.\n\n```js\nconst name = \"Ana\";\nconsole.log(name.length);   // 3\nconsole.log(\"hi you\".length); // 6\nconsole.log(\"\".length);     // 0\n```\n\nU praksi se najcesce koristi za proveru unosa, na primer da li je lozinka dovoljno duga: `password.length >= 8`."
+  },
+  "task": {
+    "title": "Da li je lozinka dovoljno duga",
+    "brief": "Funkcija `isLongEnough` treba da vrati `true` ako lozinka ima bar 8 znakova, a `false` ako ima manje. Izaberi tacnu varijantu (A, B ili C) i upisi je posle `return`. Primeri: `isLongEnough(\"sunce123\")` vraca `true`, a `isLongEnough(\"mac\")` vraca `false`.",
+    "signature": "function isLongEnough(password)",
+    "starter": "// A: password.length() >= 8\n// B: password.length >= 8\n// C: password.size >= 8\n\nfunction isLongEnough(password) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "lozinka od tacno 8 znakova je dovoljno duga",
+        "code": "assert.equal(isLongEnough(\"sunce123\"), true);"
+      },
+      {
+        "name": "kratka lozinka nije dovoljno duga",
+        "code": "assert.equal(isLongEnough(\"mac\"), false);"
+      },
+      {
+        "name": "i razmak se broji kao znak",
+        "code": "assert.equal(isLongEnough(\"moj pas\"), false);"
+      }
+    ]
+  },
+  "answer": "function isLongEnough(password) {\n  return password.length >= 8;\n}",
+  "explanation": "`length` je svojstvo, a ne funkcija, pa se pise bez zagrada. Varijanta A baca gresku jer pokusava da pozove broj kao funkciju. Varijanta C koristi `size`, koje string nema, pa uvek dobija `undefined` i vraca `false`, zato je tacna B.",
+  "format": "mcq",
+  "id": "2026-10-18-jutro",
+  "createdAt": "2026-10-18T06:28:04.278Z",
+  "slot": "jutro"
+}

@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-18-jutro",
+    "createdAt": "2026-10-18T06:28:04.278Z",
+    "topic": "string length",
+    "lessonTitle": "Duzina stringa: length",
+    "taskTitle": "Da li je lozinka dovoljno duga"
+  },
+  {
     "id": "2026-10-17-vece",
     "createdAt": "2026-10-17T18:00:56.272Z",
     "topic": "sablon stringovi",
