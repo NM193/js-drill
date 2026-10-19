@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-19-vece",
+    "createdAt": "2026-10-19T18:00:45.733Z",
+    "topic": "string split",
+    "lessonTitle": "Seckanje stringa sa split",
+    "taskTitle": "Podeli recenicu na reci"
+  },
+  {
     "id": "2026-10-19-jutro",
     "createdAt": "2026-10-19T06:00:46.604Z",
     "topic": "string toUpperCase",

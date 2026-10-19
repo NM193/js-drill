@@ -1,0 +1,33 @@
+{
+  "topic": "string split",
+  "lesson": {
+    "title": "Seckanje stringa sa split",
+    "body": "Metoda `split` (ugradjena funkcija koju zoves tackom posle stringa) deli string na delove i vraca **niz** tih delova. U zagradu stavljas separator, to jest znak na kome se string sece. Sam separator ne ulazi u rezultat.\n\n```js\nconst fruits = \"jabuka,kruska,sljiva\";\nconst list = fruits.split(\",\");\n// list je [\"jabuka\", \"kruska\", \"sljiva\"]\n```\n\nU praksi se ovo stalno koristi: recenicu delis na reci, CSV red na kolone, a tagove odvojene zarezom pretvaras u niz."
+  },
+  "task": {
+    "title": "Podeli recenicu na reci",
+    "brief": "Funkcija `getWords` treba da vrati niz reci iz recenice, a reci su odvojene razmakom. Izaberi tacnu varijantu (A, B ili C) i prepisi je na mesto `// ovde`.\n\nPrimeri:\n- `getWords(\"dobro jutro\")` vraca `[\"dobro\", \"jutro\"]`\n- `getWords(\"zdravo\")` vraca `[\"zdravo\"]`",
+    "signature": "function getWords(sentence)",
+    "starter": "// A: return sentence.split(\"\");\n// B: return sentence.split(\" \");\n// C: return sentence.split(\",\");\n\nfunction getWords(sentence) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "dve reci daju niz od dva elementa",
+        "code": "assert.deepEqual(getWords(\"dobro jutro\"), [\"dobro\", \"jutro\"]);"
+      },
+      {
+        "name": "tri reci daju niz duzine 3",
+        "code": "assert.equal(getWords(\"ja volim JavaScript\").length, 3);"
+      },
+      {
+        "name": "jedna rec daje niz sa jednim elementom",
+        "code": "assert.deepEqual(getWords(\"zdravo\"), [\"zdravo\"]);"
+      }
+    ]
+  },
+  "answer": "function getWords(sentence) {\n  return sentence.split(\" \");\n}",
+  "explanation": "Reci su odvojene razmakom, pa je separator `\" \"` i tacna je varijanta B. Varijanta A sa praznim stringom `\"\"` sece izmedju svakog slova i vraca pojedinacna slova, a ne reci. Varijanta C trazi zarez, a u recenici ga nema, pa ceo string ostaje jedan element niza.",
+  "format": "mcq",
+  "id": "2026-10-19-vece",
+  "createdAt": "2026-10-19T18:00:45.733Z",
+  "slot": "vece"
+}
