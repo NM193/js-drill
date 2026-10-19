@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-19-jutro",
+    "createdAt": "2026-10-19T06:00:46.604Z",
+    "topic": "string toUpperCase",
+    "lessonTitle": "Velika slova: toUpperCase",
+    "taskTitle": "Popravi funkciju koja vice"
+  },
+  {
     "id": "2026-10-18-vece",
     "createdAt": "2026-10-18T18:02:23.800Z",
     "topic": "string includes",

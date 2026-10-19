@@ -1,0 +1,33 @@
+{
+  "topic": "string toUpperCase",
+  "lesson": {
+    "title": "Velika slova: toUpperCase",
+    "body": "`toUpperCase()` je metoda stringa. Metoda je funkcija koja pripada nekoj vrednosti i poziva se preko tacke. Ova metoda vraca novi string u kome su sva slova velika, a originalni string ostaje isti. Zagrade na kraju su obavezne. Tek one pokrecu metodu, a bez njih dobijas samu funkciju umesto teksta. U praksi se koristi za naslove, za oznake poput \"NOVO\" ili da se unos korisnika svede na isti oblik pre poredjenja.\n\n```js\nconst name = \"ana\";\nconst big = name.toUpperCase();\nconsole.log(big);  // \"ANA\"\nconsole.log(name); // \"ana\"\n```"
+  },
+  "task": {
+    "title": "Popravi funkciju koja vice",
+    "brief": "Funkcija `shout` treba da vrati isti tekst, ali velikim slovima. Sada vraca nesto drugo. Popravi liniju sa komentarom `// ovde`. Primeri: `shout(\"hello\")` vraca `\"HELLO\"`, a `shout(\"Ana\")` vraca `\"ANA\"`.",
+    "signature": "function shout(text)",
+    "starter": "function shout(text) {\n  return text.toUpperCase; // ovde\n}",
+    "tests": [
+      {
+        "name": "hello postaje HELLO",
+        "code": "assert.equal(shout(\"hello\"), \"HELLO\");"
+      },
+      {
+        "name": "Ana postaje ANA",
+        "code": "assert.equal(shout(\"Ana\"), \"ANA\");"
+      },
+      {
+        "name": "vraca string, a ne funkciju",
+        "code": "assert.equal(typeof shout(\"ok\"), \"string\");"
+      }
+    ]
+  },
+  "answer": "function shout(text) {\n  return text.toUpperCase();\n}",
+  "explanation": "Bez zagrada, `text.toUpperCase` je sama metoda, odnosno funkcija, a ne njen rezultat. Tek sa `()` metoda se pokrene i vrati novi string velikim slovima. Originalni `text` se pri tome ne menja.",
+  "format": "debug",
+  "id": "2026-10-19-jutro",
+  "createdAt": "2026-10-19T06:00:46.604Z",
+  "slot": "jutro"
+}
