@@ -1,0 +1,33 @@
+{
+  "topic": "niz push",
+  "lesson": {
+    "title": "Dodavanje na kraj niza: push",
+    "body": "`push` dodaje novi element na kraj niza. Pises ime niza, tacku, `push`, a u zagradama vrednost koju dodajes. Niz se menja odmah, pa mu i `length` poraste za jedan. To radi i kad je niz napravljen sa `const`, jer ne pravis novi niz nego samo dopunjavas postojeci.\n\n```js\nconst fruits = [\"apple\", \"pear\"];\nfruits.push(\"plum\");\nconsole.log(fruits); // [\"apple\", \"pear\", \"plum\"]\n```\n\nPazi: `fruits[0] = \"plum\"` ne dodaje nista, nego menja prvi element. U praksi `push` koristis kad nesto skupljas, na primer stavke u korpi, poruke u cetu ili rezultate pretrage."
+  },
+  "task": {
+    "title": "Popravi dodavanje u korpu",
+    "brief": "Kod treba da doda \"eggs\" na kraj korpe, ali umesto toga brise \"milk\". Ispravi liniju na kojoj stoji `// ovde`. Primer 1: pre izmene `cart` je `[\"milk\", \"bread\"]`, a posle treba da bude `[\"milk\", \"bread\", \"eggs\"]`. Primer 2: `count` treba da bude 3, a sada je 2.",
+    "signature": "const cart, const count",
+    "starter": "const cart = [\"milk\", \"bread\"];\ncart[0] = \"eggs\"; // ovde\nconst count = cart.length;",
+    "tests": [
+      {
+        "name": "eggs je dodat na kraj korpe",
+        "code": "assert.deepEqual(cart, [\"milk\", \"bread\", \"eggs\"]);"
+      },
+      {
+        "name": "milk je ostao na prvom mestu",
+        "code": "assert.equal(cart[0], \"milk\");"
+      },
+      {
+        "name": "count je 3",
+        "code": "assert.equal(count, 3);"
+      }
+    ]
+  },
+  "answer": "const cart = [\"milk\", \"bread\"];\ncart.push(\"eggs\"); // ovde\nconst count = cart.length;",
+  "explanation": "`cart[0] = \"eggs\"` stavlja novu vrednost na mesto prvog elementa, pa `\"milk\"` nestaje, a niz i dalje ima 2 elementa. `cart.push(\"eggs\")` dodaje novi element na kraj, pa niz sada ima 3 elementa. Zato je i `count` 3.",
+  "format": "debug",
+  "id": "2026-10-20-vece",
+  "createdAt": "2026-10-20T18:00:47.098Z",
+  "slot": "vece"
+}
