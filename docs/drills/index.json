@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-20-jutro",
+    "createdAt": "2026-10-20T06:00:39.456Z",
+    "topic": "niz indeksi",
+    "lessonTitle": "Indeksi niza počinju od nule",
+    "taskTitle": "Uzmi drugi element niza"
+  },
+  {
     "id": "2026-10-19-vece",
     "createdAt": "2026-10-19T18:00:45.733Z",
     "topic": "string split",

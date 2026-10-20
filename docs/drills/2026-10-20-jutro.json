@@ -1,0 +1,33 @@
+{
+  "topic": "niz indeksi",
+  "lesson": {
+    "title": "Indeksi niza počinju od nule",
+    "body": "Niz je lista vrednosti u uglastim zagradama, odvojenih zarezom. Svaka vrednost u nizu ima svoj redni broj, koji se zove indeks. Indeksi počinju od nule, ne od jedinice: prvi element je na mestu 0, drugi na mestu 1, treći na mestu 2. Element dobiješ tako što posle imena niza napišeš indeks u uglastim zagradama.\n\n```js\nconst fruits = [\"apple\", \"pear\", \"plum\"];\nfruits[0]; // \"apple\"\nfruits[2]; // \"plum\"\n```\n\nU praksi tako uzimaš, na primer, prvi rezultat pretrage ili određeni red iz liste."
+  },
+  "task": {
+    "title": "Uzmi drugi element niza",
+    "brief": "Dopuni funkciju `second` tako da vrati drugi element niza `items`. Primeri: `second([\"red\", \"green\", \"blue\"])` vraća `\"green\"`, a `second([10, 20, 30])` vraća `20`.",
+    "signature": "function second(items)",
+    "starter": "function second(items) {\n  return ; // ovde\n}",
+    "tests": [
+      {
+        "name": "vraća drugi string iz niza boja",
+        "code": "assert.equal(second([\"red\", \"green\", \"blue\"]), \"green\");"
+      },
+      {
+        "name": "vraća drugi broj iz niza brojeva",
+        "code": "assert.equal(second([10, 20, 30]), 20);"
+      },
+      {
+        "name": "radi i za niz od dva elementa",
+        "code": "assert.equal(second([\"a\", \"b\"]), \"b\");"
+      }
+    ]
+  },
+  "answer": "function second(items) {\n  return items[1];\n}",
+  "explanation": "Indeksi počinju od nule, pa je prvi element `items[0]`, a drugi `items[1]`. Broj u uglastim zagradama posle imena niza kaže koji element želiš. Zato funkcija radi za svaki niz koji ima bar dva elementa.",
+  "format": "challenge",
+  "id": "2026-10-20-jutro",
+  "createdAt": "2026-10-20T06:00:39.456Z",
+  "slot": "jutro"
+}
