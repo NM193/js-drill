@@ -1,0 +1,33 @@
+{
+  "topic": "niz at",
+  "lesson": {
+    "title": "Metoda at: brojanje od kraja",
+    "body": "Metoda `at` (funkcija koju pozivas na nizu preko tacke) vraca element na zadatom mestu, isto kao uglaste zagrade. Razlika je sto `at` prima i negativan broj: `-1` je poslednji element, `-2` pretposlednji. Uglaste zagrade to ne umeju: `niz[-1]` daje `undefined`.\n\n```js\nconst colors = [\"red\", \"green\", \"blue\"];\ncolors.at(0);  // \"red\"\ncolors.at(-1); // \"blue\"\ncolors[-1];    // undefined\n```\n\nU praksi `at(-1)` koristis kad ti treba poslednja poruka ili poslednja kupovina, a ne znas koliko niz ima elemenata."
+  },
+  "task": {
+    "title": "Poslednji element niza",
+    "brief": "Izaberi varijantu koja vraca poslednji element niza i upisi je posle `return`. Primer 1: `last([10, 20, 30])` vraca `30`. Primer 2: `last([\"a\", \"b\"])` vraca `\"b\"`.",
+    "signature": "function last(arr)",
+    "starter": "// A: arr[-1]\n// B: arr.at(-1)\n// C: arr.at(1)\n\nfunction last(arr) {\n  return; // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca poslednji broj",
+        "code": "assert.equal(last([10, 20, 30]), 30);"
+      },
+      {
+        "name": "vraca poslednji string",
+        "code": "assert.equal(last([\"a\", \"b\"]), \"b\");"
+      },
+      {
+        "name": "radi i za niz sa jednim elementom",
+        "code": "assert.equal(last([7]), 7);"
+      }
+    ]
+  },
+  "answer": "function last(arr) {\n  return arr.at(-1);\n}",
+  "explanation": "Tacna je B: `arr.at(-1)` broji od kraja, pa uvek daje poslednji element, koliko god niz bio dugacak. Varijanta A daje `undefined`, jer uglaste zagrade ne razumeju negativan indeks. Varijanta C daje drugi element, jer brojanje od pocetka krece od nule.",
+  "format": "mcq",
+  "id": "2026-10-21-jutro",
+  "createdAt": "2026-10-21T06:00:39.473Z",
+  "slot": "jutro"
+}
