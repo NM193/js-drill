@@ -1,0 +1,33 @@
+{
+  "topic": "petlja for",
+  "lesson": {
+    "title": "Petlja for: ponavljanje sa brojacem",
+    "body": "Petlja `for` ponavlja isti kod vise puta, a brojac pamti u kom je krugu. U zagradi su tri dela: odakle brojac krece (`let i = 0`), dokle petlja traje (`i < names.length`) i sta se desi posle svakog kruga (`i++` znaci: povecaj `i` za 1).\n\n```js\nconst names = [\"Ana\", \"Marko\", \"Iva\"];\nfor (let i = 0; i < names.length; i++) {\n  console.log(names[i]);\n}\n```\n\nIndeksi krecu od nule, pa je `names[i]` u svakom krugu sledeci element: prvo \"Ana\", pa \"Marko\", pa \"Iva\". U praksi tako prolazis kroz listu proizvoda, poruka ili brojeva i sa svakim nesto uradis, na primer saberes ih."
+  },
+  "task": {
+    "title": "Saberi sve brojeve u nizu",
+    "brief": "Funkcija `sum` treba da vrati zbir svih brojeva u nizu. Petlja je vec napisana. Na mestu `// ovde` dodaj trenutni broj (`numbers[i]`) na `total`. Primeri: `sum([1, 2, 3])` vraca `6`, a `sum([10, 20])` vraca `30`.",
+    "signature": "function sum(numbers)",
+    "starter": "function sum(numbers) {\n  let total = 0;\n  for (let i = 0; i < numbers.length; i++) {\n    // ovde\n  }\n  return total;\n}",
+    "tests": [
+      {
+        "name": "sabira tri broja",
+        "code": "assert.equal(sum([1, 2, 3]), 6);"
+      },
+      {
+        "name": "sabira dva broja",
+        "code": "assert.equal(sum([10, 20]), 30);"
+      },
+      {
+        "name": "prazan niz daje 0",
+        "code": "assert.equal(sum([]), 0);"
+      }
+    ]
+  },
+  "answer": "function sum(numbers) {\n  let total = 0;\n  for (let i = 0; i < numbers.length; i++) {\n    total = total + numbers[i];\n  }\n  return total;\n}",
+  "explanation": "Petlja prolazi kroz sve indekse, od 0 do poslednjeg, a `numbers[i]` je broj iz trenutnog kruga. Svaki krug dodaje taj broj na `total`, pa posle petlje `total` sadrzi zbir svih brojeva. Kod praznog niza petlja se ne izvrsi nijednom, pa `total` ostaje 0.",
+  "format": "challenge",
+  "id": "2026-10-21-vece",
+  "createdAt": "2026-10-21T18:00:50.564Z",
+  "slot": "vece"
+}
