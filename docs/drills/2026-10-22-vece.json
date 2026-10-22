@@ -1,0 +1,33 @@
+{
+  "topic": "forEach",
+  "lesson": {
+    "title": "forEach: kroz niz bez brojaca",
+    "body": "`forEach` prolazi kroz svaki element niza i za svaki element pozove funkciju koju mu das. Ne treba ti brojac `i` ni `length`, jer `forEach` sam zna gde je kraj niza.\n\n```js\nconst prices = [100, 250];\nprices.forEach(price => console.log(price));\n// ispisuje 100, pa 250\n```\n\nVazno je da `forEach` ne vraca nista korisno, nego uvek vraca `undefined` (vrednost koja znaci \"nema nicega\"). Zato rezultat upisujes u promenljivu napravljenu pre njega, na primer `total += price`, sto je isto kao `total = total + price`. U praksi ga koristis kad za svaki element treba nesto da uradis, recimo da ga ispises ili sabereš."
+  },
+  "task": {
+    "title": "Saberi niz pomocu forEach",
+    "brief": "Izaberi varijantu A, B ili C koja sabira sve brojeve iz niza i upisi je umesto `// ovde`. Primeri: sumAll([1, 2, 3]) vraca 6, a sumAll([10, 5]) vraca 15.",
+    "signature": "function sumAll(numbers)",
+    "starter": "// A: numbers.forEach(n => { total = n; });\n// B: numbers.forEach(n => { total += n; });\n// C: total = numbers.forEach(n => n);\n\nfunction sumAll(numbers) {\n  let total = 0;\n  // ovde\n  return total;\n}",
+    "tests": [
+      {
+        "name": "sabira tri broja",
+        "code": "assert.equal(sumAll([1, 2, 3]), 6);"
+      },
+      {
+        "name": "sabira dva broja",
+        "code": "assert.equal(sumAll([10, 5]), 15);"
+      },
+      {
+        "name": "prazan niz daje 0",
+        "code": "assert.equal(sumAll([]), 0);"
+      }
+    ]
+  },
+  "answer": "function sumAll(numbers) {\n  let total = 0;\n  numbers.forEach(n => { total += n; });\n  return total;\n}",
+  "explanation": "Tacna je varijanta B, jer za svaki broj dodaje njegovu vrednost na `total`. A svaki put pregazi `total`, pa na kraju ostane samo poslednji broj. C ne radi jer `forEach` uvek vraca `undefined`, pa bi `total` postao `undefined`.",
+  "format": "mcq",
+  "id": "2026-10-22-vece",
+  "createdAt": "2026-10-22T18:00:37.091Z",
+  "slot": "vece"
+}

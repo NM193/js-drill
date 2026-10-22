@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-22-vece",
+    "createdAt": "2026-10-22T18:00:37.091Z",
+    "topic": "forEach",
+    "lessonTitle": "forEach: kroz niz bez brojaca",
+    "taskTitle": "Saberi niz pomocu forEach"
+  },
+  {
     "id": "2026-10-22-jutro",
     "createdAt": "2026-10-22T06:07:28.930Z",
     "topic": "petlja for...of",
