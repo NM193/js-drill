@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-10-22-jutro",
+    "createdAt": "2026-10-22T06:07:28.930Z",
+    "topic": "petlja for...of",
+    "lessonTitle": "Petlja for...of: element po element",
+    "taskTitle": "Popravi zbir cena"
+  },
+  {
     "id": "2026-10-21-vece",
     "createdAt": "2026-10-21T18:00:50.564Z",
     "topic": "petlja for",

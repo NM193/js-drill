@@ -1,0 +1,29 @@
+{
+  "topic": "petlja for...of",
+  "lesson": {
+    "title": "Petlja for...of: element po element",
+    "body": "Petlja `for...of` prolazi kroz niz i u svakom krugu ti daje sledeci element, bez brojaca i bez indeksa. Posle `of` pises niz, a ispred njega ime promenljive koja u tom krugu cuva trenutni element.\n\n```js\nconst names = [\"Ana\", \"Marko\", \"Iva\"];\nfor (const name of names) {\n  console.log(name);\n}\n```\n\nOvde je `name` prvo \"Ana\", pa \"Marko\", pa \"Iva\". To je sama vrednost, a ne njen indeks, pa ne pises `names[i]`. Moze `const`, jer se u svakom krugu pravi nova promenljiva. U praksi `for...of` koristis kad ti treba svaki element redom, a klasican `for` kad ti treba i broj pozicije."
+  },
+  "task": {
+    "title": "Popravi zbir cena",
+    "brief": "Ovaj kod treba da sabere sve cene u `total`. Umesto toga, posle petlje `total` je `NaN` (to znaci \"nije broj\"). Ispravi liniju sa `// ovde` tako da se na `total` dodaje trenutna cena. Primeri: za `[10, 20, 30]` `total` treba da bude `60`, a za `[5, 15]` bio bi `20`.",
+    "signature": "const prices, let total",
+    "starter": "const prices = [10, 20, 30];\nlet total = 0;\nfor (const price of prices) {\n  total = total + prices[price]; // ovde\n}",
+    "tests": [
+      {
+        "name": "total je zbir svih cena",
+        "code": "assert.equal(total, 60);"
+      },
+      {
+        "name": "niz prices je ostao isti",
+        "code": "assert.deepEqual(prices, [10, 20, 30]);"
+      }
+    ]
+  },
+  "answer": "const prices = [10, 20, 30];\nlet total = 0;\nfor (const price of prices) {\n  total = total + price;\n}",
+  "explanation": "U `for...of` petlji promenljiva `price` vec sadrzi samu cenu: prvo 10, pa 20, pa 30. Izraz `prices[price]` je trazio elemente na indeksima 10, 20 i 30, a njih nema, pa je dobijao `undefined` i zbir je postajao `NaN`. Zato se na `total` dodaje direktno `price`.",
+  "format": "debug",
+  "id": "2026-10-22-jutro",
+  "createdAt": "2026-10-22T06:07:28.930Z",
+  "slot": "jutro"
+}
