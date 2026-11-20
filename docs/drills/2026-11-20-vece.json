@@ -1,0 +1,33 @@
+{
+  "topic": "filter",
+  "lesson": {
+    "title": "filter: zadrzi samo ono sto treba",
+    "body": "`filter` pravi nov niz u kome su samo oni elementi koji prodju uslov. Uslov pises kao malu funkciju koja za svaki element vrati `true` (zadrzi ga) ili `false` (izbaci ga). Originalni niz ostaje isti.\n\n```js\nconst numbers = [3, 8, 12, 5];\nconst big = numbers.filter((n) => n > 6);\n// big je [8, 12]\n```\n\nU praksi ovako izdvajas, na primer, samo zavrsene zadatke ili samo proizvode koji su na stanju."
+  },
+  "task": {
+    "title": "Popravi uslov za jeftine cene",
+    "brief": "Promenljiva `cheap` treba da sadrzi samo cene manje od 100, ali uslov u `filter` je pogresan. Ispravi liniju oznacenu sa `// ovde`.\n\nPrimeri: 40 ostaje u nizu jer je manje od 100. 300 ispada jer nije manje od 100. Od `[120, 40, 300, 75, 60]` treba da dobijes `[40, 75, 60]`.",
+    "signature": "const cheap",
+    "starter": "const prices = [120, 40, 300, 75, 60];\n// cheap treba da sadrzi samo cene manje od 100\nconst cheap = prices.filter((price) => price > 100); // ovde",
+    "tests": [
+      {
+        "name": "cheap sadrzi samo cene manje od 100",
+        "code": "assert.deepEqual(cheap, [40, 75, 60]);"
+      },
+      {
+        "name": "cheap ima tri elementa",
+        "code": "assert.equal(cheap.length, 3);"
+      },
+      {
+        "name": "originalni niz prices je ostao isti",
+        "code": "assert.deepEqual(prices, [120, 40, 300, 75, 60]);"
+      }
+    ]
+  },
+  "answer": "const prices = [120, 40, 300, 75, 60];\nconst cheap = prices.filter((price) => price < 100);",
+  "explanation": "Uslov je bio okrenut: `price > 100` zadrzava skupe cene, a trazene su jeftine. Sa `price < 100` funkcija vraca `true` samo za 40, 75 i 60, pa samo one ulaze u novi niz.",
+  "format": "debug",
+  "id": "2026-11-20-vece",
+  "createdAt": "2026-11-20T19:00:52.179Z",
+  "slot": "vece"
+}
