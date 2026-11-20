@@ -1,0 +1,33 @@
+{
+  "topic": "map",
+  "lesson": {
+    "title": "map: novi niz od postojećeg",
+    "body": "`map` prolazi kroz niz i od svakog elementa pravi novu vrednost. Rezultat je **novi niz** iste dužine, a originalni niz ostaje isti. Unutra mu daješ funkciju (najčešće arrow funkciju) koja kaže šta da se uradi sa jednim elementom.\n\n```js\nconst nums = [1, 2, 3];\nconst doubled = nums.map((n) => n * 2);\n// doubled je [2, 4, 6], nums je i dalje [1, 2, 3]\n```\n\nU praksi ga koristiš kad imaš listu podataka, a treba ti ista lista u drugom obliku. Na primer: cene sa popustom ili imena za prikaz na ekranu."
+  },
+  "task": {
+    "title": "Dodaj dostavu na svaku cenu",
+    "brief": "Imaš niz cena `prices`. Napravi novi niz `withShipping` u kome je svaka cena veća za 100 (dostava). Koristi `map`. Primer 1: 200 postaje 300. Primer 2: 1000 postaje 1100. Niz `prices` mora da ostane nepromenjen.",
+    "signature": "const withShipping",
+    "starter": "const prices = [200, 450, 1000];\nconst withShipping = // ovde",
+    "tests": [
+      {
+        "name": "svaka cena je veća za 100",
+        "code": "assert.deepEqual(withShipping, [300, 550, 1100]);"
+      },
+      {
+        "name": "originalni niz je ostao isti",
+        "code": "assert.deepEqual(prices, [200, 450, 1000]);"
+      },
+      {
+        "name": "novi niz ima isto elemenata",
+        "code": "assert.equal(withShipping.length, 3);"
+      }
+    ]
+  },
+  "answer": "const prices = [200, 450, 1000];\nconst withShipping = prices.map((price) => price + 100);",
+  "explanation": "`map` poziva arrow funkciju za svaku cenu i od rezultata pravi novi niz. Funkcija dobija jednu cenu i vraća tu cenu plus 100. Niz `prices` se ne menja, jer `map` uvek vraća novi niz.",
+  "format": "challenge",
+  "id": "2026-11-20-jutro",
+  "createdAt": "2026-11-20T07:00:31.537Z",
+  "slot": "jutro"
+}

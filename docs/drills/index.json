@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-20-jutro",
+    "createdAt": "2026-11-20T07:00:31.537Z",
+    "topic": "map",
+    "lessonTitle": "map: novi niz od postojećeg",
+    "taskTitle": "Dodaj dostavu na svaku cenu"
+  },
+  {
     "id": "2026-10-22-vece",
     "createdAt": "2026-10-22T18:00:37.091Z",
     "topic": "forEach",
