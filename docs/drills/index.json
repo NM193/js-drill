@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-21-jutro",
+    "createdAt": "2026-11-21T09:31:04.760Z",
+    "topic": "find",
+    "lessonTitle": "find: prvi element koji odgovara",
+    "taskTitle": "Prva cena veca od 100"
+  },
+  {
     "id": "2026-11-20-vece",
     "createdAt": "2026-11-20T19:00:52.179Z",
     "topic": "filter",

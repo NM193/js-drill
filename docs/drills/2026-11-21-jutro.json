@@ -1,0 +1,33 @@
+{
+  "topic": "find",
+  "lesson": {
+    "title": "find: prvi element koji odgovara",
+    "body": "`find` prolazi kroz niz i vraca **prvi** element za koji uslov vazi. Uslov pises kao malu funkciju koja za svaki element vrati `true` ili `false`. Cim nadje prvi pogodak, staje i ne gleda dalje.\n\n```js\nconst numbers = [3, 8, 12, 20];\nconst firstBig = numbers.find((n) => n > 10);\n// firstBig je 12\n```\n\nZa razliku od `filter`, ne dobijas niz nego samu vrednost. Ako nijedan element ne odgovara, dobijas `undefined`. U praksi se koristi kad ti iz liste treba samo jedna stvar, na primer prvi proizvod skuplji od neke cene."
+  },
+  "task": {
+    "title": "Prva cena veca od 100",
+    "brief": "Funkcija `firstExpensive` prima niz cena i treba da vrati prvu cenu koja je veca od 100. Izaberi tacnu varijantu (A, B ili C) i upisi je umesto `// ovde`.\n\nPrimeri:\n- `firstExpensive([40, 150, 90, 300])` vraca `150`\n- `firstExpensive([120, 80])` vraca `120`",
+    "signature": "function firstExpensive(prices)",
+    "starter": "// A: prices.filter((p) => p > 100)\n// B: prices.find((p) => p > 100)\n// C: prices.find((p) => p < 100)\n\nfunction firstExpensive(prices) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca prvu cenu vecu od 100",
+        "code": "assert.equal(firstExpensive([40, 150, 90, 300]), 150);"
+      },
+      {
+        "name": "radi i kad je pogodak na pocetku niza",
+        "code": "assert.equal(firstExpensive([120, 80]), 120);"
+      },
+      {
+        "name": "vraca undefined kad nijedna cena nije veca od 100",
+        "code": "assert.equal(firstExpensive([10, 20]), undefined);"
+      }
+    ]
+  },
+  "answer": "function firstExpensive(prices) {\n  return prices.find((p) => p > 100);\n}",
+  "explanation": "Tacna je varijanta B. `find` vraca prvi element za koji uslov `p > 100` vazi, i to kao samu vrednost. Varijanta A vraca ceo niz pogodaka, a C trazi cene manje od 100.",
+  "format": "mcq",
+  "id": "2026-11-21-jutro",
+  "createdAt": "2026-11-21T09:31:04.760Z",
+  "slot": "jutro"
+}
