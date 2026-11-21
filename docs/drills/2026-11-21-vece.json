@@ -1,0 +1,33 @@
+{
+  "topic": "objekti svojstva",
+  "lesson": {
+    "title": "Objekti: tacka i uglaste zagrade",
+    "body": "Objekat je skup parova *ime: vrednost*. Svaki takav par se zove svojstvo (engl. property). Objekat pises u viticastim zagradama, a vrednost citas tackom, na primer `user.name`. Isto mozes da uradis i uglastim zagradama, sa imenom svojstva kao stringom: `user[\"name\"]`. Uglaste zagrade su potrebne kad je ime svojstva u promenljivoj, a to se cesto desava kad kod unapred ne zna koje polje mu treba.\n\n```js\nconst user = { name: \"Ana\", age: 28 };\nconst key = \"age\";\nconsole.log(user.name); // \"Ana\"\nconsole.log(user[key]); // 28\n```\n\nPazi: `user.key` trazi svojstvo koje se bas zove \"key\", pa vraca `undefined`."
+  },
+  "task": {
+    "title": "Procitaj svojstvo po imenu",
+    "brief": "Dopuni funkciju `getValue` tako da vrati vrednost svojstva ciji naziv stoji u parametru `key`. Primer 1: `getValue({ name: \"Ana\", age: 28 }, \"age\")` vraca `28`. Primer 2: `getValue({ city: \"Nis\" }, \"city\")` vraca `\"Nis\"`.",
+    "signature": "function getValue(obj, key)",
+    "starter": "function getValue(obj, key) {\n  return // ovde\n}",
+    "tests": [
+      {
+        "name": "vraca broj iz svojstva age",
+        "code": "assert.equal(getValue({ name: \"Ana\", age: 28 }, \"age\"), 28);"
+      },
+      {
+        "name": "vraca string iz svojstva city",
+        "code": "assert.equal(getValue({ city: \"Nis\" }, \"city\"), \"Nis\");"
+      },
+      {
+        "name": "radi i za drugo ime svojstva u istom objektu",
+        "code": "assert.equal(getValue({ name: \"Ana\", age: 28 }, \"name\"), \"Ana\");"
+      }
+    ]
+  },
+  "answer": "function getValue(obj, key) {\n  return obj[key];\n}",
+  "explanation": "Ime svojstva je u promenljivoj `key`, pa se koriste uglaste zagrade: `obj[key]`. `obj.key` bi trazilo svojstvo koje se doslovno zove \"key\" i vratilo bi `undefined`.",
+  "format": "challenge",
+  "id": "2026-11-21-vece",
+  "createdAt": "2026-11-21T19:00:34.716Z",
+  "slot": "vece"
+}
