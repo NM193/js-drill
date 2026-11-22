@@ -1,0 +1,33 @@
+{
+  "topic": "ugnjezdeni objekti",
+  "lesson": {
+    "title": "Objekat unutar objekta",
+    "body": "Vrednost svojstva moze da bude i drugi objekat. To se zove ugnjezdeni objekat, odnosno objekat koji stoji unutar drugog objekta. Do unutrasnje vrednosti stizes tako sto nizes tacke, po jednu za svaki nivo:\n\n```js\nconst user = { name: \"Ana\", address: { city: \"Beograd\" } };\nuser.address.city; // \"Beograd\"\nuser.city;         // undefined\n```\n\nAko preskocis nivo, kao u `user.city`, dobijas `undefined`, jer `user` nema svojstvo `city`. Ima ga samo `address`. U praksi ovako izgledaju podaci koji stizu sa servera: korisnik ima adresu, a porudzbina ima kupca."
+  },
+  "task": {
+    "title": "Pronadji grad kupca",
+    "brief": "Kod treba da upise grad kupca u promenljivu `city`, ali umesto grada dobija `undefined`. Popravi liniju oznacenu sa `// ovde`. Primer 1: za objekat iznad, `city` treba da bude `\"Novi Sad\"`. Primer 2: da u objektu pise `city: \"Nis\"`, `city` bi bio `\"Nis\"`.",
+    "signature": "const city",
+    "starter": "const order = {\n  id: 7,\n  customer: { name: \"Marko\", city: \"Novi Sad\" }\n};\nconst city = order.city; // ovde",
+    "tests": [
+      {
+        "name": "city je \"Novi Sad\"",
+        "code": "assert.equal(city, \"Novi Sad\");"
+      },
+      {
+        "name": "city nije undefined",
+        "code": "assert.ok(city !== undefined);"
+      },
+      {
+        "name": "city je isti kao grad u objektu customer",
+        "code": "assert.equal(city, order.customer.city);"
+      }
+    ]
+  },
+  "answer": "const order = {\n  id: 7,\n  customer: { name: \"Marko\", city: \"Novi Sad\" }\n};\nconst city = order.customer.city;",
+  "explanation": "Grad nije direktno u `order`, nego u objektu `customer` koji stoji unutar njega. Zato `order.city` vraca `undefined`. Treba proci kroz oba nivoa: `order.customer.city`.",
+  "format": "debug",
+  "id": "2026-11-22-jutro",
+  "createdAt": "2026-11-22T07:00:33.450Z",
+  "slot": "jutro"
+}
