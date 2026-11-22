@@ -1,0 +1,33 @@
+{
+  "topic": "destrukturiranje",
+  "lesson": {
+    "title": "Destrukturiranje objekta",
+    "body": "Destrukturiranje je kraci nacin da izvadis vrednosti iz objekta u posebne promenljive. Umesto da svaki put pises `user.name` i `user.age`, napravis obe promenljive u jednoj liniji:\n\n```js\nconst user = { name: \"Ana\", age: 28 };\nconst { name, age } = user;\n// name je \"Ana\", age je 28\n```\n\nViticaste zagrade levo od `=` znace: uzmi ova svojstva iz objekta. Ime promenljive mora biti isto kao ime svojstva, inace dobijas `undefined`. U praksi ces ovo stalno videti u kodu koji ti AI napise, na primer kad vadi podatke iz odgovora servera."
+  },
+  "task": {
+    "title": "Izvadi grad iz objekta",
+    "brief": "Funkcija `getCity` dobija objekat osobe. Izaberi varijantu (A, B ili C) koja destrukturiranjem vadi svojstvo `city` u promenljivu `city` i upisi je na mesto `// ovde`. Primeri: `getCity({ name: \"Ana\", city: \"Beograd\" })` vraca `\"Beograd\"`, a `getCity({ name: \"Marko\", city: \"Novi Sad\" })` vraca `\"Novi Sad\"`.",
+    "signature": "function getCity(person)",
+    "starter": "// A: const { town } = person;\n// B: const { city } = person;\n// C: const city = person;\n\nfunction getCity(person) {\n  // ovde\n  return city;\n}",
+    "tests": [
+      {
+        "name": "vraca grad Beograd",
+        "code": "assert.equal(getCity({ name: \"Ana\", city: \"Beograd\" }), \"Beograd\");"
+      },
+      {
+        "name": "vraca grad Novi Sad i kad objekat ima vise svojstava",
+        "code": "assert.equal(getCity({ name: \"Marko\", city: \"Novi Sad\", age: 30 }), \"Novi Sad\");"
+      },
+      {
+        "name": "vraca string, a ne ceo objekat",
+        "code": "assert.equal(typeof getCity({ city: \"Nis\" }), \"string\");"
+      }
+    ]
+  },
+  "answer": "function getCity(person) {\n  const { city } = person;\n  return city;\n}",
+  "explanation": "Tacna je varijanta B: `const { city } = person;` pravi promenljivu `city` u kojoj je vrednost svojstva `city`. Varijanta A trazi svojstvo `town`, koje ne postoji, pa dobija `undefined`. Varijanta C u `city` stavlja ceo objekat, a ne samo grad.",
+  "format": "mcq",
+  "id": "2026-11-22-vece",
+  "createdAt": "2026-11-22T19:00:37.217Z",
+  "slot": "vece"
+}
