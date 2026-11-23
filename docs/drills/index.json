@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-23-vece",
+    "createdAt": "2026-11-23T19:01:23.706Z",
+    "topic": "podrazumevani parametri",
+    "lessonTitle": "Podrazumevane vrednosti parametara",
+    "taskTitle": "Podrazumevano jedan komad"
+  },
+  {
     "id": "2026-11-22-vece",
     "createdAt": "2026-11-22T19:00:37.217Z",
     "topic": "destrukturiranje",

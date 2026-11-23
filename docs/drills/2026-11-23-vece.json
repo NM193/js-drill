@@ -1,0 +1,33 @@
+{
+  "topic": "podrazumevani parametri",
+  "lesson": {
+    "title": "Podrazumevane vrednosti parametara",
+    "body": "Parametar funkcije moze da ima **podrazumevanu vrednost** - to je vrednost koja se koristi kad pri pozivu na tom mestu ne posaljes nista. Pises je sa `=` odmah posle imena parametra:\n\n```js\nfunction greet(name = \"gost\") { return `Zdravo, ${name}!`; }\ngreet(\"Ana\"); // \"Zdravo, Ana!\"\ngreet();      // \"Zdravo, gost!\"\n```\n\nBez podrazumevane vrednosti `name` bi bio `undefined`, pa bi rezultat bio \"Zdravo, undefined!\". Ako posaljes vrednost, ona uvek ima prednost. U praksi ovo sluzi da funkcija radi i kad se neki podatak izostavi, a cesto ces ga videti u kodu koji ti AI napise, na primer `page = 1` ili `limit = 10`."
+  },
+  "task": {
+    "title": "Podrazumevano jedan komad",
+    "brief": "Funkcija `totalPrice` racuna cenu za vise komada, ali joj nedostaje drugi parametar. Na mesto `// ovde` upisi parametar `quantity` sa podrazumevanom vrednoscu `1`, da funkcija radi i kad se broj komada ne posalje. Primeri: `totalPrice(200, 3)` vraca `600`, a `totalPrice(200)` vraca `200`.",
+    "signature": "function totalPrice(price, quantity)",
+    "starter": "function totalPrice(price,\n  // ovde\n) {\n  return price * quantity;\n}",
+    "tests": [
+      {
+        "name": "mnozi cenu i broj komada",
+        "code": "assert.equal(totalPrice(200, 3), 600);"
+      },
+      {
+        "name": "bez broja komada racuna jedan komad",
+        "code": "assert.equal(totalPrice(200), 200);"
+      },
+      {
+        "name": "poslat broj komada ima prednost nad podrazumevanim",
+        "code": "assert.equal(totalPrice(50, 4), 200);"
+      }
+    ]
+  },
+  "answer": "function totalPrice(price, quantity = 1) {\n  return price * quantity;\n}",
+  "explanation": "`quantity = 1` znaci: ako se drugi argument ne posalje, `quantity` je `1`. Zato `totalPrice(200)` racuna `200 * 1` i vraca `200`. Kad posaljes broj, na primer `3`, koristi se on, a podrazumevana vrednost se preskace.",
+  "format": "challenge",
+  "id": "2026-11-23-vece",
+  "createdAt": "2026-11-23T19:01:23.706Z",
+  "slot": "vece"
+}
