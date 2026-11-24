@@ -1,0 +1,33 @@
+{
+  "topic": "try i catch",
+  "lesson": {
+    "title": "try i catch: kad nesto pukne",
+    "body": "Kad neka linija baci gresku, program na tom mestu staje. Zato kod koji moze da pukne stavis u `try`, a u `catch` napises sta da se uradi ako stvarno pukne. Ako greske nema, `catch` se preskace.\n\n```js\nconst text = null;\nlet message = \"\";\ntry { message = text.toUpperCase(); } catch { message = \"nema teksta\"; }\n// message je \"nema teksta\"\n```\n\nOvde je `text` jednak `null`, sto znaci da vrednosti nema, pa poziv `toUpperCase` puca i izvrsi se `catch`. U praksi ovo koristis kad podaci mozda nisu stigli, da aplikacija prikaze rezervni tekst umesto da stane."
+  },
+  "task": {
+    "title": "Ime korisnika ili Gost",
+    "brief": "Funkcija treba da vrati ime korisnika. Ako citanje imena pukne jer je `user` jednak `null`, treba da vrati `\"Gost\"`. Izaberi tacnu varijantu (A, B ili C) i upisi je na mesto `// ovde`.\n\nPrimeri:\n- `getUserName({ name: \"Ana\" })` vraca `\"Ana\"`\n- `getUserName(null)` vraca `\"Gost\"`",
+    "signature": "function getUserName(user)",
+    "starter": "// A: result = user.name;\n// B: try { result = \"Gost\"; } catch { result = user.name; }\n// C: try { result = user.name; } catch { result = \"Gost\"; }\n\nfunction getUserName(user) {\n  let result = \"\";\n  // ovde\n  return result;\n}",
+    "tests": [
+      {
+        "name": "vraca ime kad korisnik postoji",
+        "code": "assert.equal(getUserName({ name: \"Ana\" }), \"Ana\");"
+      },
+      {
+        "name": "vraca Gost kad je korisnik null",
+        "code": "assert.equal(getUserName(null), \"Gost\");"
+      },
+      {
+        "name": "radi i za drugo ime",
+        "code": "assert.equal(getUserName({ name: \"Marko\" }), \"Marko\");"
+      }
+    ]
+  },
+  "answer": "function getUserName(user) {\n  let result = \"\";\n  try { result = user.name; } catch { result = \"Gost\"; }\n  return result;\n}",
+  "explanation": "Tacna je varijanta C: rizicno citanje `user.name` stoji u `try`, a rezervna vrednost u `catch`. Varijanta A nema zastitu, pa puca kad je `user` jednak `null`. Varijanta B u `try` stavlja kod koji nikad ne puca, pa uvek vraca `\"Gost\"`.",
+  "format": "mcq",
+  "id": "2026-11-24-vece",
+  "createdAt": "2026-11-24T19:00:35.900Z",
+  "slot": "vece"
+}

@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-24-vece",
+    "createdAt": "2026-11-24T19:00:35.900Z",
+    "topic": "try i catch",
+    "lessonTitle": "try i catch: kad nesto pukne",
+    "taskTitle": "Ime korisnika ili Gost"
+  },
+  {
     "id": "2026-11-24-jutro",
     "createdAt": "2026-11-24T07:22:21.779Z",
     "topic": "citanje greske",
