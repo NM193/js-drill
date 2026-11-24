@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-24-jutro",
+    "createdAt": "2026-11-24T07:22:21.779Z",
+    "topic": "citanje greske",
+    "lessonTitle": "Kako se cita poruka o gresci",
+    "taskTitle": "Ispravi ime koje ne postoji"
+  },
+  {
     "id": "2026-11-23-vece",
     "createdAt": "2026-11-23T19:01:23.706Z",
     "topic": "podrazumevani parametri",

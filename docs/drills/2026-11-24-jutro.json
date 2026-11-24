@@ -1,0 +1,33 @@
+{
+  "topic": "citanje greske",
+  "lesson": {
+    "title": "Kako se cita poruka o gresci",
+    "body": "Kad JavaScript ne moze da izvrsi neku liniju, stane i ispise poruku o gresci. Poruka ima dva dela: ispred dvotacke je vrsta greske, a iza nje opis sta je poslo naopako.\n\n```js\nconst price = 100;\nconst total = prise * 2;\n// ReferenceError: prise is not defined\n```\n\n`ReferenceError` znaci da si upotrebio ime koje ne postoji. Deo `prise is not defined` ti tacno kaze koje ime je problem - ovde je to pogresno otkucano `price`. U praksi je to najcesce greska u kucanju, pa prvo uporedi ime iz poruke sa imenima u svom kodu."
+  },
+  "task": {
+    "title": "Ispravi ime koje ne postoji",
+    "brief": "Funkcija `totalPrice` treba da vrati cenu pomnozenu kolicinom. Kad se pozove, baca gresku: `ReferenceError: totl is not defined`. Procitaj poruku, nadji ime koje ne postoji i ispravi tu jednu liniju.\n\nPrimeri:\n- `totalPrice(200, 3)` vraca `600`\n- `totalPrice(50, 2)` vraca `100`",
+    "signature": "function totalPrice(price, quantity)",
+    "starter": "function totalPrice(price, quantity) {\n  const total = price * quantity;\n  return totl; // ovde\n}",
+    "tests": [
+      {
+        "name": "200 puta 3 je 600",
+        "code": "assert.equal(totalPrice(200, 3), 600);"
+      },
+      {
+        "name": "50 puta 2 je 100",
+        "code": "assert.equal(totalPrice(50, 2), 100);"
+      },
+      {
+        "name": "15 puta 1 je 15",
+        "code": "assert.equal(totalPrice(15, 1), 15);"
+      }
+    ]
+  },
+  "answer": "function totalPrice(price, quantity) {\n  const total = price * quantity;\n  return total;\n}",
+  "explanation": "Poruka `ReferenceError: totl is not defined` kaze da ime `totl` ne postoji. Promenljiva se zove `total`, pa je u liniji sa `return` samo falilo jedno slovo. Kad se ime ispravi, funkcija vraca proizvod cene i kolicine.",
+  "format": "debug",
+  "id": "2026-11-24-jutro",
+  "createdAt": "2026-11-24T07:22:21.779Z",
+  "slot": "jutro"
+}
