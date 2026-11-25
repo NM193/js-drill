@@ -1,0 +1,33 @@
+{
+  "topic": "typeof",
+  "lesson": {
+    "title": "Tipovi vrednosti i typeof",
+    "body": "Svaka vrednost u JavaScriptu ima tip, to jest vrstu: tekst je `string`, broj je `number`, a tačno/netačno je `boolean`. Reč `typeof` ispred vrednosti daje naziv njenog tipa, napisan kao tekst.\n\n```js\nconst age = 25;\ntypeof age;              // \"number\"\ntypeof \"25\";             // \"string\"\ntypeof age === \"number\"; // true\n```\n\nPazi: `25` je broj, a `\"25\"` pod navodnicima je tekst. Naziv tipa možeš da uporediš pomoću `===`, i tada dobiješ `true` ili `false`. U praksi ovo koristiš da proveriš šta si dobio pre nego što računaš, jer tekstualno polje u formi daje tekst čak i kad korisnik ukuca broj."
+  },
+  "task": {
+    "title": "Da li je vrednost tekst?",
+    "brief": "Dopuni izraz posle `return` tako da funkcija vrati `true` ako je `value` tekst, a `false` ako nije. Koristi `typeof`.\n\nPrimeri:\n- `isText(\"Ana\")` vraća `true`\n- `isText(25)` vraća `false`",
+    "signature": "function isText(value)",
+    "starter": "function isText(value) {\n  return ; // ovde\n}",
+    "tests": [
+      {
+        "name": "tekst vraća true",
+        "code": "assert.equal(isText(\"Ana\"), true);"
+      },
+      {
+        "name": "broj vraća false",
+        "code": "assert.equal(isText(25), false);"
+      },
+      {
+        "name": "broj pod navodnicima je tekst",
+        "code": "assert.equal(isText(\"25\"), true);"
+      }
+    ]
+  },
+  "answer": "function isText(value) {\n  return typeof value === \"string\";\n}",
+  "explanation": "`typeof value` daje naziv tipa kao tekst, na primer `\"string\"` ili `\"number\"`. Poređenje `=== \"string\"` zatim daje `true` samo kada je vrednost tekst. Zato `\"25\"` vraća `true`, a `25` vraća `false`.",
+  "format": "challenge",
+  "id": "2026-11-25-jutro",
+  "createdAt": "2026-11-25T07:00:25.582Z",
+  "slot": "jutro"
+}

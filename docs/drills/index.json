@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-25-jutro",
+    "createdAt": "2026-11-25T07:00:25.582Z",
+    "topic": "typeof",
+    "lessonTitle": "Tipovi vrednosti i typeof",
+    "taskTitle": "Da li je vrednost tekst?"
+  },
+  {
     "id": "2026-11-24-vece",
     "createdAt": "2026-11-24T19:00:35.900Z",
     "topic": "try i catch",
