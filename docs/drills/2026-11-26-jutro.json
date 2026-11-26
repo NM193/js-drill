@@ -1,0 +1,29 @@
+{
+  "topic": "let i const",
+  "lesson": {
+    "title": "Promenljive: let i const",
+    "body": "Promenljiva je ime pod kojim cuvas neku vrednost da bi je kasnije koristio. Pravis je sa `const` ili sa `let`. Vrednost u `const` promenljivoj ne moze kasnije da se zameni drugom, a vrednost u `let` moze.\n\n```js\nconst name = \"Ana\";\nlet count = 1;\ncount = count + 1; // count je sada 2\n```\n\nPo pravilu pises `const`, jer odmah vidis da se vrednost nece promeniti. `let` koristis samo kad znas da ces vrednost menjati, na primer za brojac ili zbir poena. Ako pokusas da promenis `const`, JavaScript baca gresku `Assignment to constant variable`."
+  },
+  "task": {
+    "title": "Popravi brojac poena",
+    "brief": "Kod puca sa greskom `Assignment to constant variable`, jer pokusava da promeni promenljivu napravljenu sa `const`. Popravi liniju oznacenu sa `// ovde` tako da `score` moze da se menja. Primer 1: na pocetku je `score` 10. Primer 2: posle linije `score = score + 5` treba da bude 15.",
+    "signature": "let score",
+    "starter": "const score = 10; // ovde\nscore = score + 5;",
+    "tests": [
+      {
+        "name": "score je 15 posle dodavanja",
+        "code": "assert.equal(score, 15);"
+      },
+      {
+        "name": "score je veci od pocetne vrednosti",
+        "code": "assert.ok(score > 10);"
+      }
+    ]
+  },
+  "answer": "let score = 10;\nscore = score + 5;",
+  "explanation": "Vrednost u `const` promenljivoj ne moze da se zameni, pa linija `score = score + 5` baca gresku. Sa `let` je menjanje dozvoljeno, pa `score` od 10 postaje 15. Kad ti treba vrednost koja se menja, kao sto je brojac, koristi `let`.",
+  "format": "debug",
+  "id": "2026-11-26-jutro",
+  "createdAt": "2026-11-26T07:00:49.946Z",
+  "slot": "jutro"
+}
