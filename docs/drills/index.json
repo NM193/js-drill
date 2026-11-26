@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-26-vece",
+    "createdAt": "2026-11-26T19:00:38.108Z",
+    "topic": "funkcije return",
+    "lessonTitle": "Funkcija i return",
+    "taskTitle": "Izaberi funkciju koja vraca zbir"
+  },
+  {
     "id": "2026-11-26-jutro",
     "createdAt": "2026-11-26T07:00:49.946Z",
     "topic": "let i const",

@@ -1,0 +1,33 @@
+{
+  "topic": "funkcije return",
+  "lesson": {
+    "title": "Funkcija i return",
+    "body": "Funkcija je imenovani komad koda koji mozes da pozoves vise puta. Vrednosti koje joj das u zagradama zovu se parametri. Rec `return` kaze koju vrednost funkcija vraca onome ko ju je pozvao. Ako nema `return`, funkcija uradi racun, ali vrati `undefined`, to jest nista.\n\n```js\nfunction double(n) { return n * 2; }\nfunction doubleLost(n) { n * 2; }\ndouble(4);     // 8\ndoubleLost(4); // undefined\n```\n\nU praksi ti `return` treba da bi rezultat sacuvao u promenljivu, na primer `const price = double(4);`."
+  },
+  "task": {
+    "title": "Izaberi funkciju koja vraca zbir",
+    "brief": "Koja od tri linije (A, B ili C) cini da funkcija `total` vrati zbir dva broja? Upisi tu liniju umesto `// ovde`. Primeri: `total(2, 3)` vraca `5`, a `total(10, 0)` vraca `10`.",
+    "signature": "function total(a, b)",
+    "starter": "// A: a + b;\n// B: return a + b;\n// C: let sum = a + b;\n\nfunction total(a, b) {\n  // ovde\n}",
+    "tests": [
+      {
+        "name": "total(2, 3) vraca 5",
+        "code": "assert.equal(total(2, 3), 5);"
+      },
+      {
+        "name": "total(10, 0) vraca 10",
+        "code": "assert.equal(total(10, 0), 10);"
+      },
+      {
+        "name": "funkcija ne vraca undefined",
+        "code": "assert.ok(total(1, 1) !== undefined);"
+      }
+    ]
+  },
+  "answer": "function total(a, b) {\n  return a + b;\n}",
+  "explanation": "Tacna je varijanta B, jer `return` vraca zbir onome ko je pozvao funkciju. A i C izracunaju zbir, ali ga ne vrate, pa funkcija vraca `undefined`.",
+  "format": "mcq",
+  "id": "2026-11-26-vece",
+  "createdAt": "2026-11-26T19:00:38.108Z",
+  "slot": "vece"
+}
