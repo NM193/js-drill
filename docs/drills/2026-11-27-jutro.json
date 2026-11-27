@@ -1,0 +1,33 @@
+{
+  "topic": "arrow funkcije",
+  "lesson": {
+    "title": "Arrow funkcije: kraći zapis",
+    "body": "Arrow funkcija je samo kraći način da se napiše obična funkcija. Umesto reči `function` pišeš strelicu `=>` iza zagrada sa parametrima. Ako funkcija vraća samo jedan izraz, ne trebaju ti vitičaste zagrade ni `return`, jer se vrednost iza strelice vraća sama.\n\n```js\nfunction double(n) { return n * 2; }\nconst doubleArrow = (n) => n * 2;\ndoubleArrow(5); // 10\n```\n\nAko ipak staviš vitičaste zagrade `{ }`, moraš da napišeš i `return`, inače funkcija vraća `undefined`. Ovaj zapis ćeš stalno viđati u kodu koji ti napiše AI."
+  },
+  "task": {
+    "title": "Pozdrav kao arrow funkcija",
+    "brief": "Dopuni arrow funkciju `greet` tako da vrati pozdrav sa imenom. Iskoristi šablon string sa backtick-ovima. Primeri: `greet(\"Ana\")` vraća `\"Zdravo, Ana!\"`, a `greet(\"Marko\")` vraća `\"Zdravo, Marko!\"`.",
+    "signature": "const greet = (name) => ...",
+    "starter": "// vraća: Zdravo, <ime>!\nconst greet = (name) =>\n  // ovde",
+    "tests": [
+      {
+        "name": "greet je funkcija",
+        "code": "assert.equal(typeof greet, \"function\");"
+      },
+      {
+        "name": "pozdravlja Anu",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana!\");"
+      },
+      {
+        "name": "pozdravlja Marka",
+        "code": "assert.equal(greet(\"Marko\"), \"Zdravo, Marko!\");"
+      }
+    ]
+  },
+  "answer": "const greet = (name) => `Zdravo, ${name}!`;",
+  "explanation": "Iza strelice `=>` stoji izraz koji funkcija vraća, bez `return` i bez vitičastih zagrada. Šablon string sa backtick-ovima ubacuje vrednost `name` u tekst. Da si napisao vitičaste zagrade bez `return`, funkcija bi vratila `undefined` i testovi ne bi prošli.",
+  "format": "challenge",
+  "id": "2026-11-27-jutro",
+  "createdAt": "2026-11-27T07:00:57.783Z",
+  "slot": "jutro"
+}
