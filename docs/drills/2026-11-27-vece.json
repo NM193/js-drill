@@ -1,0 +1,33 @@
+{
+  "topic": "if i else",
+  "lesson": {
+    "title": "if i else: kod koji bira",
+    "body": "`if` proverava uslov i pokrece kod u viticastim zagradama samo kad je uslov tacan (`true`). `else` je drugi put: on se pokrece kad uslov nije tacan (`false`). Uslov je najcesce poredjenje: `>` znaci \"strogo vece\", a `>=` znaci \"vece ili jednako\", pa `18 > 18` daje `false`, a `18 >= 18` daje `true`. U praksi ovako program bira sta da uradi, na primer da li da pusti korisnika dalje ili ne.\n\n```js\nconst age = 20;\nif (age >= 18) { console.log(\"moze\"); }\nelse { console.log(\"ne moze\"); }\n```"
+  },
+  "task": {
+    "title": "Popravi proveru godina",
+    "brief": "Funkcija `canVote` treba da vrati `true` kad osoba ima 18 ili vise godina, a `false` kad ima manje. Sada pogresno vraca `false` za tacno 18. Popravi liniju sa `// ovde`. Primeri: `canVote(18)` vraca `true`, `canVote(15)` vraca `false`.",
+    "signature": "function canVote(age)",
+    "starter": "function canVote(age) {\n  if (age > 18) { return true; } // ovde\n  else { return false; }\n}",
+    "tests": [
+      {
+        "name": "tacno 18 godina moze da glasa",
+        "code": "assert.equal(canVote(18), true);"
+      },
+      {
+        "name": "20 godina moze da glasa",
+        "code": "assert.equal(canVote(20), true);"
+      },
+      {
+        "name": "15 godina ne moze da glasa",
+        "code": "assert.equal(canVote(15), false);"
+      }
+    ]
+  },
+  "answer": "function canVote(age) {\n  if (age >= 18) { return true; }\n  else { return false; }\n}",
+  "explanation": "Znak `>` ne propusta granicnu vrednost, pa je `18 > 18` netacno i funkcija je vracala `false`. Sa `>=` broj 18 ispunjava uslov, pa `if` vraca `true`. Za sve manje od 18 uslov je netacan i izvrsava se `else`.",
+  "format": "debug",
+  "id": "2026-11-27-vece",
+  "createdAt": "2026-11-27T19:00:32.830Z",
+  "slot": "vece"
+}
