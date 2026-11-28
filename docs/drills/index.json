@@ -1,5 +1,12 @@
 [
   {
+    "id": "2026-11-28-jutro",
+    "createdAt": "2026-11-28T10:42:46.115Z",
+    "topic": "truthy i falsy",
+    "lessonTitle": "Truthy i falsy vrednosti",
+    "taskTitle": "Pozdrav sa rezervnim imenom"
+  },
+  {
     "id": "2026-11-27-vece",
     "createdAt": "2026-11-27T19:00:32.830Z",
     "topic": "if i else",

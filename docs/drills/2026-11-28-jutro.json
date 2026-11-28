@@ -1,0 +1,33 @@
+{
+  "topic": "truthy i falsy",
+  "lesson": {
+    "title": "Truthy i falsy vrednosti",
+    "body": "Kada `if` dobije vrednost koja nije `true` ili `false`, JavaScript je sam pretvori u jedno od to dvoje. Vrednosti koje se pretvore u `false` zovu se *falsy*. To su: `false`, `0`, `\"\"` (prazan string), `null`, `undefined` i `NaN` (rezultat racuna koji nema smisla, npr. `\"a\" * 2`). Sve ostale vrednosti su *truthy*, sto znaci da se ponasaju kao `true`. U praksi tako brzo proveris da li nesto uopste postoji, na primer da li je korisnik upisao ime:\n\n```js\nconst name = \"\";\nif (name) { console.log(\"Ima ime\"); }\nelse { console.log(\"Prazno\"); } // ispisuje Prazno\n```"
+  },
+  "task": {
+    "title": "Pozdrav sa rezervnim imenom",
+    "brief": "Funkcija `greet` pozdravlja korisnika po imenu. Ako ime nije uneto (prazan string ili nista), vraca \"Zdravo, gost\". Izaberi koja linija, A, B ili C, ide na mesto `// ovde`. Primeri: `greet(\"Ana\")` vraca `\"Zdravo, Ana\"`, a `greet(\"\")` vraca `\"Zdravo, gost\"`.",
+    "signature": "function greet(name)",
+    "starter": "// A: if (name === true) { return \"Zdravo, \" + name; }\n// B: if (name) { return \"Zdravo, \" + name; }\n// C: if (name !== undefined) { return \"Zdravo, \" + name; }\n\nfunction greet(name) {\n  // ovde\n  return \"Zdravo, gost\";\n}",
+    "tests": [
+      {
+        "name": "pozdravlja po imenu kad je ime uneto",
+        "code": "assert.equal(greet(\"Ana\"), \"Zdravo, Ana\");"
+      },
+      {
+        "name": "prazan string daje pozdrav za gosta",
+        "code": "assert.equal(greet(\"\"), \"Zdravo, gost\");"
+      },
+      {
+        "name": "bez argumenta daje pozdrav za gosta",
+        "code": "assert.equal(greet(), \"Zdravo, gost\");"
+      }
+    ]
+  },
+  "answer": "function greet(name) {\n  if (name) { return \"Zdravo, \" + name; }\n  return \"Zdravo, gost\";\n}",
+  "explanation": "Tacno je B. Prazan string i `undefined` su falsy, pa `if (name)` propusta samo pravo ime. A ne radi jer string \"Ana\" nije isto sto i `true`, a C propusta prazan string, pa bi `greet(\"\")` vratio \"Zdravo, \".",
+  "format": "mcq",
+  "id": "2026-11-28-jutro",
+  "createdAt": "2026-11-28T10:42:46.115Z",
+  "slot": "jutro"
+}
