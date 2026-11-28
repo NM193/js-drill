@@ -1,0 +1,33 @@
+{
+  "topic": "string sabloni",
+  "lesson": {
+    "title": "Sabloni stringova sa backtick-ovima",
+    "body": "**Sablon string** (eng. template literal) je string koji pises izmedju backtick-ova (`` ` ``), a ne izmedju navodnika. Unutar njega napises `${imePromenljive}`, i JavaScript na to mesto stavi vrednost te promenljive. Tako ne moras da spajas delove teksta znakom `+`.\n\n```js\nconst item = \"kafa\";\nconst price = 250;\nconst label = `${item} kosta ${price} dinara`;\n// label je \"kafa kosta 250 dinara\"\n```\n\nU praksi ovo koristis svaki put kad pravis poruku od vise delova, na primer pozdrav sa imenom korisnika ili cenu na dugmetu."
+  },
+  "task": {
+    "title": "Recenica od imena i godina",
+    "brief": "Dopuni funkciju `describe` tako da sablonom stringa vrati recenicu oblika `IME ima GODINE godina`. Primer 1: `describe(\"Ana\", 25)` vraca `\"Ana ima 25 godina\"`. Primer 2: `describe(\"Marko\", 30)` vraca `\"Marko ima 30 godina\"`.",
+    "signature": "function describe(name, age)",
+    "starter": "function describe(name, age) {\n  return ``; // ovde\n}",
+    "tests": [
+      {
+        "name": "Ana ima 25 godina",
+        "code": "assert.equal(describe(\"Ana\", 25), \"Ana ima 25 godina\");"
+      },
+      {
+        "name": "Marko ima 30 godina",
+        "code": "assert.equal(describe(\"Marko\", 30), \"Marko ima 30 godina\");"
+      },
+      {
+        "name": "radi i za druge vrednosti",
+        "code": "assert.equal(describe(\"Ivan\", 18), \"Ivan ima 18 godina\");"
+      }
+    ]
+  },
+  "answer": "function describe(name, age) {\n  return `${name} ima ${age} godina`;\n}",
+  "explanation": "Backtick-ovi prave sablon string, a `${name}` i `${age}` se zamenjuju vrednostima koje su stigle u funkciju. Broj se sam pretvori u tekst, pa ne treba nista dodatno. Isto bi dalo i `name + \" ima \" + age + \" godina\"`, ali je sablon kraci i lakse se cita.",
+  "format": "challenge",
+  "id": "2026-11-28-vece",
+  "createdAt": "2026-11-28T19:00:51.748Z",
+  "slot": "vece"
+}
